@@ -23,6 +23,7 @@ remaining:
   - "2026-11-04: unverified: how VTE and NL draw the eyes (head or separate node); whether perfect bodies go through FurDef or BodyTypeDef; Erin's 1.7 code not read."
   - "2026-11-04: feature: apparel base is VenusTouchWaistlines (nelim.venustouch.waistlines, TailorMade Harmony patch, WDI targets measured); also TailorMade, Thigappe. Not Body Mod Mix & Match (3792365853: random global pools, no gene, incompatible with Female Body Variants)."
 updated: 2026-11-04
+protocols_read_sha: b74d60307f0c851db9c94b555ca07d9dad1e5c81
 ---
 
 # Biotech Bodies: status
