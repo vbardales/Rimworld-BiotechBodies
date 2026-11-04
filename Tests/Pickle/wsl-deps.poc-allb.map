@@ -1,0 +1,18 @@
+# POC pass "allb": every mod, WDI first and Female Body Variants last (the order a player who never sorts may get).
+# Map order is load order (the staging writes activeMods in this order).
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap wsl-deps.poc-allb.map -Filter '@bodies,@pass-allb' -EvidenceDir Tests/Pickle/Inbox/poc-allb
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+WDI.Realistic.Bodies 3527486510
+VanillaExpanded.VTEXE 2016436324
+vanillaracesexpanded.highmate 2995385834
+Nals.FacialAnimation 1635901197
+VanillaExpanded.VTEXE.FacialAnims 2816938779
+tiagocc0.FemaleBodyVariants 3798082132
+# Shared tools: ColonistRace builds and reads the pawn, TextureOwner names who answers a texture path,
+# CameraZoom + SimpleCameraSetting frame it, ScreenshotStudio hides the UI.
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.textureowner path:PickleTools/TextureOwner/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod

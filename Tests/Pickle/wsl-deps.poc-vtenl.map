@@ -1,0 +1,15 @@
+# POC pass "vtenl": VTE eyes: Vanilla Textures Expanded, [NL] Facial Animation and the VTE bridge that retextures NL's face parts.
+# Map order is load order (the staging writes activeMods in this order).
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap wsl-deps.poc-vtenl.map -Filter '@bodies,@pass-vtenl' -EvidenceDir Tests/Pickle/Inbox/poc-vtenl
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VTEXE 2016436324
+Nals.FacialAnimation 1635901197
+VanillaExpanded.VTEXE.FacialAnims 2816938779
+# Shared tools: ColonistRace builds and reads the pawn, TextureOwner names who answers a texture path,
+# CameraZoom + SimpleCameraSetting frame it, ScreenshotStudio hides the UI.
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.textureowner path:PickleTools/TextureOwner/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Biotech Bodies - Pickle tests</name>
+  <author>Nelim</author>
+  <packageId>nelim.biotechbodies.pickletests</packageId>
+  <supportedVersions><li>1.6</li></supportedVersions>
+  <description>In-game tests for Biotech Bodies, run by Pickle. Development only: never published. The first suite is the proof of concept on texture mod coexistence (Tests/Poc/README.md).</description>
+  <modDependencies>
+    <li><packageId>nelim.biotechbodies</packageId><displayName>Biotech Bodies</displayName></li>
+    <li><packageId>rimworks.pickle</packageId><displayName>Pickle</displayName><steamWorkshopUrl>steam://url/CommunityFilePage/3791648678</steamWorkshopUrl></li>
+  </modDependencies>
+  <loadAfter><li>nelim.biotechbodies</li><li>rimworks.pickle</li></loadAfter>
+</ModMetaData>

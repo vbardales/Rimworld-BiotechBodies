@@ -1,0 +1,11 @@
+# POC pass "vanilla": no texture mod, the baseline every other pass is read against.
+# Map order is load order (the staging writes activeMods in this order).
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap wsl-deps.poc-vanilla.map -Filter '@bodies,@pass-vanilla' -EvidenceDir Tests/Pickle/Inbox/poc-vanilla
+# Shared tools: ColonistRace builds and reads the pawn, TextureOwner names who answers a texture path,
+# CameraZoom + SimpleCameraSetting frame it, ScreenshotStudio hides the UI.
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.textureowner path:PickleTools/TextureOwner/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod

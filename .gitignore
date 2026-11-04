@@ -1,0 +1,60 @@
+# Git is only half of what keeps the published folder clean, and the smaller half.
+#
+# Steam does not read .gitignore at all. SteamUGC.SetItemContent takes the junction's target
+# directory as it stands on disk, with no filtering, so anything sitting in the published folder
+# is published. That is what `Mod/` is for: the junction from RimWorld/Mods points there, and
+# everything else in this repository - Art/, Source/, the docs, this file - stays out of reach
+# by construction.
+
+# Build intermediates.
+# Directory.Build.props sends them outside the published folder: they must never end up in it,
+# since Mod/ goes to the Workshop as it stands. An obj/ left there would ship the publicised
+# Assembly-CSharp.dll to every subscriber.
+build/
+Source/obj/
+Source/bin/
+
+# Claude Code session worktrees and local settings. A session creates its worktree in the
+# current directory, so sometimes inside this one, and each is a full copy of the repository.
+# Until this folder became a repository of its own the rule lived in the monorepo's .gitignore,
+# a file this repository does not carry.
+.claude/
+
+# Development environments.
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+*.csproj.user
+
+# System.
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# DirectDraw Surface textures. RimWorld loads a .dds in preference to the .png beside it, so a
+# stray one silently overrides the tracked texture. This mod ships none. Listed twice because
+# attribute and ignore patterns are not case-folded on every platform.
+*.dds
+*.DDS
+
+# Evidence of Pickle runs: on disk, never in git. Both spellings, since the launcher's -EvidenceDir
+# writes to Tests/Pickle/Evidence/ and the runs of 2026-09-22 sit in Tests/Pickle/evidence/. The text that says
+# what was concluded is docs/runs/. Films are as heavy as the captures and just as local.
+Tests/Pickle/evidence/
+Tests/Pickle/Evidence/
+*.webm
+Art/.render/
+
+# Showcase notes: working prompt for the Preview illustration, deleted once Preview-source.png is received.
+PROMPT_*.md
+
+# Reproducible Preview diagnostics generated locally by the shared renderer.
+Art/.render/
+
+# Test evidence stays on disk, never in git: screenshots and Player.log grow without limit.
+Tests/Pickle/Evidence/
+Tests/Pickle/Inbox/
+Tests/Pickle/Parked/
+Tests/Pickle/evidence/
