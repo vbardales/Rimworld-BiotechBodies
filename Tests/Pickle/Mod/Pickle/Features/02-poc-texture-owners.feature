@@ -45,3 +45,26 @@ Feature: POC, which running mod answers each contested pawn texture
       | Bodies/Naked_Child              | VanillaExpanded.VTEXE             |
       | PerfectBody/PerfectBody_Female  | vanillaracesexpanded.highmate     |
       | Eyes/Normal/Female/normal       | VanillaExpanded.VTEXE.FacialAnims |
+
+  # The owner's need (2026-11-04): almost every pawn in WDI, 3 pawns back to the vanilla body, through a small C# that
+  # reads the vanilla body with Resources.Load (Tests/Poc/README.md). Proof before any code: with WDI loaded, every
+  # vanilla body path still loads from the base resources, and that texture is not the one WDI answers.
+  @pass-vanilla
+  Scenario: without a texture mod, the vanilla body loads from the base resources
+    Then Nelim's Pickle Tools: the texture "Things/Pawn/Humanlike/Bodies/Naked_Male_south" loads from the game's base resources
+
+  @pass-wdi
+  Scenario Outline: with WDI loaded, the vanilla <body> body is still reachable in the base resources
+    Then Nelim's Pickle Tools: the texture "Things/Pawn/Humanlike/Bodies/<body>_<facing>" loads from the game's base resources
+    And Nelim's Pickle Tools: the texture "Things/Pawn/Humanlike/Bodies/<body>_<facing>" from the base resources is not the one a running mod answers
+
+    Examples:
+      | body         | facing |
+      | Naked_Male   | south  |
+      | Naked_Male   | east   |
+      | Naked_Male   | north  |
+      | Naked_Female | south  |
+      | Naked_Thin   | south  |
+      | Naked_Fat    | south  |
+      | Naked_Hulk   | south  |
+      | Naked_Child  | south  |
