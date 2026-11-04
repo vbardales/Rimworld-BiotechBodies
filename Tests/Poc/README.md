@@ -62,3 +62,15 @@ clean log.
 ## Verdict
 
 Pending the tickets.
+
+## The owner's need and the chosen route (2026-11-04)
+
+Almost every pawn in WDI, 3 pawns back to the vanilla body. Route chosen by Virginie: a small C# (no copy of the
+Ludeon textures). Feasibility, read in the 1.6 `Assembly-CSharp.dll` (ilspycmd, `Verse.ContentFinder<T>.Get`): the
+running mods are asked from the last one down, then `Resources.Load<Texture2D>("Textures/" + path)`, then the mod asset
+bundles. `Data/Core` holds no `Textures/` folder, so the vanilla body exists only in the base resources, and
+`Resources.Load` reaches it whatever WDI ships at the same path. Sketch (not written before the verdict): a gene
+`BiB_VanillaBody`; a Harmony postfix on `PawnRenderNode_Body.GraphicFor`, ordered after Female Body Variants' patch,
+that gives a pawn with the gene a graphic whose textures come from `Resources.Load` (a `Graphic_Multi` subclass, since
+`Graphic_Multi.Init` goes through `ContentFinder`). Open: WDI's apparel textures fitted to its bodies, worn on a
+vanilla body.
