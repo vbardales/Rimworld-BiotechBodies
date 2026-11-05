@@ -25,7 +25,8 @@ remaining:
   - "2026-11-04: resolved by Audit on Virginie's delegation: HD Pawn Textures = HD Pawn Textures Continued (izarius, 3815495202, unofficial 1.6), not installed (Virginie to subscribe); second HD source to check: Vanilla Pawns Retextured (Neronix17, maybe neronix17.hd.pawns). VPPE resolved by assumption as VAPPE (VanillaExpanded.VAPPE, 1814987817, installed); no Workshop match for VPPE. Both now secondary to the need above."
   - "2026-11-04: POC suite written (Tests/Pickle, 9 pass maps wsl-deps.poc-*.map, features 01-poc-bodies, 02-poc-texture-owners); Mod/About/About.xml skeleton only, needed by the staging. Tickets filed, results pending."
   - "2026-11-04: feature: apparel base is VenusTouchWaistlines (nelim.venustouch.waistlines, TailorMade Harmony patch, WDI targets measured); also TailorMade, Thigappe. Not Body Mod Mix & Match (3792365853: random global pools, no gene, incompatible with Female Body Variants)."
-updated: 2026-11-04
+  - "2026-11-05: 1.a duplicate search done (Search-Workshop.sh, About.xml names matching Body, Texture, Retextur, Skin: 56 hits, 3378 of 3426 folders read). No equivalent: closest is WDI Body Traits - Physiques and Shapes (3805486882, G2, beta, body by trait on Female Body Variants, no layered per-slot look, no gene, no per-race defaults); Body Mod Mix and Match (3792365853) already ruled out. Hits: /AppData/Local/Temp/rimworld-search/biotechbodies-dup/hits.txt."
+updated: 2026-11-05
 protocols_read_sha: 95f9ae9be72e607e03bbe62ae2db81add3ab0684
 ---
 
