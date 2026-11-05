@@ -26,7 +26,7 @@ remaining:
   - "2026-11-04: POC suite written (Tests/Pickle, 9 pass maps wsl-deps.poc-*.map, features 01-poc-bodies, 02-poc-texture-owners); Mod/About/About.xml skeleton only, needed by the staging. Tickets filed, results pending."
   - "2026-11-04: feature: apparel base is VenusTouchWaistlines (nelim.venustouch.waistlines, TailorMade Harmony patch, WDI targets measured); also TailorMade, Thigappe. Not Body Mod Mix & Match (3792365853: random global pools, no gene, incompatible with Female Body Variants)."
 updated: 2026-11-04
-protocols_read_sha: b74d60307f0c851db9c94b555ca07d9dad1e5c81
+protocols_read_sha: 95f9ae9be72e607e03bbe62ae2db81add3ab0684
 ---
 
 # Biotech Bodies: status
