@@ -9,5 +9,9 @@
   <url>https://github.com/vbardales/Rimworld-BiotechBodies</url>
   <description>WORK IN PROGRESS. Proof of concept stage: this mod holds no content yet.
 
-Intended: choose the look of each part of a pawn (body, head, eyes, hair) from the texture mods you run, by gene, by race or for everyone.</description>
+Intended: choose the look of each part of a pawn (body, head, eyes, hair) from the texture mods you run, by gene, by race or for everyone.
+
+MIT licence, see ATTRIBUTION.md.
+
+[url=https://github.com/vbardales/Rimworld-BiotechBodies]Source code on GitHub[/url]</description>
 </ModMetaData>
