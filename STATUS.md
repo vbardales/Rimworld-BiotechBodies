@@ -26,6 +26,7 @@ remaining:
   - "2026-11-04: POC suite written (Tests/Pickle, 9 pass maps wsl-deps.poc-*.map, features 01-poc-bodies, 02-poc-texture-owners); Mod/About/About.xml skeleton only, needed by the staging. Tickets filed, results pending."
   - "2026-11-04: feature: apparel base is VenusTouchWaistlines (nelim.venustouch.waistlines, TailorMade Harmony patch, WDI targets measured); also TailorMade, Thigappe. Not Body Mod Mix & Match (3792365853: random global pools, no gene, incompatible with Female Body Variants)."
   - "2026-11-05: 1.a duplicate search done (Search-Workshop.sh, About.xml names matching Body, Texture, Retextur, Skin: 56 hits, 3378 of 3426 folders read). No equivalent: closest is WDI Body Traits - Physiques and Shapes (3805486882, G2, beta, body by trait on Female Body Variants, no layered per-slot look, no gene, no per-race defaults); Body Mod Mix and Match (3792365853) already ruled out. Hits: /AppData/Local/Temp/rimworld-search/biotechbodies-dup/hits.txt."
+  - "2026-11-06: makeSources: 2.a to 2.d done (ModIcon.png 128x128 18.8 KB, ModIcon.ico, PROMPT_BiotechBodies.md written, git-ignored). Open: 2.e Art/Preview-source.png from Virginie, then echo-preview.png, then 2.f cleanup (delete PROMPT), 2.g move to code[1.0.0]. Art/Preview.config.json: panel.description still holds the placeholder 'Say once what a workbench is for' (copied from another mod), to rewrite at mountPreview."
 updated: 2026-11-06
 protocols_read_sha: e7962b483699dc1410dce4b1bdd34b6393c84454
 ---
