@@ -5,7 +5,7 @@ repo: Rimworld-BiotechBodies
 remote: https://github.com/vbardales/Rimworld-BiotechBodies.git
 visibility: public
 detached: yes
-workflow_stage: setupRepo
+workflow_stage: makeSources
 licence: original
 licence_at: "2026-11-04: original mod by the owner, no source mod code reused"
 upstream_mod_remotes: N/A
@@ -26,8 +26,8 @@ remaining:
   - "2026-11-04: POC suite written (Tests/Pickle, 9 pass maps wsl-deps.poc-*.map, features 01-poc-bodies, 02-poc-texture-owners); Mod/About/About.xml skeleton only, needed by the staging. Tickets filed, results pending."
   - "2026-11-04: feature: apparel base is VenusTouchWaistlines (nelim.venustouch.waistlines, TailorMade Harmony patch, WDI targets measured); also TailorMade, Thigappe. Not Body Mod Mix & Match (3792365853: random global pools, no gene, incompatible with Female Body Variants)."
   - "2026-11-05: 1.a duplicate search done (Search-Workshop.sh, About.xml names matching Body, Texture, Retextur, Skin: 56 hits, 3378 of 3426 folders read). No equivalent: closest is WDI Body Traits - Physiques and Shapes (3805486882, G2, beta, body by trait on Female Body Variants, no layered per-slot look, no gene, no per-race defaults); Body Mod Mix and Match (3792365853) already ruled out. Hits: /AppData/Local/Temp/rimworld-search/biotechbodies-dup/hits.txt."
-updated: 2026-11-05
-protocols_read_sha: 95f9ae9be72e607e03bbe62ae2db81add3ab0684
+updated: 2026-11-06
+protocols_read_sha: e7962b483699dc1410dce4b1bdd34b6393c84454
 ---
 
 # Biotech Bodies: status
