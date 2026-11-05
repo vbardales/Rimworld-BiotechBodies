@@ -5,7 +5,7 @@ repo: Rimworld-BiotechBodies
 remote: https://github.com/vbardales/Rimworld-BiotechBodies.git
 visibility: public
 detached: yes
-workflow_stage: makeSources
+workflow_stage: code[1.0.0]
 licence: original
 licence_at: "2026-11-04: original mod by the owner, no source mod code reused"
 upstream_mod_remotes: N/A
@@ -30,7 +30,7 @@ remaining:
   - "2026-11-06: 2.e Preview-source.png (cut to 16:9, 1254x705, b1ab03c) checked: Measure-Palette 2 hue families (hues 0 and 30), Vmean 0.587, vivid 78 %: pass; no readable face, no painted render, silhouettes readable at 268 px. DEFECT: the dress form at the left is drawn in front elevation (standing, facing the viewer), against the rule 'nothing upright facing the viewer'. Decision to take: keep, or regenerate."
   - "2026-11-06: owner validated Preview-source.png as is (dress form kept). Preview rendered without echo (Art/echo-*.png not made yet, 10.a): Mod/About/Preview.png, Art/Gallery/0-preview.png, Art/Preview.ico. The panel hides the first two bench silhouettes (top-left). Render-Preview.cjs exits with an error after the Preview: 'ModIcon-source.png has excessive transparent padding' (needs owner 'badge mode' or a trimmed icon), so the folder desktop.ini files are not written; Art/ModIcon.ico was made earlier by writeIco. Checks 10.d (contrast, 268 px) not run."
 updated: 2026-11-06
-protocols_read_sha: e7962b483699dc1410dce4b1bdd34b6393c84454
+protocols_read_sha: 4e6d7b694f3ae899b26ec15b743228a30a7dd519
 ---
 
 # Biotech Bodies: status
