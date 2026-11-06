@@ -3,8 +3,8 @@ Feature: the gene BiB_VanillaBody keeps the vanilla body under WDI's Realistic B
 
   # WDI redraws every vanilla body path. A pawn with the gene must show the vanilla body, a pawn without it the WDI
   # body. Each scenario captures the same pawn twice, before and after the gene, so the two pictures are read side by
-  # side. A green capture proves only that it was taken; the pictures decide. No step reads the drawn graphic path
-  # yet: the fur nodes are logged as a trace and a step is to be asked of PickleTools.
+  # side. Since NPT 7c73beb the drawn body path is asserted too (the body of X is drawn from the texture path), and
+  # the pictures still decide how the body looks.
 
   Background:
     Given the save "test-colony" is loaded
@@ -29,13 +29,15 @@ Feature: the gene BiB_VanillaBody keeps the vanilla body under WDI's Realistic B
     When Nelim's Pickle Tools: the camera is centered on "Bo" at root size 3
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "wdi-<gender>-<type>"
+    Then Nelim's Pickle Tools: the body of "Bo" is not drawn from a texture path starting with "BiB/Vanilla/"
     When Nelim's Pickle Tools: "Bo" has the gene "BiB_VanillaBody"
     And Nelim's Pickle Tools: "Bo" body type is <type>
     And I wait 5 ticks
     And game speed is paused
     Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_VanillaBody"
     And Nelim's Pickle Tools: "Bo" has body type <type>
-    And Nelim's Pickle Tools: the fur nodes of "Bo" are logged
+    And Nelim's Pickle Tools: the body texture of "Bo" is logged
+    And Nelim's Pickle Tools: the body of "Bo" is drawn from the texture path "BiB/Vanilla/Things/Pawn/Humanlike/Bodies/Naked_<type>"
     And Nelim's Pickle Tools: "Bo" faces South
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "vanilla-<gender>-<type>"
@@ -63,12 +65,15 @@ Feature: the gene BiB_VanillaBody keeps the vanilla body under WDI's Realistic B
     When Nelim's Pickle Tools: the camera is centered on "Kid" at root size 3
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "wdi-female-Child"
+    Then Nelim's Pickle Tools: the body of "Kid" is not drawn from a texture path starting with "BiB/Vanilla/"
     When Nelim's Pickle Tools: "Kid" has the gene "BiB_VanillaBody"
     And Nelim's Pickle Tools: "Kid" body type is Child
     And I wait 5 ticks
     And game speed is paused
     Then Nelim's Pickle Tools: "Kid" holds the gene "BiB_VanillaBody"
     And Nelim's Pickle Tools: "Kid" has body type Child
+    And Nelim's Pickle Tools: the body texture of "Kid" is logged
+    And Nelim's Pickle Tools: the body of "Kid" is drawn from the texture path "BiB/Vanilla/Things/Pawn/Humanlike/Bodies/Naked_Child"
     And Nelim's Pickle Tools: "Kid" faces South
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "vanilla-female-Child"
