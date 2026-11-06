@@ -1,0 +1,11 @@
+# Same as bodyoptions, but WDI loads before Female Body Variants (load order check).
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap wdifirst -Filter '@body-options' -EvidenceDir Tests/Pickle/Inbox/body-options-wdifirst
+brrainz.harmony 2009463077
+WDI.Realistic.Bodies 3527486510
+tiagocc0.FemaleBodyVariants 3798082132
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.textureowner path:PickleTools/TextureOwner/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
