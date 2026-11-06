@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- A look gene shows a pawn with the vanilla texture of a slot, whatever texture mod is loaded. It is a texture
+       choice, not a body shape: it does not carry a body type and does not exclude the vanilla body genes. -->
+  <GeneDef>
+    <defName>BiB_VanillaBody</defName>
+    <label>vanilla body</label>
+    <description>Carriers keep the vanilla body texture, even when a texture mod redraws the bodies of everyone else. The body shape stays the one the body type gives.</description>
+    <iconPath>UI/Icons/Genes/Gene_BodyThin</iconPath>
+    <displayCategory>Cosmetic</displayCategory>
+    <displayOrderInCategory>900</displayOrderInCategory>
+    <selectionWeight>0</selectionWeight>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <exclusionTags>
+      <li>BiB_BodyLook</li>
+    </exclusionTags>
+  </GeneDef>
+
+</Defs>

@@ -14,4 +14,22 @@ Intended: choose the look of each part of a pawn (body, head, eyes, hair) from t
 MIT licence, see ATTRIBUTION.md.
 
 [url=https://github.com/vbardales/Rimworld-BiotechBodies]Source code on GitHub[/url]</description>
+  <modDependencies>
+    <li>
+      <packageId>brrainz.harmony</packageId>
+      <displayName>Harmony</displayName>
+      <steamWorkshopUrl>steam://url/CommunityFilePage/2009463077</steamWorkshopUrl>
+    </li>
+    <li>
+      <packageId>Ludeon.RimWorld.Biotech</packageId>
+      <displayName>Biotech</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>brrainz.harmony</li>
+    <li>Ludeon.RimWorld</li>
+    <li>Ludeon.RimWorld.Biotech</li>
+    <li>tiagocc0.FemaleBodyVariants</li>
+    <li>WDI.Realistic.Bodies</li>
+  </loadAfter>
 </ModMetaData>
