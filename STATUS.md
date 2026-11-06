@@ -35,7 +35,7 @@ remaining:
   - "2026-11-06: scenarios now assert the drawn body path (NPT steps, 7c73beb, compiled, never played; commit b575e18). Result 20261106-034933-022-8d8e: exit 0, 5 passed (Male, Female, Thin, Hulk, child). [body-texture] lines: without the gene the path is the vanilla one (WDI textures drawn), with the gene it comes back with the BiB/Vanilla/ prefix, child included (Naked_Child from the Biotech content). Male wdi/vanilla captures read by eye: different bodies, as expected. Evidence kept minified in Tests/Pickle/Evidence/vanilla-gene. Next: second slice (other looks and slots, Mod options, per-race defaults), WDI apparel on a vanilla body, Female Body Variants order."
   - "2026-11-06: code, second slice built (0 warnings, not played): Mod options for the body slot (BiBSettings, BiBMod, Languages/English/Keyed/BiB.xml): global default and one row per loaded humanlike race, Automatic or Vanilla; resolution gene, race, global. Scenarios 04-body-options.feature (global Vanilla, race row Human Vanilla; NPT steps 2026-11-06, compiled never played) filed on 57a2227: ticket 20261106-092547-619-29a6, Tests/Pickle/Inbox/body-options. At RUN_DONE read summary.json, junit.xml, [body-texture] lines, global-/race- captures. Keep Mod/ and Source/ on 57a2227 until then (touching is allowed, the ticket is relaunched). Then: WDI apparel on a vanilla body, Female Body Variants order, the other looks and slots."
 updated: 2026-11-06
-protocols_read_sha: 39b2d8ba6ba07c25a936409930a6640b70d58e07
+protocols_read_sha: 21e22cbde6212aacdb1eed5aae2acb8450480451
 ---
 
 # Biotech Bodies: status
