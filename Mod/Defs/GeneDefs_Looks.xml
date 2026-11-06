@@ -19,4 +19,20 @@
     </exclusionTags>
   </GeneDef>
 
+  <GeneDef>
+    <defName>BiB_WdiBody</defName>
+    <label>WDI body</label>
+    <description>Carriers keep the body texture of WDI's Realistic Bodies, even when the default for their race or for everyone is another look. Without that mod, nothing changes.</description>
+    <iconPath>UI/Icons/Genes/Gene_BodyFat</iconPath>
+    <displayCategory>Cosmetic</displayCategory>
+    <displayOrderInCategory>901</displayOrderInCategory>
+    <selectionWeight>0</selectionWeight>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <exclusionTags>
+      <li>BiB_BodyLook</li>
+    </exclusionTags>
+  </GeneDef>
+
 </Defs>

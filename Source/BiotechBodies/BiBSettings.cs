@@ -10,7 +10,8 @@ namespace BiotechBodies
     public enum BodyLook
     {
         Auto,
-        Vanilla
+        Vanilla,
+        Wdi
     }
 
     // Resolution of the body slot, first match wins: look gene of the pawn, default of the pawn's race (only a race
@@ -22,10 +23,23 @@ namespace BiotechBodies
 
         public BodyLook ResolveBody(Pawn pawn)
         {
-            if (pawn.genes != null && BiBGeneDefOf.BiB_VanillaBody != null
-                && pawn.genes.HasActiveGene(BiBGeneDefOf.BiB_VanillaBody))
+            var look = ResolveBodyUnchecked(pawn);
+            // A look whose source mod is not loaded changes nothing.
+            return look == BodyLook.Wdi && !BodySources.WdiLoaded ? BodyLook.Auto : look;
+        }
+
+        private BodyLook ResolveBodyUnchecked(Pawn pawn)
+        {
+            if (pawn.genes != null)
             {
-                return BodyLook.Vanilla;
+                if (BiBGeneDefOf.BiB_VanillaBody != null && pawn.genes.HasActiveGene(BiBGeneDefOf.BiB_VanillaBody))
+                {
+                    return BodyLook.Vanilla;
+                }
+                if (BiBGeneDefOf.BiB_WdiBody != null && pawn.genes.HasActiveGene(BiBGeneDefOf.BiB_WdiBody))
+                {
+                    return BodyLook.Wdi;
+                }
             }
             if (raceBody.TryGetValue(pawn.def.defName, out var race) && race != BodyLook.Auto)
             {
@@ -102,6 +116,10 @@ namespace BiotechBodies
                 var options = new List<FloatMenuOption>();
                 foreach (BodyLook look in System.Enum.GetValues(typeof(BodyLook)))
                 {
+                    if (look == BodyLook.Wdi && !BodySources.WdiLoaded)
+                    {
+                        continue;
+                    }
                     var chosen = look;
                     var text = look == BodyLook.Auto && raceRow ? "BiB_Look_Inherit".Translate()
                         : ("BiB_Look_" + look).Translate();
