@@ -9,6 +9,7 @@ namespace BiotechBodies
         static Startup()
         {
             new Harmony("nelim.biotechbodies").PatchAll();
+            FaceLooks.Register();
         }
     }
 }

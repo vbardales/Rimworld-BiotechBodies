@@ -175,6 +175,11 @@ namespace BiotechBodies
         [HarmonyPrefix]
         public static bool Prefix(string itemPath, ref Texture2D __result)
         {
+            if (FaceLooks.IsFacePath(itemPath))
+            {
+                __result = FaceLooks.Find(itemPath);
+                return false;
+            }
             if (itemPath == null
                 || !(itemPath.StartsWith(BodySources.VanillaPrefix) || itemPath.StartsWith(BodySources.WdiPrefix)))
             {
