@@ -27,7 +27,7 @@ remaining:
   - "build and release: 3.b build not verified (rebuild and compare Mod/Assemblies/BiotechBodies.dll with Source, declare build scripts to CI/CD); 2.e/10.a: Preview rendered without echo, Render-Preview.cjs errors on ModIcon-source.png transparent padding (needs owner badge mode or a trimmed icon), echo and 10.d checks stay for mountPreview; panel.description of Art/Preview.config.json still a placeholder, to rewrite at mountPreview."
   - "dependencies and sources: apparel base VenusTouchWaistlines (nelim.venustouch.waistlines); Body Mod Mix and Match ruled out as base (see head and hair line). 1.a duplicate search done 2026-11-05: closest is WDI Body Traits (3805486882), no equivalent. HD Pawn Textures Continued (3815495202) not installed; second HD source Vanilla Pawns Retextured (Neronix17) to check, both secondary."
 updated: 2026-11-06
-protocols_read_sha: 7206a6e67021379bfd9194a6bb2bda385f8cc0f5
+protocols_read_sha: 9864a34e5e3f6bc06d2dd8763017d86be725880e
 ---
 
 # Biotech Bodies: status
