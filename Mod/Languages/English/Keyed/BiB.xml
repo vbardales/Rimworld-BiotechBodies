@@ -8,4 +8,10 @@
   <BiB_Look_Inherit>Same as everyone</BiB_Look_Inherit>
   <BiB_Look_Vanilla>Vanilla</BiB_Look_Vanilla>
   <BiB_Look_Wdi>WDI's Realistic Bodies</BiB_Look_Wdi>
+  <BiB_FaceSlot>Face</BiB_FaceSlot>
+  <BiB_FaceSlotDesc>Which face pack a pawn shows when it has no face look gene and no gene that a face pack targets. A look gene comes first, then the default of its race, then the default for everyone. Automatic changes nothing. The list shows only the face packs that are loaded.</BiB_FaceSlotDesc>
+  <BiB_FaceLook_Unagi>UNAGI Facial Animation</BiB_FaceLook_Unagi>
+  <BiB_FaceLook_NiceFA>Nice Facial Animation</BiB_FaceLook_NiceFA>
+  <BiB_FaceLook_Retexture>Facial Animation Retexture</BiB_FaceLook_Retexture>
+  <BiB_FaceLook_Reel>Reel Facial Animations</BiB_FaceLook_Reel>
 </LanguageData>

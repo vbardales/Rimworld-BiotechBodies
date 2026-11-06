@@ -20,6 +20,19 @@ namespace BiotechBodies
     {
         public BodyLook globalBody = BodyLook.Auto;
         public Dictionary<string, BodyLook> raceBody = new Dictionary<string, BodyLook>();
+        // Face default: key of a FaceLook, empty = Auto. Applies only to a pawn with no gene Facial Animation can use.
+        public string globalFace = "";
+        public Dictionary<string, string> raceFace = new Dictionary<string, string>();
+
+        public FaceLook ResolveFace(Pawn pawn)
+        {
+            if (!raceFace.TryGetValue(pawn.def.defName, out var key) || string.IsNullOrEmpty(key))
+            {
+                key = globalFace;
+            }
+            var look = FaceLooks.ByKey(key);
+            return look != null && FaceLooks.Loaded(look) ? look : null;
+        }
 
         public BodyLook ResolveBody(Pawn pawn)
         {
@@ -52,9 +65,19 @@ namespace BiotechBodies
         {
             Scribe_Values.Look(ref globalBody, "globalBody", BodyLook.Auto);
             Scribe_Collections.Look(ref raceBody, "raceBody", LookMode.Value, LookMode.Value);
+            Scribe_Values.Look(ref globalFace, "globalFace", "");
+            Scribe_Collections.Look(ref raceFace, "raceFace", LookMode.Value, LookMode.Value);
             if (raceBody == null)
             {
                 raceBody = new Dictionary<string, BodyLook>();
+            }
+            if (raceFace == null)
+            {
+                raceFace = new Dictionary<string, string>();
+            }
+            if (globalFace == null)
+            {
+                globalFace = "";
             }
         }
     }
@@ -78,19 +101,30 @@ namespace BiotechBodies
         {
             var races = DefDatabase<ThingDef>.AllDefs.Where(d => d.race != null && d.race.Humanlike)
                 .OrderBy(d => d.label ?? d.defName).ToList();
+            var faces = FaceLooks.All.Where(FaceLooks.Loaded).ToList();
             var list = new Listing_Standard();
-            var view = new Rect(0f, 0f, inRect.width - 20f, 60f + races.Count * 32f);
+            var view = new Rect(0f, 0f, inRect.width - 20f, 160f + (races.Count + 1) * 32f * (faces.Count > 0 ? 2 : 1));
             Widgets.BeginScrollView(inRect, ref scroll, view);
             list.Begin(view);
             list.Label("BiB_BodySlot".Translate());
             list.Label("BiB_BodySlotDesc".Translate());
-            Row(list, "BiB_Global".Translate(), Settings.globalBody, v => Settings.globalBody = v, false);
+            var bodyOptions = new List<KeyValuePair<string, string>>();
+            foreach (BodyLook look in System.Enum.GetValues(typeof(BodyLook)))
+            {
+                if (look != BodyLook.Wdi || BodySources.WdiLoaded)
+                {
+                    bodyOptions.Add(new KeyValuePair<string, string>(look.ToString(), ("BiB_Look_" + look).Translate()));
+                }
+            }
+            Row(list, "BiB_Global".Translate(), Settings.globalBody.ToString(), bodyOptions,
+                k => Settings.globalBody = ParseBody(k), false);
             foreach (var race in races)
             {
                 Settings.raceBody.TryGetValue(race.defName, out var current);
                 var def = race;
-                Row(list, (race.LabelCap.ToString()), current, v =>
+                Row(list, race.LabelCap.ToString(), current.ToString(), bodyOptions, k =>
                 {
+                    var v = ParseBody(k);
                     if (v == BodyLook.Auto)
                     {
                         Settings.raceBody.Remove(def.defName);
@@ -101,31 +135,65 @@ namespace BiotechBodies
                     }
                 }, true);
             }
+            if (faces.Count > 0)
+            {
+                list.Gap(12f);
+                list.Label("BiB_FaceSlot".Translate());
+                list.Label("BiB_FaceSlotDesc".Translate());
+                var faceOptions = new List<KeyValuePair<string, string>>
+                {
+                    new KeyValuePair<string, string>("", "BiB_Look_Auto".Translate())
+                };
+                faceOptions.AddRange(faces.Select(f =>
+                    new KeyValuePair<string, string>(f.Key, ("BiB_FaceLook_" + f.Key).Translate().ToString())));
+                Row(list, "BiB_Global".Translate(), Settings.globalFace, faceOptions,
+                    k => Settings.globalFace = k, false);
+                foreach (var race in races)
+                {
+                    Settings.raceFace.TryGetValue(race.defName, out var current);
+                    var def = race;
+                    Row(list, race.LabelCap.ToString(), current ?? "", faceOptions, k =>
+                    {
+                        if (string.IsNullOrEmpty(k))
+                        {
+                            Settings.raceFace.Remove(def.defName);
+                        }
+                        else
+                        {
+                            Settings.raceFace[def.defName] = k;
+                        }
+                    }, true);
+                }
+            }
             list.End();
             Widgets.EndScrollView();
         }
 
-        private static void Row(Listing_Standard list, string label, BodyLook current,
-            System.Action<BodyLook> set, bool raceRow)
+        private static BodyLook ParseBody(string key)
+        {
+            return (BodyLook)System.Enum.Parse(typeof(BodyLook), key);
+        }
+
+        private static void Row(Listing_Standard list, string label, string currentKey,
+            List<KeyValuePair<string, string>> options, System.Action<string> set, bool raceRow)
         {
             var rect = list.GetRect(30f);
             Widgets.Label(rect.LeftHalf(), label);
-            var button = rect.RightHalf();
-            if (Widgets.ButtonText(button, ("BiB_Look_" + current).Translate()))
+            var autoKey = options[0].Key;
+            var shown = options.FirstOrDefault(o => o.Key == currentKey);
+            var text = raceRow && currentKey == autoKey ? "BiB_Look_Inherit".Translate().ToString()
+                : (shown.Value ?? currentKey);
+            if (Widgets.ButtonText(rect.RightHalf(), text))
             {
-                var options = new List<FloatMenuOption>();
-                foreach (BodyLook look in System.Enum.GetValues(typeof(BodyLook)))
+                var menu = new List<FloatMenuOption>();
+                foreach (var option in options)
                 {
-                    if (look == BodyLook.Wdi && !BodySources.WdiLoaded)
-                    {
-                        continue;
-                    }
-                    var chosen = look;
-                    var text = look == BodyLook.Auto && raceRow ? "BiB_Look_Inherit".Translate()
-                        : ("BiB_Look_" + look).Translate();
-                    options.Add(new FloatMenuOption(text, () => set(chosen)));
+                    var chosen = option.Key;
+                    var optionText = raceRow && chosen == autoKey ? "BiB_Look_Inherit".Translate().ToString()
+                        : option.Value;
+                    menu.Add(new FloatMenuOption(optionText, () => set(chosen)));
                 }
-                Find.WindowStack.Add(new FloatMenu(options));
+                Find.WindowStack.Add(new FloatMenu(menu));
             }
             list.Gap(2f);
         }
@@ -142,6 +210,7 @@ namespace BiotechBodies
             {
                 foreach (var pawn in map.mapPawns.AllPawnsSpawned)
                 {
+                    FaceDefaults.Refresh(pawn);
                     pawn.Drawer?.renderer?.SetAllGraphicsDirty();
                 }
             }

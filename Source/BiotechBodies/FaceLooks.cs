@@ -106,6 +106,11 @@ namespace BiotechBodies
             }
         }
 
+        public static FaceLook ByKey(string key)
+        {
+            return string.IsNullOrEmpty(key) ? null : All.FirstOrDefault(l => l.Key == key);
+        }
+
         public static bool Loaded(FaceLook look)
         {
             return packByPrefix.ContainsKey(look.Prefix);

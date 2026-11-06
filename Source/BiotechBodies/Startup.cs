@@ -8,8 +8,10 @@ namespace BiotechBodies
     {
         static Startup()
         {
-            new Harmony("nelim.biotechbodies").PatchAll();
+            var harmony = new Harmony("nelim.biotechbodies");
+            harmony.PatchAll();
             FaceLooks.Register();
+            FaceDefaults.Patch(harmony);
         }
     }
 }
