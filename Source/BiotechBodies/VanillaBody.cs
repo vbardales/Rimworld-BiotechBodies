@@ -33,11 +33,11 @@ namespace BiotechBodies
 
         public static bool Wants(Pawn pawn)
         {
-            if (pawn?.genes == null || pawn.story?.bodyType == null || BiBGeneDefOf.BiB_VanillaBody == null)
+            if (pawn?.story?.bodyType == null || BiBMod.Settings == null)
             {
                 return false;
             }
-            return pawn.genes.HasActiveGene(BiBGeneDefOf.BiB_VanillaBody);
+            return BiBMod.Settings.ResolveBody(pawn) == BodyLook.Vanilla;
         }
 
         // Official content first (Core, then each DLC, in load order), then the base resources, then the asset

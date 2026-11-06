@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <BiB_ModName>Biotech Bodies</BiB_ModName>
+  <BiB_BodySlot>Body</BiB_BodySlot>
+  <BiB_BodySlotDesc>Which body texture a pawn shows. A look gene on the pawn comes first, then the default of its race, then the default for everyone. Automatic changes nothing: the game and your texture mods decide.</BiB_BodySlotDesc>
+  <BiB_Global>Everyone</BiB_Global>
+  <BiB_Look_Auto>Automatic</BiB_Look_Auto>
+  <BiB_Look_Inherit>Same as everyone</BiB_Look_Inherit>
+  <BiB_Look_Vanilla>Vanilla</BiB_Look_Vanilla>
+</LanguageData>

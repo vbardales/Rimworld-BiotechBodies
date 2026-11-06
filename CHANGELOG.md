@@ -8,4 +8,5 @@ This file serves the repository and the writing of Steam patch notes; RimWorld d
 ### Added
 
 - Gene `BiB_VanillaBody` (`Mod/Defs/GeneDefs_Looks.xml`): a pawn with it keeps the vanilla naked body even when a texture mod such as WDI redraws the vanilla paths. A Harmony postfix on `PawnRenderNode_Body.GraphicFor` builds the graphic from a prefixed path (`BiB/Vanilla/`), and a prefix on `ContentFinder<Texture2D>.Get` resolves that prefix from the official content only (Core, DLCs, base resources, asset bundles). No texture is copied.
+- Mod options (`BiBSettings`, `BiBMod`): default body look for everyone and per humanlike race, Automatic (change nothing) or Vanilla. Resolution per pawn: look gene, race default, global default.
 - Repository skeleton and `Mod/About/About.xml`, now with Harmony and Biotech as dependencies and the load order after Female Body Variants and WDI's Realistic Bodies.
