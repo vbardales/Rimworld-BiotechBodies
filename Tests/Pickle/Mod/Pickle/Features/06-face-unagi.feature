@@ -26,6 +26,7 @@ Feature: the gene BiB_FaceUnagi gives a pawn the face parts of the UNAGI Facial 
     And Nelim's Pickle Tools: "Bo" faces South
     When Nelim's Pickle Tools: the camera is centered on "Bo" at root size 1.5
     And Nelim's Pickle Tools: I let 10 frames pass
+    And Nelim's Pickle Tools: the face parts of "Bo" are logged
     And I take a screenshot "face-default-<gender>"
     When Nelim's Pickle Tools: "Bo" has the gene "BiB_FaceUnagi"
     And I wait 5 ticks
@@ -33,6 +34,10 @@ Feature: the gene BiB_FaceUnagi gives a pawn the face parts of the UNAGI Facial 
     And Nelim's Pickle Tools: "Bo" faces South
     And Nelim's Pickle Tools: I let 10 frames pass
     Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_FaceUnagi"
+    And Nelim's Pickle Tools: the face parts of "Bo" are logged
+    And Nelim's Pickle Tools: the face Eyeball type of "Bo" starts with "BiB_Unagi_"
+    And Nelim's Pickle Tools: the face Eyeball texture of "Bo" starts with "BiB/Face/Unagi/"
+    And Nelim's Pickle Tools: the face Mouth type of "Bo" starts with "BiB_Unagi_"
     And I take a screenshot "face-unagi-<gender>"
     And no errors were logged
 
