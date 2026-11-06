@@ -36,7 +36,7 @@ remaining:
   - "2026-11-06: code, second slice built (0 warnings): Mod options for the body slot (BiBSettings, BiBMod, Languages/English/Keyed/BiB.xml): global default and one row per loaded humanlike race, Automatic or Vanilla; resolution gene, race, global. Result 20261106-092547-619-29a6 (57a2227): exit 0, 2 passed (global Vanilla gives Male the BiB/Vanilla/ body path, race row Human Vanilla gives Female the same; the same pawns draw the plain WDI path without the option, [body-texture] lines in Player.log). Evidence kept minified in Tests/Pickle/Evidence/body-options. Next: WDI apparel on a vanilla body, Female Body Variants load order, the other looks and slots (eyes, head, hair), a Mod options UI check by eye, a pawn with no gene and Automatic stays WDI."
   - "2026-11-06: code, third slice built (0 warnings, not played): second body look WDI (gene BiB_WdiBody, BodyLook.Wdi, prefix BiB/Wdi/, textures from the WDI.Realistic.Bodies pack only; path = the graphic the game was going to draw; hidden in Mod options when WDI is not loaded). Scenario added to 04-body-options.feature (gene over global Vanilla), ticket filed on the commit of this line. Next: WDI apparel on a vanilla body, Female Body Variants order, other slots."
 updated: 2026-11-06
-protocols_read_sha: f19f4980859a25c39295dfc37761de0f552b36da
+protocols_read_sha: 7206a6e67021379bfd9194a6bb2bda385f8cc0f5
 ---
 
 # Biotech Bodies: status
