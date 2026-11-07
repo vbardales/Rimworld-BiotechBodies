@@ -21,8 +21,6 @@ namespace BiotechBodies
     {
         private static FieldInfo settingsField;
         private static FieldInfo drawForGenes;
-        private static FieldInfo faceTypeField;
-        private static FieldInfo pawnField;
 
         public static void Patch(Harmony harmony)
         {
@@ -36,10 +34,8 @@ namespace BiotechBodies
             settingsField = AccessTools.Field(settingsType, "Settings");
             drawForGenes = AccessTools.Field(settingsField.FieldType, "DrawFaceTypeForGenes");
             var baseType = comp.BaseType;
-            faceTypeField = AccessTools.Field(baseType, "faceType");
-            pawnField = AccessTools.Field(baseType, "pawn");
             var target = AccessTools.Method(baseType, "SetRandomFaceType");
-            if (target != null && faceTypeField != null && pawnField != null)
+            if (target != null)
             {
                 harmony.Patch(target, postfix: new HarmonyMethod(typeof(FaceDefaults).GetMethod(nameof(Postfix))));
             }
@@ -51,7 +47,7 @@ namespace BiotechBodies
             {
                 return;
             }
-            var pawn = pawnField.GetValue(__instance) as Pawn;
+            var pawn = Field(__instance.GetType(), "pawn")?.GetValue(__instance) as Pawn;
             var type = PartType(__instance.GetType());
             if (pawn == null || type == null)
             {
@@ -66,8 +62,26 @@ namespace BiotechBodies
                 .MakeGenericMethod(type).Invoke(null, new object[] { pawn, look });
             if (found != null && found.Count > 0)
             {
-                faceTypeField.SetValue(__instance, Pick(found));
+                Field(__instance.GetType(), "faceType").SetValue(__instance, Pick(found));
             }
+        }
+
+        // A field of the generic base of a controller comp, taken from the instantiation the comp really has: the
+        // FieldInfo of one instantiation does not apply to an instance of another.
+        private static FieldInfo Field(Type comp, string name)
+        {
+            for (var t = comp; t != null; t = t.BaseType)
+            {
+                if (t.IsGenericType && t.GetGenericArguments().Length == 2)
+                {
+                    var field = t.GetField(name, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public | BindingFlags.DeclaredOnly);
+                    if (field != null)
+                    {
+                        return field;
+                    }
+                }
+            }
+            return null;
         }
 
         // The part definition type of a controller comp: the first type argument of its generic base.
@@ -131,7 +145,7 @@ namespace BiotechBodies
         // a default look now, or that wears a part of one (back to NL's own pick when the default was removed).
         public static void Refresh(Pawn pawn)
         {
-            if (faceTypeField == null || !(pawn is ThingWithComps thing))
+            if (settingsField == null || !(pawn is ThingWithComps thing))
             {
                 return;
             }
@@ -142,7 +156,7 @@ namespace BiotechBodies
                 {
                     continue;
                 }
-                var current = faceTypeField.GetValue(comp) as Def;
+                var current = Field(comp.GetType(), "faceType")?.GetValue(comp) as Def;
                 if (wants || (current != null && current.defName.StartsWith("BiB_")))
                 {
                     AccessTools.Method(comp.GetType(), "SetRandomFaceType")?.Invoke(comp, null);
