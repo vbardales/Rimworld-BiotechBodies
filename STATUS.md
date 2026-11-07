@@ -10,9 +10,9 @@ licence: original
 licence_at: "2026-11-04: original mod by the owner, no source mod code reused"
 upstream_mod_remotes: N/A
 settings_audit: partial
-localization: unchecked
-translation_en: unchecked
-translation_fr: unchecked
+localization: partial
+translation_en: complete
+translation_fr: partial
 dependencies: unchecked
 workshop: none
 published: no
@@ -58,3 +58,8 @@ Tests (5.f), expected and observed:
 - Optional dependencies: WDI absent and face pack absent paths analysed in code (fallback to Auto, row hidden). Played: not yet (`unverified`).
 - Compile: `dotnet build --no-incremental`, 0 warning, 0 error on 4c3dc53.
 - Not run (`unverified`, in-game, at playTests): first use with clean config, persistence across restart and save reload, input validation (menus only, no free text), shortcut hidden on a clean config, shortcut integration in RIMMSQOL, runtime logs while opening and editing the page, English and French replay.
+
+## Translation audit
+
+Date 2026-11-07, revision aa532fd. Texts: 14 owned (8 Keyed calls in BiBSettings.cs; 6 gene labels and descriptions as DefInjected, 2 MainButtonDef fields). English: Keyed and Defs, complete. French: written by the session in Mod/Languages/French (Keyed, DefInjected GeneDef and MainButtonDef); wording avoids pawn agreement (no tu, no vous, no pawn noun in the singular: case B epicene, "Le corps garde...", "les colons"). The four face-pack genes (UNAGI, Nice FA, Retexture, Reel) have their French in Mod/Compat/<Pack>/ gated by Mod/LoadFolders.xml (IfModActive), as Check-DefInjected requires for MayRequire defs. Keys built at run time renamed with a dot ("BiB_Look." + look, "BiB_FaceLook." + key) so Check-Translations sees them as used.
+Checks: Check-Translations.ps1 PASS (14 texts), Check-DefInjected.ps1 errors 0 (16 load states of 4 optional mods). Not checked: raw keys, fallback text and clipping in game (unverified until playTests). Relecture de Virginie: not done, translation_fr stays partial until she validates (6.g).
