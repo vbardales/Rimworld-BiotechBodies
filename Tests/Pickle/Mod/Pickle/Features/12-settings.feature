@@ -26,7 +26,8 @@ Feature: the Mod options page of Biotech Bodies
   Scenario: S3 the choices are written to disk and read back as a restart would
     When Nelim's Pickle Tools: I set the option "globalBody" of the mod "nelim.biotechbodies" to "Vanilla"
     And Nelim's Pickle Tools: I set the entry "Human" of the option "raceBody" of the mod "nelim.biotechbodies" to "Vanilla"
-    Then Nelim's Pickle Tools: the settings file of the mod "nelim.biotechbodies" holds "globalBody" as "Vanilla"
+    Then Nelim's Pickle Tools: the option "globalBody" of the mod "nelim.biotechbodies" is "Vanilla"
+    And Nelim's Pickle Tools: the settings file of the mod "nelim.biotechbodies" holds "globalBody" as "Vanilla"
     When Nelim's Pickle Tools: the settings of the mod "nelim.biotechbodies" are re-read from the file
     Then Nelim's Pickle Tools: the option "globalBody" of the mod "nelim.biotechbodies" is "Vanilla"
     And Nelim's Pickle Tools: the entry "Human" of the option "raceBody" of the mod "nelim.biotechbodies" is "Vanilla"
