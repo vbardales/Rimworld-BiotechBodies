@@ -101,7 +101,7 @@ namespace BiotechBodies
 
         public override void DoSettingsWindowContents(Rect inRect)
         {
-            var races = DefDatabase<ThingDef>.AllDefs.Where(d => d.race != null && d.race.Humanlike)
+            var races = DefDatabase<ThingDef>.AllDefs.Where(d => d.category == ThingCategory.Pawn && d.race != null && d.race.Humanlike)
                 .OrderBy(d => d.label ?? d.defName).ToList();
             var faces = FaceLooks.All.Where(FaceLooks.Loaded).ToList();
             var list = new Listing_Standard();
