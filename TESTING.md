@@ -20,15 +20,15 @@ Promised behaviour (STATUS.md design, 2026-11-04/06; PUBLICATION.md is written a
 | S3 | choices are written to disk and read back as a restart does | `12-settings` | settings | file and memory agree |
 | S4 | a stored WDI choice changes nothing when WDI is not loaded | `12-settings` `@nowdi` | settings | body not from `BiB/Wdi/` nor `BiB/Vanilla/` |
 | S5 | the BiB_Settings MainButton is listed by RIMMSQOL, hidden by default, not drawn | `13-rimmsqol-shortcut` `@rimmsqol` | avec-rimmsqol | hidden, no choice, no cell |
-| S6 | revealed in RIMMSQOL it is drawn and opens a settings window with no error | `13-rimmsqol-shortcut` | avec-rimmsqol | drawn, activated, no error |
+| S6 | revealed in RIMMSQOL the shortcut is drawn | `13-rimmsqol-shortcut` | avec-rimmsqol | RIMMSQOL shows visible, file records it, the bar draws it |
 | S7 | hidden again it leaves the bar; forgetting the choice leaves nothing | `13-rimmsqol-shortcut` | avec-rimmsqol | as written |
-| L1 | French texts: no raw key, no clipping, in English and French | rejouer S1 and S6 captures with `-Language French` | settings, avec-rimmsqol | read by a person (playTests, 8.h) |
+| L1 | French texts: no raw key, no clipping, in English and French | rejouer the S1 capture with `-Language French` | settings, avec-rimmsqol | read by a person (playTests, 8.h) |
 
 Written, not played yet (7.d): every Pickle row above. B1 to B3, B4, F1, F2 were played green on earlier builds (tickets 8d8e, 29a6, 0287, 7e93, a659, f795, 3859, b6ab, a198, 7078; evidence in `Tests/Pickle/Evidence/`); the code changed since (shortcut, renamed Keyed keys, LoadFolders), so they are replayed at playTests (8.c). B5 is queued: ticket 20261107-160455-898-fa56.
 
 ## Gaps, said plainly
 
-- S6 and S7 do not prove that the revealed button opens THIS mod's settings (no NPT step "a settings dialog is open for the mod"): the opening is captured only. Asked from NPT.
+- Not checked on purpose (owner, 2026-11-07): that the revealed shortcut opens the settings. That is RIMMSQOL's functional domain; our side is the def, hidden by default and listable.
 - Female Body Variants load order: unproven (STATUS.md, `remaining`).
 - Hair and head slots: not in 1.0.0, no test.
 - Adding the mod to a save in progress (scenario D): not applicable, always (owner, 2026-11-06, AUDIT.md 8.i).
