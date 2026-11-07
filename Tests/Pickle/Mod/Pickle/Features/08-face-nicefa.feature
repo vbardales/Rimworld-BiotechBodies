@@ -1,6 +1,7 @@
 @review @face-nicefa @timeout:180 @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.screenshotstudio
 Feature: the gene BiB_FaceNiceFA gives a pawn the face parts of the Nice Facial Animation pack
 
+  # Nice FA covers Head, Lid, Brow, Skin and rare Eyeball types only (no Mouth, no common Eyeball), so Head is asserted.
   # The loaded default face is not this pack, so the gene must change the face. The same pawn is photographed close
   # up before and after the gene. The load log carries the number of part definitions cloned for the look
   # ([Biotech Bodies] face look NiceFA).
@@ -35,8 +36,7 @@ Feature: the gene BiB_FaceNiceFA gives a pawn the face parts of the Nice Facial 
     And Nelim's Pickle Tools: I let 10 frames pass
     Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_FaceNiceFA"
     And Nelim's Pickle Tools: the face parts of "Bo" are logged
-    And Nelim's Pickle Tools: the face Eyeball type of "Bo" starts with "BiB_NiceFA_"
-    And Nelim's Pickle Tools: the face Eyeball texture of "Bo" starts with "BiB/Face/NiceFA/"
-    And Nelim's Pickle Tools: the face Mouth type of "Bo" starts with "BiB_NiceFA_"
+    And Nelim's Pickle Tools: the face Head type of "Bo" starts with "BiB_NiceFA_"
+    And Nelim's Pickle Tools: the face Head texture of "Bo" starts with "BiB/Face/NiceFA/"
     And I take a screenshot "face-NiceFA"
     And no errors were logged
