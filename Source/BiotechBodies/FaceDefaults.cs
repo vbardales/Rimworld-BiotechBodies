@@ -43,6 +43,18 @@ namespace BiotechBodies
 
         public static void Postfix(object __instance)
         {
+            try
+            {
+                Apply(__instance);
+            }
+            catch (Exception e)
+            {
+                Log.Error("[Biotech Bodies] face default failed for " + __instance.GetType().Name + ": " + (e is TargetInvocationException && e.InnerException != null ? e.InnerException : e));
+            }
+        }
+
+        private static void Apply(object __instance)
+        {
             if (!ModsConfig.BiotechActive || BiBMod.Settings == null || !GenesDrawn())
             {
                 return;
@@ -159,8 +171,15 @@ namespace BiotechBodies
                 var current = Field(comp.GetType(), "faceType")?.GetValue(comp) as Def;
                 if (wants || (current != null && current.defName.StartsWith("BiB_")))
                 {
-                    AccessTools.Method(comp.GetType(), "SetRandomFaceType")?.Invoke(comp, null);
-                    comp.GetType().GetMethod("SetDirty")?.Invoke(comp, null);
+                    try
+                    {
+                        AccessTools.Method(comp.GetType(), "SetRandomFaceType")?.Invoke(comp, null);
+                        comp.GetType().GetMethod("SetDirty")?.Invoke(comp, null);
+                    }
+                    catch (Exception e)
+                    {
+                        Log.Error("[Biotech Bodies] face refresh failed for " + comp.GetType().Name + ": " + (e is TargetInvocationException && e.InnerException != null ? e.InnerException : e));
+                    }
                 }
             }
             pawn.Drawer?.renderer?.SetAllGraphicsDirty();
