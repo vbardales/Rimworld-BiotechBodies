@@ -5,7 +5,7 @@ repo: Rimworld-BiotechBodies
 remote: https://github.com/vbardales/Rimworld-BiotechBodies.git
 visibility: public
 detached: yes
-workflow_stage: settings[1.0.0]
+workflow_stage: localize[1.0.0]
 licence: original
 licence_at: "2026-11-04: original mod by the owner, no source mod code reused"
 upstream_mod_remotes: N/A
@@ -30,7 +30,7 @@ remaining:
   - "optional compat declared 2026-11-07 (Audit 4.b/4.e pilot): Mod/About/OptionalCompat.xml lists the four face packs (kind texture), Workshop ids matched by title and author (63b2981, e2bc8b5). Check-OptionalCompat.ps1 OK. The pause on the Audit optional dependencies test is over once Audit says so."
   - "unverified (settings, in game, at playTests): first use on a clean config, persistence after restart and save reload, shortcut hidden by default, shortcut integration in RIMMSQOL, logs while editing the options, optional dependency absent cases, English and French replay. Detail in the Settings audit section."
 updated: 2026-11-07
-protocols_read_sha: 31e4f12c1a85531a1f695c4c918749915d73ff25
+protocols_read_sha: d50e897d99502ca657123fca75ee01baaf46dd1b
 ---
 
 # Biotech Bodies: status
