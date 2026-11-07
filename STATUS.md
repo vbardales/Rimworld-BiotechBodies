@@ -9,7 +9,7 @@ workflow_stage: settings[1.0.0]
 licence: original
 licence_at: "2026-11-04: original mod by the owner, no source mod code reused"
 upstream_mod_remotes: N/A
-settings_audit: unchecked
+settings_audit: partial
 localization: unchecked
 translation_en: unchecked
 translation_fr: unchecked
@@ -28,6 +28,7 @@ remaining:
   - "dependencies declared 2026-11-07 (4.g, cc6ef32, verified in sources and About.xml, ids read from the Workshop About.xml): hard modDependencies: brrainz.harmony (2009463077, Harmony patches and Lib.Harmony reference), Ludeon.RimWorld.Biotech (genes, GeneDef). Optional, never in modDependencies, only loadAfter and read at runtime (reflection or MayRequire on the GeneDef element, no Patch, no LoadFolders, no IfModActive needed): tiagocc0.FemaleBodyVariants (3798082132, body graphic path carried over), WDI.Realistic.Bodies (3527486510, WdiBody look, hidden without it), Nals.FacialAnimation (1635901197, NL reached by reflection), UNAGI.FacialAnimation (3268178647), Andromeda.FacialAnimation (3302079637, Nice FA, incompatible with NL Experimentals on its own side), Barb.Facetexture (3271240549, loads under UNAGI), Reel.FacialAnims (3118315633, needs VFE Core, VTE, VTE-FA on its own side). supportedVersions 1.6; no DLC branch, no LoadFolders. Load order: five Pickle sets sorted by scripts/sort-load-order.py with these packs, no cycle. incompatibleWith not declared: Body Mod Mix and Match (Gulio.BodyModMixAndMatch, 3792365853) replaces the body node per pawn so BiB body genes do nothing beside it, no crash (owner may declare it). 4.f n/a: the mod adds no animal."
   - "dependencies and sources: apparel base VenusTouchWaistlines (nelim.venustouch.waistlines); Body Mod Mix and Match ruled out as base (see head and hair line). 1.a duplicate search done 2026-11-05: closest is WDI Body Traits (3805486882), no equivalent. HD Pawn Textures Continued (3815495202) not installed; second HD source Vanilla Pawns Retextured (Neronix17) to check, both secondary."
   - "optional compat declared 2026-11-07 (Audit 4.b/4.e pilot): Mod/About/OptionalCompat.xml lists the four face packs (kind texture), Workshop ids matched by title and author (63b2981, e2bc8b5). Check-OptionalCompat.ps1 OK. The pause on the Audit optional dependencies test is over once Audit says so."
+  - "unverified (settings, in game, at playTests): first use on a clean config, persistence after restart and save reload, shortcut hidden by default, shortcut integration in RIMMSQOL, logs while editing the options, optional dependency absent cases, English and French replay. Detail in the Settings audit section."
 updated: 2026-11-07
 protocols_read_sha: 31e4f12c1a85531a1f695c4c918749915d73ff25
 ---
@@ -36,3 +37,24 @@ protocols_read_sha: 31e4f12c1a85531a1f695c4c918749915d73ff25
 
 Current state only: the front matter above is the source of truth, run lines go to `docs/runs/`.
 Origin: asked by the owner on 2026-11-04 through RhyaethWdiRealisticBodiesPatch (RWDIRB), whose WDI patch (6 PatchOperationReplace, ticket 261c) stays there untouched. The GitHub repository is not created yet.
+
+## Settings audit
+
+Date 2026-11-07, revision 4c3dc53 (files: Source/BiotechBodies/BiBSettings.cs, MainButtonWorker_Settings.cs, Mod/Defs/MainButtonDefs/BiB_Settings.xml). Result: `partial` (analysis and compile done, in-game checks `unverified`).
+
+Inventory and rationale (5.a, 5.b). Mod options page "Biotech Bodies" holds the defaults the look slots use when a pawn has no look gene (design of 2026-11-04/06):
+- Body slot: one global default and one row per loaded humanlike race; values Auto, Vanilla, WDI (WDI only when WDI.Realistic.Bodies is loaded). Use: a colony decides once how every pawn of a race is drawn without adding a gene to each pawn. Auto changes nothing.
+- Face slot: one global default and one row per race; values Auto and each face pack that is loaded (UNAGI, Nice FA, Retexture, Reel). Shown only when at least one pack is loaded. A race row set to Auto inherits the global value.
+- No option is decorative; no constant exposed. Hair and head slots have no option (not in 1.0.0).
+Resolution order, first match wins: look gene of the pawn, race row, global row, Auto.
+
+Access (5.c, 5.d). Primary: Options de mod, Biotech Bodies (`BiBMod.SettingsCategory`, `DoSettingsWindowContents`), no XML edit, no RIMMSQOL needed. Shortcut: MainButtonDef `BiB_Settings`, `buttonVisible` false (hidden by default), worker opens `Dialog_ModSettings(BiBMod.Instance)`, the same dialog and values as the primary entry (same pattern as BillAutopilot). Added today: before, none existed (defect closed in code).
+
+Usage review (5.e). Body and face defaults apply to the pawn drawn at once for the body (graphic read at each draw) and at the next face generation for the face (FaceDefaults prefix on CompRenderNodes); no restart needed for the body, face to confirm in game. Scope: global to the game install (ModSettings), not per save. Dependent rows: a look whose source mod is not loaded is not offered; a stored WDI value with WDI absent falls back to Auto (`ResolveBody`). Restore defaults: set a row back to Auto/"Inherit"; no "reset all" button (not added: two slots, rows are one click each). Scroll view present. Texts go through keys `BiB_*` (English only for now; French at localize).
+
+Tests (5.f), expected and observed:
+- Actual effect, body: global and per-race Auto/Vanilla/WDI observed, tickets 29a6 and 0287 (3 passed each); gene overrides option, 8d8e (5 passed).
+- Actual effect, face default: tickets f795 and 3859 (4 passed), pack genes b6ab, a198, 7078 (1 passed each) on build ca5d6c9.
+- Optional dependencies: WDI absent and face pack absent paths analysed in code (fallback to Auto, row hidden). Played: not yet (`unverified`).
+- Compile: `dotnet build --no-incremental`, 0 warning, 0 error on 4c3dc53.
+- Not run (`unverified`, in-game, at playTests): first use with clean config, persistence across restart and save reload, input validation (menus only, no free text), shortcut hidden on a clean config, shortcut integration in RIMMSQOL, runtime logs while opening and editing the page, English and French replay.
