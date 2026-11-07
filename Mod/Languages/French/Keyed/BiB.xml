@@ -5,7 +5,7 @@
   <BiB_BodySlotDesc>Texture de corps affichée sur les colons. Un gène d'aspect passe en premier, puis le réglage de la race, puis le réglage commun à tous. Automatique ne change rien : le jeu et les mods de textures décident.</BiB_BodySlotDesc>
   <BiB_Global>Tous</BiB_Global>
   <BiB_Look.Auto>Automatique</BiB_Look.Auto>
-  <BiB_Look_Inherit>Comme pour tous</BiB_Look_Inherit>
+  <BiB_Look_Inherit>Identique au réglage général</BiB_Look_Inherit>
   <BiB_Look.Vanilla>Vanilla</BiB_Look.Vanilla>
   <BiB_Look.Wdi>WDI's Realistic Bodies</BiB_Look.Wdi>
   <BiB_FaceSlot>Visage</BiB_FaceSlot>
