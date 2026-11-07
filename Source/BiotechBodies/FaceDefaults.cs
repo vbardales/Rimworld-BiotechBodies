@@ -35,6 +35,11 @@ namespace BiotechBodies
                 {
                     harmony.Patch(target, postfix: new HarmonyMethod(postfix.MakeGenericMethod(type)));
                 }
+                var applicable = AccessTools.Method(generator.MakeGenericType(type), "GetApplicableFaceTypeDefsForRaceConsideringGenes");
+                if (applicable != null)
+                {
+                    harmony.Patch(applicable, postfix: new HarmonyMethod(typeof(FaceDefaults).GetMethod(nameof(LogApplicable)).MakeGenericMethod(type)));
+                }
             }
         }
 
@@ -54,6 +59,21 @@ namespace BiotechBodies
             {
                 __result = found;
             }
+        }
+
+        // Diagnostic (2026-11-07): what NL offers a pawn that carries a BiB face gene, to find why the swap does not show.
+        private static int logged;
+
+        public static void LogApplicable<T>(Pawn pawn, IEnumerable<T> __result) where T : Def
+        {
+            if (logged > 60 || pawn?.genes == null || !pawn.genes.GenesListForReading.Any(g => g.def.defName.StartsWith("BiB_Face")))
+            {
+                return;
+            }
+            logged++;
+            var list = __result.ToList();
+            Log.Message("[Biotech Bodies] diag " + typeof(T).Name + " for " + pawn.LabelShort + ": " + list.Count + " applicable, first "
+                + (list.Count > 0 ? list[0].defName : "-") + ", genes " + string.Join(",", pawn.genes.GenesListForReading.Select(g => g.def.defName)));
         }
 
         private static bool GenesDrawn()

@@ -179,6 +179,7 @@ namespace BiotechBodies
                 return node;
             }
             var merged = node.CloneNode(true);
+            merged.Attributes.RemoveNamedItem("ParentName");
             foreach (XmlNode child in Resolve(parent, parents).ChildNodes)
             {
                 if (child.NodeType == XmlNodeType.Element && merged[child.Name] == null)
