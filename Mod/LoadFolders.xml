@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<loadFolders>
+  <v1.6>
+    <li>/</li>
+    <li IfModActive="UNAGI.FacialAnimation">Compat/Unagi</li>
+    <li IfModActive="Andromeda.FacialAnimation">Compat/NiceFA</li>
+    <li IfModActive="Barb.Facetexture">Compat/Retexture</li>
+    <li IfModActive="Reel.FacialAnims">Compat/Reel</li>
+  </v1.6>
+</loadFolders>

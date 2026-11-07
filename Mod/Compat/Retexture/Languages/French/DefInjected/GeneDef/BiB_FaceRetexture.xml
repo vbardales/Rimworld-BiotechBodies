@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <BiB_FaceRetexture.label>visage Retexture</BiB_FaceRetexture.label>
+  <BiB_FaceRetexture.description>Le visage reprend les éléments du pack Facial Animation Retexture, même quand un autre pack de visages l'emporte dans l'ordre de chargement. Un élément que le pack ne couvre pas garde le visage par défaut. Facial Animation dessine le visage.</BiB_FaceRetexture.description>
+</LanguageData>

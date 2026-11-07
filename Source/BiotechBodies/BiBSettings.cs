@@ -115,7 +115,7 @@ namespace BiotechBodies
             {
                 if (look != BodyLook.Wdi || BodySources.WdiLoaded)
                 {
-                    bodyOptions.Add(new KeyValuePair<string, string>(look.ToString(), ("BiB_Look_" + look).Translate()));
+                    bodyOptions.Add(new KeyValuePair<string, string>(look.ToString(), ("BiB_Look." + look).Translate()));
                 }
             }
             Row(list, "BiB_Global".Translate(), Settings.globalBody.ToString(), bodyOptions,
@@ -144,10 +144,10 @@ namespace BiotechBodies
                 list.Label("BiB_FaceSlotDesc".Translate());
                 var faceOptions = new List<KeyValuePair<string, string>>
                 {
-                    new KeyValuePair<string, string>("", "BiB_Look_Auto".Translate())
+                    new KeyValuePair<string, string>("", "BiB_Look.Auto".Translate())
                 };
                 faceOptions.AddRange(faces.Select(f =>
-                    new KeyValuePair<string, string>(f.Key, ("BiB_FaceLook_" + f.Key).Translate().ToString())));
+                    new KeyValuePair<string, string>(f.Key, ("BiB_FaceLook." + f.Key).Translate().ToString())));
                 Row(list, "BiB_Global".Translate(), Settings.globalFace, faceOptions,
                     k => Settings.globalFace = k, false);
                 foreach (var race in races)

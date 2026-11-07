@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <BiB_VanillaBody.label>corps vanilla</BiB_VanillaBody.label>
+  <BiB_VanillaBody.description>Le corps garde la texture vanilla, même quand un mod de textures redessine les corps de tous les autres. La forme du corps reste celle que donne le type de corps.</BiB_VanillaBody.description>
+  <BiB_WdiBody.label>corps WDI</BiB_WdiBody.label>
+  <BiB_WdiBody.description>Le corps garde la texture de WDI's Realistic Bodies, même quand le réglage de la race ou celui de tous est un autre aspect. Sans ce mod, rien ne change.</BiB_WdiBody.description>
+</LanguageData>
