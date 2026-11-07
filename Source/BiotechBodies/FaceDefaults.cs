@@ -32,6 +32,10 @@ namespace BiotechBodies
                 return;
             }
             settingsField = AccessTools.Field(settingsType, "Settings");
+            if (settingsField == null)
+            {
+                return;
+            }
             drawForGenes = AccessTools.Field(settingsField.FieldType, "DrawFaceTypeForGenes");
             var target = AccessTools.Method(drawComp, "CompRenderNodes");
             if (target != null)
@@ -51,7 +55,8 @@ namespace BiotechBodies
             }
             catch (Exception e)
             {
-                Log.Error("[Biotech Bodies] face default failed: " + (e is TargetInvocationException && e.InnerException != null ? e.InnerException : e));
+                var text = "[Biotech Bodies] face default failed: " + (e is TargetInvocationException && e.InnerException != null ? e.InnerException : e);
+                Log.ErrorOnce(text, text.GetHashCode());
             }
         }
 
@@ -124,7 +129,12 @@ namespace BiotechBodies
 
         private static bool GenesDrawn()
         {
-            return drawForGenes == null || (bool)drawForGenes.GetValue(settingsField.GetValue(null));
+            if (drawForGenes == null)
+            {
+                return true;
+            }
+            var settings = settingsField.GetValue(null);
+            return settings != null && (bool)drawForGenes.GetValue(settings);
         }
 
         // Same weighted pick as NL (probability field), among the definitions found.

@@ -159,8 +159,9 @@ namespace BiotechBodies
                 return;
             }
             var prefixed = BodySources.PrefixOf(look) + path;
-            // WDI look: a body WDI does not ship (a child, a mod body) keeps the game's graphic.
-            if (look == BodyLook.Wdi && BodySources.Resolve(prefixed + "_south") == null)
+            // A body the source does not ship (a child under WDI, a body type of a non-official mod under Vanilla)
+            // keeps the game's graphic, never a missing texture.
+            if (BodySources.Resolve(prefixed + "_south") == null)
             {
                 return;
             }
@@ -181,7 +182,8 @@ namespace BiotechBodies
                 return false;
             }
             if (itemPath == null
-                || !(itemPath.StartsWith(BodySources.VanillaPrefix) || itemPath.StartsWith(BodySources.WdiPrefix)))
+                || !(itemPath.StartsWith(BodySources.VanillaPrefix, System.StringComparison.Ordinal)
+                    || itemPath.StartsWith(BodySources.WdiPrefix, System.StringComparison.Ordinal)))
             {
                 return true;
             }
