@@ -99,6 +99,12 @@ namespace BiotechBodies
             return "BiB_ModName".Translate();
         }
 
+        private static string RaceLabel(ThingDef race, List<ThingDef> races)
+        {
+            var label = race.LabelCap.ToString();
+            return races.Count(r => r.LabelCap.ToString() == label) > 1 ? label + " (" + race.defName + ")" : label;
+        }
+
         public override void DoSettingsWindowContents(Rect inRect)
         {
             var races = DefDatabase<ThingDef>.AllDefs.Where(d => d.category == ThingCategory.Pawn && d.race != null && d.race.Humanlike)
@@ -124,7 +130,7 @@ namespace BiotechBodies
             {
                 Settings.raceBody.TryGetValue(race.defName, out var current);
                 var def = race;
-                Row(list, race.LabelCap.ToString(), current.ToString(), bodyOptions, k =>
+                Row(list, RaceLabel(race, races), current.ToString(), bodyOptions, k =>
                 {
                     var v = ParseBody(k);
                     if (v == BodyLook.Auto)
@@ -154,7 +160,7 @@ namespace BiotechBodies
                 {
                     Settings.raceFace.TryGetValue(race.defName, out var current);
                     var def = race;
-                    Row(list, race.LabelCap.ToString(), current ?? "", faceOptions, k =>
+                    Row(list, RaceLabel(race, races), current ?? "", faceOptions, k =>
                     {
                         if (string.IsNullOrEmpty(k))
                         {
