@@ -30,6 +30,7 @@ remaining:
   - "dependencies and sources: apparel base VenusTouchWaistlines (nelim.venustouch.waistlines); Body Mod Mix and Match ruled out as base (see head and hair line). 1.a duplicate search done 2026-11-05: closest is WDI Body Traits (3805486882), no equivalent. HD Pawn Textures Continued (3815495202) not installed; second HD source Vanilla Pawns Retextured (Neronix17) to check, both secondary."
 updated: 2026-11-07
 protocols_read_sha: d2fe5947117627b98c44cc38fd00bfbd90725403
+  - "optional compat declared 2026-11-07 (Audit 4.b/4.e pilot): Mod/About/OptionalCompat.xml lists the four face packs (kind texture), Workshop ids matched by title and author (63b2981, e2bc8b5). Check-OptionalCompat.ps1 OK. The pause on the Audit optional dependencies test is over once Audit says so."
 ---
 
 # Biotech Bodies: status
