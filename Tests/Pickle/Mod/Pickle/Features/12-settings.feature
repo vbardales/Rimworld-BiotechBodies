@@ -32,7 +32,7 @@ Feature: the Mod options page of Biotech Bodies
     Then Nelim's Pickle Tools: the option "globalBody" of the mod "nelim.biotechbodies" is "Vanilla"
     And Nelim's Pickle Tools: the entry "Human" of the option "raceBody" of the mod "nelim.biotechbodies" is "Vanilla"
     When Nelim's Pickle Tools: I set the option "globalBody" of the mod "nelim.biotechbodies" to "Auto"
-    Then Nelim's Pickle Tools: the settings file of the mod "nelim.biotechbodies" holds "globalBody" as "Auto"
+    Then Nelim's Pickle Tools: the option "globalBody" of the mod "nelim.biotechbodies" is "Auto"
     And no errors were logged
 
   @nowdi
