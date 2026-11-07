@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<OptionalCompat>
+  <li><packageId>Andromeda.FacialAnimation</packageId><workshopId>3302079637</workshopId><kind>texture</kind></li>
+  <li><packageId>Barb.Facetexture</packageId><workshopId></workshopId><kind>texture</kind></li>
+  <li><packageId>Reel.FacialAnims</packageId><workshopId></workshopId><kind>texture</kind></li>
+  <li><packageId>UNAGI.FacialAnimation</packageId><workshopId></workshopId><kind>texture</kind></li>
+</OptionalCompat>
