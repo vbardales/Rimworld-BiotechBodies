@@ -5,14 +5,14 @@ repo: Rimworld-BiotechBodies
 remote: https://github.com/vbardales/Rimworld-BiotechBodies.git
 visibility: public
 detached: yes
-workflow_stage: localize[1.0.0]
+workflow_stage: writeTests[1.0.0]
 licence: original
 licence_at: "2026-11-04: original mod by the owner, no source mod code reused"
 upstream_mod_remotes: N/A
 settings_audit: partial
-localization: partial
+localization: complete
 translation_en: complete
-translation_fr: partial
+translation_fr: complete
 dependencies: unchecked
 workshop: none
 published: no
@@ -30,7 +30,7 @@ remaining:
   - "optional compat declared 2026-11-07 (Audit 4.b/4.e pilot): Mod/About/OptionalCompat.xml lists the four face packs (kind texture), Workshop ids matched by title and author (63b2981, e2bc8b5). Check-OptionalCompat.ps1 OK. The pause on the Audit optional dependencies test is over once Audit says so."
   - "unverified (settings, in game, at playTests): first use on a clean config, persistence after restart and save reload, shortcut hidden by default, shortcut integration in RIMMSQOL, logs while editing the options, optional dependency absent cases, English and French replay. Detail in the Settings audit section."
 updated: 2026-11-07
-protocols_read_sha: d50e897d99502ca657123fca75ee01baaf46dd1b
+protocols_read_sha: 611c34587974a0b8f04c37a33eba91aa6911f252
 ---
 
 # Biotech Bodies: status
@@ -62,4 +62,4 @@ Tests (5.f), expected and observed:
 ## Translation audit
 
 Date 2026-11-07, revision aa532fd. Texts: 14 owned (8 Keyed calls in BiBSettings.cs; 6 gene labels and descriptions as DefInjected, 2 MainButtonDef fields). English: Keyed and Defs, complete. French: written by the session in Mod/Languages/French (Keyed, DefInjected GeneDef and MainButtonDef); wording avoids pawn agreement (no tu, no vous, no pawn noun in the singular: case B epicene, "Le corps garde...", "les colons"). The four face-pack genes (UNAGI, Nice FA, Retexture, Reel) have their French in Mod/Compat/<Pack>/ gated by Mod/LoadFolders.xml (IfModActive), as Check-DefInjected requires for MayRequire defs. Keys built at run time renamed with a dot ("BiB_Look." + look, "BiB_FaceLook." + key) so Check-Translations sees them as used.
-Checks: Check-Translations.ps1 PASS (14 texts), Check-DefInjected.ps1 errors 0 (16 load states of 4 optional mods). Not checked: raw keys, fallback text and clipping in game (unverified until playTests). Relecture de Virginie: not done, translation_fr stays partial until she validates (6.g).
+Checks: Check-Translations.ps1 PASS (14 texts), Check-DefInjected.ps1 errors 0 (16 load states of 4 optional mods). Not checked: raw keys, fallback text and clipping in game (unverified until playTests). Relecture de Virginie: done 2026-11-07, revision 53c5939, validated without correction (6.g). ChatGPT review of page 1: no correction; Audit run on an empty file earlier: 1 wording applied (BiB_Look_Inherit), 4 rejected.
