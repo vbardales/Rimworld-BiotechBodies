@@ -27,7 +27,7 @@ remaining:
   - "build and release: 3.b build verified 2026-11-07 (dotnet build --no-incremental gives the same sha256 as the committed Mod/Assemblies/BiotechBodies.dll); CI/CD answered 2026-11-07: no build script wanted, the generator runs --build-project Source/BiotechBodies/BiotechBodies.csproj on the runner (3.b declared); 2.e/10.a: Preview rendered without echo, Render-Preview.cjs errors on ModIcon-source.png transparent padding (needs owner badge mode or a trimmed icon), echo and 10.d checks stay for mountPreview; panel.description of Art/Preview.config.json still a placeholder, to rewrite at mountPreview."
   - "dependencies and sources: apparel base VenusTouchWaistlines (nelim.venustouch.waistlines); Body Mod Mix and Match ruled out as base (see head and hair line). 1.a duplicate search done 2026-11-05: closest is WDI Body Traits (3805486882), no equivalent. HD Pawn Textures Continued (3815495202) not installed; second HD source Vanilla Pawns Retextured (Neronix17) to check, both secondary."
 updated: 2026-11-06
-protocols_read_sha: aadfdb782687f29388418afc13bf9761abb27863
+protocols_read_sha: d2fe5947117627b98c44cc38fd00bfbd90725403
 ---
 
 # Biotech Bodies: status
