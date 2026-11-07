@@ -9,14 +9,15 @@ using Verse;
 namespace BiotechBodies
 {
     // The face default (Mod options): a pawn that carries no gene Facial Animation (NL) can use gets the parts of the
-    // default look, as if it carried the look gene. NL picks the part of a pawn in ControllerBaseComp<T,S>.SetRandomFaceType
-    // among the definitions whose targetGeneDefs match the genes of the pawn, else among the untargeted ones: the postfix
-    // replaces that pick when no definition of the part targets a gene of the pawn and the Mod options name a default look.
-    // Pawns with a look gene, or with any gene another mod targets, are never touched.
+    // default look, as if it carried the look gene. NL picks the part of a pawn among the definitions whose targetGeneDefs
+    // match the genes of the pawn, else among the untargeted ones; this sets the part to a definition of the default look
+    // when no definition of that part targets a gene of the pawn. Pawns with a look gene, or with any gene another mod
+    // targets, are never touched.
     //
-    // The patch is applied once, on the shared code of the generic class: the runtime shares that code between every
-    // instantiation over a reference type, so a patch per type would run for all types (and write a definition of one type
-    // into the part of another). The part type T is read from the comp instance.
+    // NL code is never patched: the controller comps are generic classes whose code the runtime shares between all part
+    // types, and a Harmony patch there loses the part type (every part would pick definitions of the first type).
+    // The hook is the non-generic DrawFaceGraphicsComp.CompRenderNodes, which NL calls when it builds the face nodes of
+    // a pawn, before it reads the part of each controller. The part type T is read from each controller comp.
     public static class FaceDefaults
     {
         private static FieldInfo settingsField;
@@ -24,44 +25,40 @@ namespace BiotechBodies
 
         public static void Patch(Harmony harmony)
         {
-            var faceTypeBase = AccessTools.TypeByName("FacialAnimation.FaceTypeDef");
-            var comp = AccessTools.TypeByName("FacialAnimation.EyeballControllerComp");
+            var drawComp = AccessTools.TypeByName("FacialAnimation.DrawFaceGraphicsComp");
             var settingsType = AccessTools.TypeByName("FacialAnimation.FacialAnimationMod");
-            if (faceTypeBase == null || comp == null || settingsType == null)
+            if (drawComp == null || settingsType == null)
             {
                 return;
             }
             settingsField = AccessTools.Field(settingsType, "Settings");
             drawForGenes = AccessTools.Field(settingsField.FieldType, "DrawFaceTypeForGenes");
-            var baseType = comp.BaseType;
-            var target = AccessTools.Method(baseType, "SetRandomFaceType");
+            var target = AccessTools.Method(drawComp, "CompRenderNodes");
             if (target != null)
             {
-                harmony.Patch(target, postfix: new HarmonyMethod(typeof(FaceDefaults).GetMethod(nameof(Postfix))));
+                harmony.Patch(target, prefix: new HarmonyMethod(typeof(FaceDefaults).GetMethod(nameof(Prefix))));
             }
         }
 
-        public static void Postfix(object __instance)
+        public static void Prefix(ThingComp __instance)
         {
             try
             {
-                Apply(__instance);
+                if (__instance.parent is Pawn pawn)
+                {
+                    Apply(pawn);
+                }
             }
             catch (Exception e)
             {
-                Log.Error("[Biotech Bodies] face default failed for " + __instance.GetType().Name + ": " + (e is TargetInvocationException && e.InnerException != null ? e.InnerException : e));
+                Log.Error("[Biotech Bodies] face default failed: " + (e is TargetInvocationException && e.InnerException != null ? e.InnerException : e));
             }
         }
 
-        private static void Apply(object __instance)
+        // Sets the part of every controller comp of the pawn to a definition of the default look, when it has one.
+        private static void Apply(Pawn pawn)
         {
-            if (!ModsConfig.BiotechActive || BiBMod.Settings == null || !GenesDrawn())
-            {
-                return;
-            }
-            var pawn = Field(__instance.GetType(), "pawn")?.GetValue(__instance) as Pawn;
-            var type = PartType(__instance.GetType());
-            if (pawn == null || type == null)
+            if (settingsField == null || !ModsConfig.BiotechActive || BiBMod.Settings == null || !GenesDrawn())
             {
                 return;
             }
@@ -70,16 +67,32 @@ namespace BiotechBodies
             {
                 return;
             }
-            var found = (IList<Def>)typeof(FaceDefaults).GetMethod(nameof(Matching), BindingFlags.NonPublic | BindingFlags.Static)
-                .MakeGenericMethod(type).Invoke(null, new object[] { pawn, look });
-            if (found != null && found.Count > 0)
+            foreach (var comp in Controllers(pawn))
             {
-                Field(__instance.GetType(), "faceType").SetValue(__instance, Pick(found));
+                var type = PartType(comp.GetType());
+                comp.GetType().GetMethod("InitializeIfNeed")?.Invoke(comp, null);
+                var found = (IList<Def>)typeof(FaceDefaults).GetMethod(nameof(Matching), BindingFlags.NonPublic | BindingFlags.Static)
+                    .MakeGenericMethod(type).Invoke(null, new object[] { pawn, look });
+                if (found == null || found.Count == 0)
+                {
+                    continue;
+                }
+                var faceType = Field(comp.GetType(), "faceType");
+                if (!found.Contains((Def)faceType.GetValue(comp)))
+                {
+                    faceType.SetValue(comp, Pick(found));
+                    // NL re-picks among the untargeted definitions when the genes change and the part is not one of them.
+                    Field(comp.GetType(), "geneChanged")?.SetValue(comp, false);
+                }
             }
         }
 
-        // A field of the generic base of a controller comp, taken from the instantiation the comp really has: the
-        // FieldInfo of one instantiation does not apply to an instance of another.
+        private static IEnumerable<ThingComp> Controllers(Pawn pawn)
+        {
+            return pawn.AllComps.Where(c => c.GetType().Namespace == "FacialAnimation" && PartType(c.GetType()) != null);
+        }
+
+        // A field of the generic base of a controller comp, taken from the instantiation the comp really has.
         private static FieldInfo Field(Type comp, string name)
         {
             for (var t = comp; t != null; t = t.BaseType)
@@ -153,39 +166,42 @@ namespace BiotechBodies
             return (ofRace.Count > 0 ? ofRace : forLook.Where(d => (string)race.GetValue(d) == string.Empty).ToList()).Cast<Def>().ToList();
         }
 
-        // The parts of a pawn follow the default look when the Mod options change: re-pick the parts of a pawn that has
-        // a default look now, or that wears a part of one (back to NL's own pick when the default was removed).
+        // The parts of a pawn follow the default look when the Mod options change: apply it to a pawn that has a
+        // default look now, or give back the own pick of NL to a pawn that wears a part of a look that is no longer its default.
         public static void Refresh(Pawn pawn)
         {
-            if (settingsField == null || !(pawn is ThingWithComps thing))
+            if (settingsField == null || !(pawn is ThingWithComps))
             {
                 return;
             }
             var wants = BiBMod.Settings != null && BiBMod.Settings.ResolveFace(pawn) != null;
-            foreach (var comp in thing.AllComps)
+            foreach (var comp in Controllers(pawn))
             {
-                if (comp.GetType().Namespace != "FacialAnimation" || PartType(comp.GetType()) == null)
-                {
-                    continue;
-                }
-                // A comp not initialised yet (pawn unset) picks its part, through the postfix, when it first draws.
+                // A comp not initialised yet (pawn unset) is left to NL: Apply runs before it first draws.
                 if (Field(comp.GetType(), "pawn")?.GetValue(comp) == null)
                 {
                     continue;
                 }
                 var current = Field(comp.GetType(), "faceType")?.GetValue(comp) as Def;
-                if (wants || (current != null && current.defName.StartsWith("BiB_")))
+                if (!wants && current != null && current.defName.StartsWith("BiB_"))
                 {
                     try
                     {
                         AccessTools.Method(comp.GetType(), "SetRandomFaceType")?.Invoke(comp, null);
-                        comp.GetType().GetMethod("SetDirty")?.Invoke(comp, null);
                     }
                     catch (Exception e)
                     {
                         Log.Error("[Biotech Bodies] face refresh failed for " + comp.GetType().Name + ": " + (e is TargetInvocationException && e.InnerException != null ? e.InnerException : e));
                     }
                 }
+            }
+            if (wants)
+            {
+                Apply(pawn);
+            }
+            foreach (var comp in Controllers(pawn))
+            {
+                comp.GetType().GetMethod("SetDirty")?.Invoke(comp, null);
             }
             pawn.Drawer?.renderer?.SetAllGraphicsDirty();
         }
