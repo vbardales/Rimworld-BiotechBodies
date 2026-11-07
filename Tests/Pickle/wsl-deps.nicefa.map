@@ -1,0 +1,10 @@
+# Face look Nice FA: Harmony, NL Facial Animation (stable, Nice FA is incompatible with Experimentals), Nice FA, then Biotech Bodies.
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap <abs path of this file> -Filter '@face-nicefa' -EvidenceDir Tests/Pickle/Inbox/face-nicefa
+brrainz.harmony 2009463077
+Nals.FacialAnimation 1635901197
+Andromeda.FacialAnimation 3302079637
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod

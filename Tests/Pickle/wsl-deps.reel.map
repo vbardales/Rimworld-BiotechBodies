@@ -1,0 +1,13 @@
+# Face look Reel: Harmony, NL Facial Animation, VFE Core, VTE, VTE Facial Animations, Reel, then Biotech Bodies.
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap <abs path of this file> -Filter '@face-reel' -EvidenceDir Tests/Pickle/Inbox/face-reel
+brrainz.harmony 2009463077
+Nals.FacialAnimation 1635901197
+OskarPotocki.VanillaFactionsExpanded.Core 2023507013
+VanillaExpanded.VTEXE 2016436324
+VanillaExpanded.VTEXE.FacialAnims 2816938779
+Reel.FacialAnims 3118315633
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod

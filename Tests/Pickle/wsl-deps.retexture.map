@@ -1,0 +1,11 @@
+# Face look FA Retexture: Harmony, NL Facial Animation, UNAGI (the retexture loads under it), Retexture, then Biotech Bodies.
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap <abs path of this file> -Filter '@face-retexture' -EvidenceDir Tests/Pickle/Inbox/face-retexture
+brrainz.harmony 2009463077
+Nals.FacialAnimation 1635901197
+UNAGI.FacialAnimation 3268178647
+Barb.Facetexture 3271240549
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
