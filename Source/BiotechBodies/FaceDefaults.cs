@@ -168,6 +168,11 @@ namespace BiotechBodies
                 {
                     continue;
                 }
+                // A comp not initialised yet (pawn unset) picks its part, through the postfix, when it first draws.
+                if (Field(comp.GetType(), "pawn")?.GetValue(comp) == null)
+                {
+                    continue;
+                }
                 var current = Field(comp.GetType(), "faceType")?.GetValue(comp) as Def;
                 if (wants || (current != null && current.defName.StartsWith("BiB_")))
                 {
