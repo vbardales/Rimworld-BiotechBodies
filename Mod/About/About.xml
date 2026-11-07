@@ -31,5 +31,10 @@ MIT licence, see ATTRIBUTION.md.
     <li>Ludeon.RimWorld.Biotech</li>
     <li>tiagocc0.FemaleBodyVariants</li>
     <li>WDI.Realistic.Bodies</li>
+    <li>Nals.FacialAnimation</li>
+    <li>UNAGI.FacialAnimation</li>
+    <li>Andromeda.FacialAnimation</li>
+    <li>Barb.Facetexture</li>
+    <li>Reel.FacialAnims</li>
   </loadAfter>
 </ModMetaData>
