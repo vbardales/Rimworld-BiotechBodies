@@ -1,0 +1,7 @@
+# Settings of the mod with no WDI and no texture mod staged (Harmony, then Biotech Bodies, the mod itself).
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap settings -Filter '@settings' -EvidenceDir Tests/Pickle/Inbox/settings
+brrainz.harmony 2009463077
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod

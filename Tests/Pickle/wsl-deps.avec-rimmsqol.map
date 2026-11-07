@@ -1,0 +1,5 @@
+# RIMMSQOL and the shared steps that drive its real MainButtons list (Harmony, RIMMSQOL, then Biotech Bodies, the mod itself).
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap avec-rimmsqol -Filter '@rimmsqol' -EvidenceDir Tests/Pickle/Inbox/rimmsqol
+brrainz.harmony 2009463077
+MalteSchulze.RIMMSqol 1084452457
+nelim.pickletools.rimmsqol path:PickleTools/RimmsqolSteps/Mod
