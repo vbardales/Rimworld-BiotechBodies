@@ -85,10 +85,12 @@ namespace BiotechBodies
     public class BiBMod : Mod
     {
         public static BiBSettings Settings;
+        public static BiBMod Instance;
         private Vector2 scroll;
 
         public BiBMod(ModContentPack content) : base(content)
         {
+            Instance = this;
             Settings = GetSettings<BiBSettings>();
         }
 
