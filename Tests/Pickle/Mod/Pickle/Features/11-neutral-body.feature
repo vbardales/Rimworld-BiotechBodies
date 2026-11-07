@@ -51,5 +51,6 @@ Feature: a gender-neutral pawn with the gene BiB_VanillaBody shows the vanilla b
       | type   |
       | Thin   |
       | Male   |
-      | Female |
       | Hulk   |
+    # Female is not a row: a Gender.None pawn with the standard body gene always has the Male body type, so the step
+    # "body type is Female" refuses it (ticket fa56). The pictures cover the three body types a neutral pawn can have.
