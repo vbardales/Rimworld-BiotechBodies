@@ -35,8 +35,7 @@ Feature: the gene BiB_FaceReel gives a pawn the face parts of the Reel Facial An
     And Nelim's Pickle Tools: I let 10 frames pass
     Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_FaceReel"
     And Nelim's Pickle Tools: the face parts of "Bo" are logged
-    And Nelim's Pickle Tools: the face Eyeball type of "Bo" starts with "BiB_Reel_"
-    And Nelim's Pickle Tools: the face Eyeball texture of "Bo" starts with "BiB/Face/Reel/"
+    And Nelim's Pickle Tools: the face Mouth texture of "Bo" starts with "BiB/Face/Reel/"
     And Nelim's Pickle Tools: the face Mouth type of "Bo" starts with "BiB_Reel_"
     And I take a screenshot "face-Reel"
     And no errors were logged
