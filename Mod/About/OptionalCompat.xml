@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <OptionalCompat>
+  <!-- workshopIds matched by title and author on the Steam Workshop; the page shows no packageId. UNAGI also has a separate ".biotech" item, 3287187828. -->
   <li><packageId>Andromeda.FacialAnimation</packageId><workshopId>3302079637</workshopId><kind>texture</kind></li>
-  <li><packageId>Barb.Facetexture</packageId><workshopId></workshopId><kind>texture</kind></li>
-  <li><packageId>Reel.FacialAnims</packageId><workshopId></workshopId><kind>texture</kind></li>
-  <li><packageId>UNAGI.FacialAnimation</packageId><workshopId></workshopId><kind>texture</kind></li>
+  <li><packageId>Barb.Facetexture</packageId><workshopId>3271240549</workshopId><kind>texture</kind></li>
+  <li><packageId>Reel.FacialAnims</packageId><workshopId>3118315633</workshopId><kind>texture</kind></li>
+  <li><packageId>UNAGI.FacialAnimation</packageId><workshopId>3268178647</workshopId><kind>texture</kind></li>
 </OptionalCompat>
