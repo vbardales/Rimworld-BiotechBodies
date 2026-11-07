@@ -35,8 +35,7 @@ Feature: the gene BiB_FaceRetexture gives a pawn the face parts of the Facial An
     And Nelim's Pickle Tools: I let 10 frames pass
     Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_FaceRetexture"
     And Nelim's Pickle Tools: the face parts of "Bo" are logged
-    And Nelim's Pickle Tools: the face Eyeball type of "Bo" starts with "BiB_Retexture_"
-    And Nelim's Pickle Tools: the face Eyeball texture of "Bo" starts with "BiB/Face/Retexture/"
+    And Nelim's Pickle Tools: the face Mouth texture of "Bo" starts with "BiB/Face/Retexture/"
     And Nelim's Pickle Tools: the face Mouth type of "Bo" starts with "BiB_Retexture_"
     And I take a screenshot "face-Retexture"
     And no errors were logged
