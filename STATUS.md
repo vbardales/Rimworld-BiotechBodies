@@ -98,3 +98,18 @@ Steps read: 2026-11-09 (git log of NPT since 2026-11-07: camera ortho, point fra
 | Included animal (rule 5) | Shots |
 |---|---|
 | none: the mod includes no animal | n/a |
+
+## Shotlist
+
+Written 2026-11-09 at `shootGallery` (header of `Tests/Pickle/Mod/Pickle/Features/14-gallery.feature`, v3), plan only: no scenario, no map, no ticket yet. Rating: `no capture yet: rating the plan` (score-gallery). Opus director pass done (1 call); kept: reorder (wide, medium, medium, tight, tight, wide, window last), recurring StylingStation prop, a job and an instant per shot, one shared outfit per pawn with one justified change (shot 2 fitting), Shogun in shots 1 and 6 (criterion c, seen from the front), Soren with MouthSmile, head-and-shoulders at the real zoom. Changed against it: no walking, sitting or use-the-mirror job and no arm gesture: no step exists for them (PickleTools docs/steps.md), so a pose is a carried item plus a facing (`stands at facing`, `carries the item`); not asked of NPT (owner may want a "walks to" step). Cut: nothing.
+
+| Shot | a time | b decor | c living | d pawns | e action | f composition | g subject | j mod | Plan score |
+|---|---|---|---|---|---|---|---|---|---|
+| 1-bridge-morning (river-bridge, wide) | 08:00 clear +10 min | 2 TorchLamp lit, Brazier lit, 2 PlantPot Plant_Daylily, Plant_YellowTallGrass | Shogun facing camera, plants | Nelim cream shirt, Highpony, smile | carries Cloth, "just before she reaches the hut" | wide, bridge diagonal | Nelim brings her bundle to the tea room | weak (wide opening, assumed -0.5) | 4.5 |
+| 2-two-bodies (hut, tight two-shot) | 09:00 +60 min | StylingStation, table, 2 MealSimple, cushions, andon, 2 PlantPot | Plant_Daylily | Nelim and Miel in UnderWhere_Tanktop + Apparel_Shorts (fitting), smile | Nelim holds a cup, Miel faces the mirror, "just after Miel stepped out" | tight, off-centre left | same Female body, two looks | ok, two outlines | 5 |
+| 3-quill-statues (statue-garden, tight) | 11:00 +120 min | statues, 3 PlantPot, TorchLamp, Brazier | Plant_Daylily | Quill moss green + glasses, Ryu blue, smile | Quill carries Cloth, "just before she lays it" | knees up, statues behind | neutral body beside WDI | ok | 5 |
+| 4-faces-at-the-mirror (cloister, tight) | 13:00 +120 min | StylingStation, wall lanterns, 2 PlantPot, Brazier | Plant_Daylily | four pawns, canon hair, smile | each holds a MealSimple, "just after the four chose" | four heads and shoulders | four face packs, one gene each | ok (borderline at 268 px) | 5 |
+| 5-soren-portrait (flower-garden, tight) | 15:00 +120 min | Plant_Daylily, Plant_YellowTallGrass, 3 PlantPot, TorchLamp, Brazier | plants | Soren copper shirt, Tidy, MouthSmile | carries WoodLog, "just before he leans in" | head and shoulders, real zoom | one face pack close up | ok | 5 |
+| 6-water-garden-dusk (wide) | 17:00 +120 min | 2 TorchLamp, 2 PlantPot, StylingStation, Brazier, lilies | Shogun lying, facing camera | five pawns, clothes above, smile | Soren carries Torch, "just after the last guest left" | wide, low light | five friends, five looks | weak (wide closing, assumed -0.5) | 4.5 |
+
+Series k: ok (one story in the header, wide opening, mediums, tights, wide closing, rhythm 08:00 to 17:00). Series plan mean 4.83. Shot 7 (options window) is set aside, not scored. Risks: Nice FA, Reel and WDI on one map (second map if not); a carried item drawn in a pose (hauler carry) not yet seen on a photo; no step to walk a pawn; shots 1 and 6 do not show the mod at 268 px (accepted, assumed). Shot verdicts after the run: none yet.
