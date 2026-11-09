@@ -69,3 +69,32 @@ Tests (5.f), expected and observed:
 
 Date 2026-11-07, revision aa532fd. Texts: 14 owned (8 Keyed calls in BiBSettings.cs; 6 gene labels and descriptions as DefInjected, 2 MainButtonDef fields). English: Keyed and Defs, complete. French: written by the session in Mod/Languages/French (Keyed, DefInjected GeneDef and MainButtonDef); wording avoids pawn agreement (no tu, no vous, no pawn noun in the singular: case B epicene, "Le corps garde...", "les colons"). The four face-pack genes (UNAGI, Nice FA, Retexture, Reel) have their French in Mod/Compat/<Pack>/ gated by Mod/LoadFolders.xml (IfModActive), as Check-DefInjected requires for MayRequire defs. Keys built at run time renamed with a dot ("BiB_Look." + look, "BiB_FaceLook." + key) so Check-Translations sees them as used.
 Checks: Check-Translations.ps1 PASS (14 texts), Check-DefInjected.ps1 errors 0 (16 load states of 4 optional mods). Not checked: raw keys, fallback text and clipping in game (unverified until playTests). Relecture de Virginie: done 2026-11-07, revision 53c5939, validated without correction (6.g). ChatGPT review of page 1: no correction; Audit run on an empty file earlier: 1 wording applied (BiB_Look_Inherit), 4 rejected.
+
+## NSB
+
+Sync 2026-11-09, at the start of `shootGallery`. No shotlist and no gallery scenario exist yet (written by `write-shotlist`), so the mod uses no place, colonist or animal today.
+
+Rules (owner, 2026-11-05/07): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs an express validation; a change to a colonist's properties (body, face, genes, hair...) needs an express validation quoted with its date; every outfit is free; every animal the mod includes must be in the gallery. Rule 5: the mod includes no animal (BiB adds genes and a render patch only), nothing to show.
+
+Changes in NSB since the last read: docs only (batches 5l and 5m for NPT, VALIDE.md, SANCTUAIRE-LIEUX.md: places and decor, nothing about looks). The NSB maps carry `Nals.FacialAnimation`, its experimentals and `wdi.realistic.bodies`, but none of the four BiB face packs (UNAGI, Nice FA, Retexture, Reel): the gallery map of BiB adds them (mods are free to add).
+
+Places read: not read yet (no place chosen, read `SANCTUAIRE-LIEUX.md` and `SANCTUAIRE-CASES.md` at `write-shotlist`)
+Tribe read: 2026-11-09 (HUMAINS-PROFILS, GALERIE-COLONS, LOOKS-VALIDATION, LOOK-CATALOGUES, DEPENDANCES-SANCTUAIRE, QUILL-PROFIL; other profiles not opened)
+Steps read: 2026-11-09 (git log of NPT since 2026-11-07: camera ortho, point framing, "carries the item" steps; entries not opened, none replaces a setup of this mod yet)
+
+| Place | Shots | Changes for the gallery | Last read |
+|---|---|---|---|
+| none chosen | - | - | not read |
+
+| Colonist | Shots | Outfit per shot | Last read of profile | Exceptions |
+|---|---|---|---|---|
+| Quill Aster | none yet (proposed: body, `Neutre_AverageNormal`, Vanilla vs WDI) | daily or nude reference, at `write-shotlist` | 2026-11-09 | gene `BiB_VanillaBody`: owner "oui" 2026-11-09 (in chat, BiB session), covers Quill and this gene for the NSB map, ticket 128c green on the SaB side |
+| Nelim, Miel, Soren, Ryu (proposed for body and face looks) | none yet | at `write-shotlist` | not opened | BiB look genes or Mod options on them change body or face: PENDING, no scenario before the owner answers |
+
+| Animal | Shots | Outfit | Last read | Exceptions |
+|---|---|---|---|---|
+| none | - | - | - | none |
+
+| Included animal (rule 5) | Shots |
+|---|---|
+| none: the mod includes no animal | n/a |
