@@ -55,7 +55,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   #   stands at facing, carries the item, I frame the rectangle | "A neutral pawn, a body that finally fits."
   # 4 | 4-faces-at-the-mirror | cloister | 13:00, clear, +120 min | the face slot: four packs around the mirror | tight,
   #   four heads and shoulders, shoulder to shoulder, torii out of focus behind | Nelim (BiB_FaceUnagi), Miel (BiB_FaceNiceFA),
-  #   Soren (BiB_FaceRetexture), Ryu (BiB_FaceReel), clothes above, canon hair above, each holding a cup (carries the item "MealSimple"), each holding a cup (carries the item "MealSimple"), all smiling; "just after the four
+  #   Soren (BiB_FaceRetexture), Ryu (BiB_FaceReel), clothes above, canon hair above, each holding a cup (carries the item "MealSimple"), all smiling; "just after the four
   #   chose a face" | StylingStation in the middle, wall lanterns lit, PlantPot with Plant_Daylily at each end, Brazier lit |
   #   steps: has the gene, face parts logged, stands at facing, I frame the rectangle | "Four face packs, four faces: one gene
   #   each."
