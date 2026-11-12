@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <!-- Test only: a gene of "another mod" with its own body look. It borrows vanilla textures so the test needs no art:
+       a Thin pawn is drawn with the Hulk body, a Hulk pawn with the Thin body; Male is not listed. -->
+  <GeneDef>
+    <defName>BiBTest_CustomBody</defName>
+    <label>test custom body</label>
+    <description>Test gene: draws the Hulk texture on a Thin body type and the Thin texture on a Hulk body type.</description>
+    <iconPath>UI/Icons/Genes/Gene_BodyThin</iconPath>
+    <displayCategory>Cosmetic</displayCategory>
+    <displayOrderInCategory>999</displayOrderInCategory>
+    <selectionWeight>0</selectionWeight>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+    <exclusionTags>
+      <li>BiB_BodyLook</li>
+    </exclusionTags>
+    <modExtensions>
+      <li Class="BiotechBodies.BodyLookExtension">
+        <bodyPaths>
+          <li><bodyType>Thin</bodyType><path>Things/Pawn/Humanlike/Bodies/Naked_Hulk</path></li>
+          <li><bodyType>Hulk</bodyType><path>Things/Pawn/Humanlike/Bodies/Naked_Thin</path></li>
+        </bodyPaths>
+      </li>
+    </modExtensions>
+  </GeneDef>
+
+</Defs>
