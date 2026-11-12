@@ -74,3 +74,4 @@ Languages: French (28 keys, 0 missing against English). English is the source si
 | Reviewer | Date | Revision reviewed | Corrections requested |
 |---|---|---|---|
 | Virginie | 2026-11-12 | 683d393 | none (validated) |
+| Virginie | 2026-11-12 | 4a72a42 | none (second review, no finding, validated) |
