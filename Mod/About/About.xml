@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <ModMetaData>
   <name>Biotech Bodies</name>
   <author>Nelim</author>
@@ -37,4 +37,4 @@ MIT licence, see ATTRIBUTION.md.
     <li>Barb.Facetexture</li>
     <li>Reel.FacialAnims</li>
   </loadAfter>
-</ModMetaData>
+<modVersion>0.1.0</modVersion></ModMetaData>
