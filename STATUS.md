@@ -78,11 +78,11 @@ Sync 2026-11-09, at the start of `shootGallery`. No shotlist and no gallery scen
 
 Rules (owner, 2026-11-05/07): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs an express validation; a change to a colonist's properties (body, face, genes, hair...) needs an express validation quoted with its date; every outfit is free; every animal the mod includes must be in the gallery. Rule 5: the mod includes no animal (BiB adds genes and a render patch only), nothing to show.
 
-Changes in NSB since the last read: docs only (batches 5l and 5m for NPT, VALIDE.md, SANCTUAIRE-LIEUX.md: places and decor, nothing about looks). The NSB maps carry `Nals.FacialAnimation`, its experimentals and `wdi.realistic.bodies`, but none of the four BiB face packs (UNAGI, Nice FA, Retexture, Reel): the gallery map of BiB adds them (mods are free to add).
+Re-sync 2026-11-12 (git log of NSB docs since 2026-11-09, diffs read): cc61d17 Quill eyes `BIGEYE` becomes `EyeNormal` in NSB-ROSTER and QUILL-PROFIL (Beauty2 mouth Harmony patch, Quill head test; head and eyes are not BiB code, no change here); TESTING.md regenerations; 18abf53 renamed `docs/` to `Docs/` (no content change). Nothing else in NSB moved, no colonist, animal or place of this mod changed. NPT since 2026-11-09: 21 new steps (culture, filth removal, field read and set, floor building, decor burns, hidden main bar and speed controls, thought labels), none replaces a setup of this mod; "the main bar, the speed controls and the mouse-over readout are hidden" may serve a gallery capture. Earlier: docs only (batches 5l and 5m for NPT, VALIDE.md, SANCTUAIRE-LIEUX.md: places and decor, nothing about looks). The NSB maps carry `Nals.FacialAnimation`, its experimentals and `wdi.realistic.bodies`, but none of the four BiB face packs (UNAGI, Nice FA, Retexture, Reel): the gallery map of BiB adds them (mods are free to add).
 
 Places read: not read yet (no place chosen, read `SANCTUAIRE-LIEUX.md` and `SANCTUAIRE-CASES.md` at `write-shotlist`)
-Tribe read: 2026-11-09 (HUMAINS-PROFILS, GALERIE-COLONS, LOOKS-VALIDATION, LOOK-CATALOGUES, DEPENDANCES-SANCTUAIRE, QUILL-PROFIL; other profiles not opened)
-Steps read: 2026-11-09 (git log of NPT since 2026-11-07: camera ortho, point framing, "carries the item" steps; entries not opened, none replaces a setup of this mod yet)
+Tribe read: 2026-11-12 (diffs of NSB-ROSTER and QUILL-PROFIL since 2026-11-09; 2026-11-09: HUMAINS-PROFILS, GALERIE-COLONS, LOOKS-VALIDATION, LOOK-CATALOGUES, DEPENDANCES-SANCTUAIRE, QUILL-PROFIL; other profiles not opened)
+Steps read: 2026-11-12 (diff of NPT docs/steps.md since 2026-11-09, 21 new steps read; catalogues looks.md and apparel.md regenerated, not opened)
 
 | Place | Shots | Changes for the gallery | Last read |
 |---|---|---|---|
