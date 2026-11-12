@@ -137,12 +137,23 @@ namespace BiotechBodies
         [HarmonyAfter("tiagocc0.FemaleBodyVariants")]
         public static void Postfix(ref Graphic __result, Pawn pawn)
         {
-            if (__result == null || !BodySources.Wants(pawn, out var look))
+            if (__result == null)
             {
                 return;
             }
             // Only the plain naked body: the dessicated body, mutants and creepjoiners keep their own path.
             if (pawn.Drawer.renderer.CurRotDrawMode == RotDrawMode.Dessicated || pawn.IsMutant || pawn.IsCreepJoiner)
+            {
+                return;
+            }
+            // A gene of another mod with its own body textures wins over every other look.
+            var custom = CustomBody.GraphicFor(pawn, __result);
+            if (custom != null)
+            {
+                __result = custom;
+                return;
+            }
+            if (!BodySources.Wants(pawn, out var look))
             {
                 return;
             }
