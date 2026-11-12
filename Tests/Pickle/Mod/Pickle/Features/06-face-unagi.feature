@@ -24,7 +24,7 @@ Feature: the gene BiB_FaceUnagi gives a pawn the face parts of the UNAGI Facial 
     And I wait 5 ticks
     And game speed is paused
     And Nelim's Pickle Tools: "Bo" faces South
-    When Nelim's Pickle Tools: the camera is centered on "Bo" at root size 1.5
+    When Nelim's Pickle Tools: the camera is centered on "Bo" at root size 2
     And Nelim's Pickle Tools: I let 10 frames pass
     And Nelim's Pickle Tools: the face parts of "Bo" are logged
     And I take a screenshot "face-default-<gender>"
