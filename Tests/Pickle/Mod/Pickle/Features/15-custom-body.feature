@@ -19,7 +19,7 @@ Feature: a gene of another mod with a BodyLookExtension draws its own body textu
 
   Scenario Outline: a <type> pawn with the custom body gene is drawn from <path>
     Given Nelim's Pickle Tools: a colonist "Kay" of kind "Colonist" exists
-    And Nelim's Pickle Tools: "Kay" gender is Female
+    And Nelim's Pickle Tools: "Kay" gender is <gender>
     And Nelim's Pickle Tools: "Kay" body type is <type>
     And I destroy the gear of "Kay"
     And I wait 5 ticks
@@ -42,7 +42,7 @@ Feature: a gene of another mod with a BodyLookExtension draws its own body textu
     Then no errors were logged
 
     Examples:
-      | type | path                                           |
-      | Thin | Things/Pawn/Humanlike/Bodies/Naked_Hulk        |
-      | Hulk | Things/Pawn/Humanlike/Bodies/Naked_Thin        |
-      | Male | Things/Pawn/Humanlike/Bodies/Naked_Male        |
+      | type | gender | path                                    |
+      | Thin | Female | Things/Pawn/Humanlike/Bodies/Naked_Hulk |
+      | Hulk | Female | Things/Pawn/Humanlike/Bodies/Naked_Thin |
+      | Male | Male   | Things/Pawn/Humanlike/Bodies/Naked_Male |
