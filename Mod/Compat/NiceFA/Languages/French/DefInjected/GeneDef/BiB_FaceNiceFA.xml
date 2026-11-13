@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <BiB_FaceNiceFA.label>visage Nice</BiB_FaceNiceFA.label>
-  <BiB_FaceNiceFA.description>Le visage reprend les éléments du pack Nice Facial Animation (Joli visage animé), même quand un autre pack de visages l'emporte dans l'ordre de chargement. Un élément que le pack ne couvre pas garde le visage par défaut. Facial Animation dessine le visage.</BiB_FaceNiceFA.description>
+  <BiB_FaceNiceFA.description>Le visage reprend les éléments du pack Nice Facial Animation (Joli visage animé), même quand un autre pack de visages l'emporte dans l'ordre de chargement. Un élément que le pack ne couvre pas garde le visage par défaut. [NL] Facial Animation - WIP (Visage animé, en travaux) dessine le visage.</BiB_FaceNiceFA.description>
 </LanguageData>

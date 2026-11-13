@@ -11,3 +11,4 @@ Names decided by Virginie. `/review-translation` sends this file to ChatGPT with
 | Facial Animation - Retexture | translated to "Visage animé - Retexture" | Same wording as the other face packs; Retexture stays. | 2026-11-13 |
 | Reel's Facial Animation Textures | translated to "Textures pour visage animé de Reel" | Textures meant for the face pack, by Reel. | 2026-11-13 |
 | Harmony | translated to "Harmonie" | Registry decision of 2026-11-12, not cited in a game text of this mod. | 2026-11-12 |
+| [NL] Facial Animation - WIP | translated to "Visage animé, en travaux" | Full title cited in French as "[NL] Facial Animation - WIP (Visage animé, en travaux)"; WIP = "en travaux". Registry workshop:1635901197. | 2026-11-13 |
