@@ -12,6 +12,6 @@
   <BiB_FaceSlotDesc>Which face pack a pawn shows when it has no face look gene and no gene that a face pack targets. A look gene comes first, then the default of its race, then the default for everyone. Automatic changes nothing. The list shows only the face packs that are loaded.</BiB_FaceSlotDesc>
   <BiB_FaceLook.Unagi>UNAGI Facial Animation</BiB_FaceLook.Unagi>
   <BiB_FaceLook.NiceFA>Nice Facial Animation</BiB_FaceLook.NiceFA>
-  <BiB_FaceLook.Retexture>Facial Animation Retexture</BiB_FaceLook.Retexture>
-  <BiB_FaceLook.Reel>Reel Facial Animations</BiB_FaceLook.Reel>
+  <BiB_FaceLook.Retexture>Facial Animation - Retexture</BiB_FaceLook.Retexture>
+  <BiB_FaceLook.Reel>Reel's Facial Animation Textures</BiB_FaceLook.Reel>
 </LanguageData>
