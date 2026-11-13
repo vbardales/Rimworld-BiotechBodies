@@ -25,6 +25,9 @@ MIT licence, see ATTRIBUTION.md.
       <displayName>Biotech</displayName>
     </li>
   </modDependencies>
+  <incompatibleWith>
+    <li>Gulio.BodyModMixAndMatch</li>
+  </incompatibleWith>
   <loadAfter>
     <li>brrainz.harmony</li>
     <li>Ludeon.RimWorld</li>

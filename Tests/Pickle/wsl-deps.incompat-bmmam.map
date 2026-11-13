@@ -1,0 +1,9 @@
+# Incompatibility pass: Body Mod Mix and Match (Gulio.BodyModMixAndMatch) with Biotech Bodies.
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap wsl-deps.incompat-bmmam.map -Filter '16-incompat-bmmam.feature::' -EvidenceDir Tests/Pickle/Inbox/incompat-bmmam
+brrainz.harmony 2009463077
+Gulio.BodyModMixAndMatch 3792365853
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
