@@ -11,3 +11,5 @@ Steps:
 - Pickle pass `Tests/Pickle/Mod/Pickle/Features/16-incompat-bmmam.feature` (map `wsl-deps.incompat-bmmam.map`) shows what happens today.
 - If a clean order exists, patch it, add scenarios for a pawn with and without a gene, then drop `incompatibleWith`.
 - Otherwise keep the declaration and re-play 16 each release (AUDIT: an incompatibility claim ages).
+
+Pass 16 result (2026-11-13, ticket 717f, green, Tests/Pickle/Evidence/incompat-bmmam2): with Body Mod Mix and Match loaded, a pawn with the gene BiB_VanillaBody still draws `BiB/Vanilla/Things/Pawn/Humanlike/Bodies/Naked_Male` and the screenshot shows the vanilla body. The documented symptom (BMMaM overrides the gene look) is not reproduced for this case. Not yet played: a pawn without a gene (must keep the BMMaM body), other body types, other genes (WdiBody). The `incompatibleWith` declaration stays until the owner decides.
