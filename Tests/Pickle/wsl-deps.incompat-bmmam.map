@@ -1,6 +1,8 @@
 # Incompatibility pass: Body Mod Mix and Match (Gulio.BodyModMixAndMatch) with Biotech Bodies.
+# Humanoid Alien Races comes first: BMMaM patches AlienRace.AlienPawnRenderNode_BodyAddon without declaring it (PiI, RenderPatches.cs:209).
 #   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap wsl-deps.incompat-bmmam.map -Filter '16-incompat-bmmam.feature::' -EvidenceDir Tests/Pickle/Inbox/incompat-bmmam
 brrainz.harmony 2009463077
+erdelf.HumanoidAlienRaces 839005762
 Gulio.BodyModMixAndMatch 3792365853
 nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
 nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
