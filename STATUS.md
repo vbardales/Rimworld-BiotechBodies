@@ -83,26 +83,37 @@ Rules (owner, 2026-11-05/07): everything in NSB is free (places, colonists, dome
 
 Re-sync 2026-11-12 (git log of NSB docs since 2026-11-09, diffs read): cc61d17 Quill eyes `BIGEYE` becomes `EyeNormal` in NSB-ROSTER and QUILL-PROFIL (Beauty2 mouth Harmony patch, Quill head test; head and eyes are not BiB code, no change here); TESTING.md regenerations; 18abf53 renamed `docs/` to `Docs/` (no content change). Nothing else in NSB moved, no colonist, animal or place of this mod changed. NPT since 2026-11-09: 21 new steps (culture, filth removal, field read and set, floor building, decor burns, hidden main bar and speed controls, thought labels), none replaces a setup of this mod; "the main bar, the speed controls and the mouse-over readout are hidden" may serve a gallery capture. Earlier: docs only (batches 5l and 5m for NPT, VALIDE.md, SANCTUAIRE-LIEUX.md: places and decor, nothing about looks). The NSB maps carry `Nals.FacialAnimation`, its experimentals and `wdi.realistic.bodies`, but none of the four BiB face packs (UNAGI, Nice FA, Retexture, Reel): the gallery map of BiB adds them (mods are free to add).
 
-Places read: not read yet (no place chosen, read `SANCTUAIRE-LIEUX.md` and `SANCTUAIRE-CASES.md` at `write-shotlist`)
-Tribe read: 2026-11-12 (diffs of NSB-ROSTER and QUILL-PROFIL since 2026-11-09; 2026-11-09: HUMAINS-PROFILS, GALERIE-COLONS, LOOKS-VALIDATION, LOOK-CATALOGUES, DEPENDANCES-SANCTUAIRE, QUILL-PROFIL; other profiles not opened)
-Steps read: 2026-11-12 (diff of NPT docs/steps.md since 2026-11-09, 21 new steps read; catalogues looks.md and apparel.md regenerated, not opened)
+Re-sync 2026-11-13, before the gallery map and scenarios: `git log` of NSB docs and of NPT steps and catalogues since 2026-11-12 returns no commit, nothing changed. Places of the shotlist read today in `SANCTUAIRE-LIEUX.md` (cells and status below). Owner rules said back: everything in NSB is free; a colonist or domestic animal outside NSB needs an express validation; a property change of a colonist needs an express validation; every outfit is free; every animal the mod includes must be shown (the mod includes none).
 
-| Place | Shots | Changes for the gallery | Last read |
-|---|---|---|---|
-| none chosen | - | - | not read |
+Places read: 2026-11-13 (SANCTUAIRE-LIEUX.md: cells and status of the six places; SANCTUAIRE-CASES.md and EMBELLISSEMENT-LIEUX.md not opened)
+Tribe read: 2026-11-12 (diffs of NSB-ROSTER and QUILL-PROFIL since 2026-11-09; 2026-11-09: HUMAINS-PROFILS, GALERIE-COLONS, LOOKS-VALIDATION, LOOK-CATALOGUES, DEPENDANCES-SANCTUAIRE, QUILL-PROFIL; other profiles not opened)
+Steps read: 2026-11-13 (no change in NPT docs/steps.md or catalogues since 2026-11-12)
+
+| Place | Shots | Cell (SANCTUAIRE-LIEUX) | Changes for the gallery | Last read |
+|---|---|---|---|---|
+| river-bridge | 1 | (135, 124) root 8.5, validated | decor placed for the shot, removed after | 2026-11-13 |
+| hut (tea-room) | 2 | (140, 73) root 5.2, validated | decor placed for the shot, removed after | 2026-11-13 |
+| statue-garden | 3 | (155, 99) root 11, validated | decor placed for the shot, removed after | 2026-11-13 |
+| cloister | 4 | (178, 128) root 4.5, validated | decor placed for the shot, removed after | 2026-11-13 |
+| flower-garden | 5 | (154, 110) root 10.5, validated | decor placed for the shot, removed after | 2026-11-13 |
+| water-garden | 6 | (167, 173) root 14, validated | decor placed for the shot, removed after | 2026-11-13 |
 
 | Colonist | Shots | Outfit per shot | Last read of profile | Exceptions |
 |---|---|---|---|---|
-| Quill Aster | none yet (proposed: body, `Neutre_AverageNormal`, Vanilla vs WDI) | daily or nude reference, at `write-shotlist` | 2026-11-09 | gene `BiB_VanillaBody`: owner "oui" 2026-11-09 (in chat, BiB session), covers Quill and this gene for the NSB map, ticket 128c green on the SaB side |
-| Nelim, Miel, Soren, Ryu (proposed for body and face looks) | none yet | at `write-shotlist` | not opened | BiB look genes or Mod options on them change body or face: PENDING, no scenario before the owner answers |
+| Nelim | 1, 2, 4, 6 | shirt cream and pants (1, 4, 6), tanktop and shorts (2, fitting) | not opened | BiB look genes and Mod options on her (WDI body, UNAGI face): owner "oui" 2026-11-09, BiB session, gallery only |
+| Miel | 2, 4, 6 | collar shirt moss green and pants, tanktop and shorts in 2 | not opened | BiB_VanillaBody, BiB_FaceNiceFA: same "oui" 2026-11-09 |
+| Soren | 4, 5, 6 | shirt copper and pants | not opened | BiB_FaceRetexture: same "oui" 2026-11-09 |
+| Ryu | 3, 4, 6 | shirt blue and pants | not opened | BiB_WdiBody, BiB_FaceReel: same "oui" 2026-11-09 |
+| Quill Aster | 3, 6 | collar shirt #556B2F, pants, PAG glasses | 2026-11-09 | BiB_VanillaBody: owner "oui" 2026-11-09 (Gender.None, vanilla look) |
 
 | Animal | Shots | Outfit | Last read | Exceptions |
 |---|---|---|---|---|
-| none | - | - | - | none |
+| Shogun (labrador, NSB) | 1, 6 | none | not opened | none |
 
 | Included animal (rule 5) | Shots |
 |---|---|
 | none: the mod includes no animal | n/a |
+
 
 ## Shotlist
 
