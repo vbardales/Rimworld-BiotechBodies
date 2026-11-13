@@ -2,7 +2,7 @@
 
 ## Compat with Body Mod Mix and Match (Gulio.BodyModMixAndMatch, Workshop 3792365853)
 
-Opened 2026-11-13 (Virginie). Today the mod is declared in `incompatibleWith` (About.xml): it replaces the body node per pawn without genes, so it overrides the look picked by a BiB gene.
+Closed 2026-11-13: incompatibleWith kept (see the last result below). Opened 2026-11-13 (Virginie). Today the mod is declared in `incompatibleWith` (About.xml): it replaces the body node per pawn without genes, so it overrides the look picked by a BiB gene.
 
 Wanted for 1.7: let it run beside BiB. BiB would leave the body to Body Mod Mix and Match when the pawn holds no BiB gene, and keep the gene look when it does.
 
