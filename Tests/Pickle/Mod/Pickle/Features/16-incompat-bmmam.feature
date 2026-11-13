@@ -113,6 +113,8 @@ Feature: Body Mod Mix and Match is declared incompatible with Biotech Bodies, is
       | 2 |
       | 3 |
       | 4 |
+      | 5 |
+      | 6 |
 # Incompatibility pass: Body Mod Mix and Match (Gulio.BodyModMixAndMatch) with Biotech Bodies.
 # Humanoid Alien Races comes first: BMMaM patches AlienRace.AlienPawnRenderNode_BodyAddon without declaring it (PiI, RenderPatches.cs:209).
 #   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap wsl-deps.incompat-bmmam.map -Filter '16-incompat-bmmam.feature::' -EvidenceDir Tests/Pickle/Inbox/incompat-bmmam

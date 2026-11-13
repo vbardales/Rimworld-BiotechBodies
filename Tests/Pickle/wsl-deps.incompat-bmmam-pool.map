@@ -1,0 +1,16 @@
+# BMMaM alone with five body packs in its pool, pawns with no BiB gene (BiB is staged as the mod under test but does nothing without a gene).
+# Positive control of the pass 16: the pawns must show different bodies. Seed config/incompat-bmmam-pool.
+#   Submit-PickleRun.ps1 -Mod BiotechBodies -DepMap wsl-deps.incompat-bmmam-pool.map -Filter '16-incompat-bmmam::no gene next to' -EvidenceDir Tests/Pickle/Inbox/incompat-bmmam7
+brrainz.harmony 2009463077
+erdelf.HumanoidAlienRaces 839005762
+mireia.bodies 2068281501
+WDI.Realistic.Bodies 3527486510
+CP.Detailed.Body.Textures.II 1501435493
+RH2.Detailed.Body.Textures.3 2873235836
+RedMattis.SimpleHDBodies 3236876098
+Gulio.BodyModMixAndMatch 3792365853
+nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
+nelim.pickletools.camerazoom path:PickleTools/CameraZoom/Mod
+ray1203.SimpleCameraSetting 3232415388
+nelim.pickletools.screenshotstudio path:PickleTools/ScreenshotStudio/Mod
+nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod

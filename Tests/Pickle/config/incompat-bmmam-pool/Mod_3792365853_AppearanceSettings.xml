@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SettingsBlock>
+  <ModSettings Class="BodyModMixAndMatch.AppearanceSettings">
+    <bodyPoolEnabled>
+      <keys>
+        <li>graphic|mireia.bodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+        <li>graphic|WDI.Realistic.Bodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+        <li>graphic|wdi.realistic.bodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+        <li>graphic|CP.Detailed.Body.Textures.II|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+        <li>graphic|cp.detailed.body.textures.ii|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+        <li>graphic|RH2.Detailed.Body.Textures.3|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+        <li>graphic|rh2.detailed.body.textures.3|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+        <li>graphic|RedMattis.SimpleHDBodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+        <li>graphic|redmattis.simplehdbodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+      </keys>
+      <values>
+        <li>True</li>
+        <li>True</li>
+        <li>True</li>
+        <li>True</li>
+        <li>True</li>
+        <li>True</li>
+        <li>True</li>
+        <li>True</li>
+        <li>True</li>
+      </values>
+    </bodyPoolEnabled>
+  </ModSettings>
+</SettingsBlock>
