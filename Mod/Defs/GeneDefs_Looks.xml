@@ -39,7 +39,7 @@
   <GeneDef MayRequire="UNAGI.FacialAnimation">
     <defName>BiB_FaceUnagi</defName>
     <label>UNAGI face</label>
-    <description>Carriers get the face parts of the UNAGI Facial Animation pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. Facial Animation draws the face.</description>
+    <description>Carriers get the face parts of the UNAGI Facial Animation pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face.</description>
     <iconPath>UI/Icons/Genes/Gene_Head</iconPath>
     <displayCategory>Cosmetic</displayCategory>
     <displayOrderInCategory>902</displayOrderInCategory>
@@ -55,7 +55,7 @@
   <GeneDef MayRequire="Andromeda.FacialAnimation">
     <defName>BiB_FaceNiceFA</defName>
     <label>Nice face</label>
-    <description>Carriers get the face parts of the Nice Facial Animation pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. Facial Animation draws the face.</description>
+    <description>Carriers get the face parts of the Nice Facial Animation pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face.</description>
     <iconPath>UI/Icons/Genes/Gene_Head</iconPath>
     <displayCategory>Cosmetic</displayCategory>
     <displayOrderInCategory>903</displayOrderInCategory>
@@ -71,7 +71,7 @@
   <GeneDef MayRequire="Barb.Facetexture">
     <defName>BiB_FaceRetexture</defName>
     <label>Retexture face</label>
-    <description>Carriers get the face parts of the Facial Animation - Retexture pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. Facial Animation draws the face.</description>
+    <description>Carriers get the face parts of the Facial Animation - Retexture pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face.</description>
     <iconPath>UI/Icons/Genes/Gene_Head</iconPath>
     <displayCategory>Cosmetic</displayCategory>
     <displayOrderInCategory>904</displayOrderInCategory>
@@ -87,7 +87,7 @@
   <GeneDef MayRequire="Reel.FacialAnims">
     <defName>BiB_FaceReel</defName>
     <label>Reel face</label>
-    <description>Carriers get the face parts of Reel's Facial Animation Textures pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. Facial Animation draws the face.</description>
+    <description>Carriers get the face parts of Reel's Facial Animation Textures pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face.</description>
     <iconPath>UI/Icons/Genes/Gene_Head</iconPath>
     <displayCategory>Cosmetic</displayCategory>
     <displayOrderInCategory>905</displayOrderInCategory>
