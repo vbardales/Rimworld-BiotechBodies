@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SettingsBlock>
+  <ModSettings Class="BodyModMixAndMatch.AppearanceSettings">
+    <bodyPoolEnabled>
+      <keys>
+        <li>graphic|mireia.bodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+      </keys>
+      <values>
+        <li>True</li>
+      </values>
+    </bodyPoolEnabled>
+  </ModSettings>
+</SettingsBlock>

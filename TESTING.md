@@ -48,3 +48,7 @@ Written, not played yet (7.d): every Pickle row above. B1 to B3, B4, F1, F2 were
 | `MalteSchulze.RIMMSqol`, `nelim.pickletools.rimmsqol` | `wsl-deps.avec-rimmsqol.map` | S5 to S7 |
 | WDI.Realistic.Bodies, tiagocc0.FemaleBodyVariants | vanillabody, bodyoptions, wdifirst | B1 to B5 |
 | face packs UNAGI, Nice FA, Retexture, Reel (and Nals.FacialAnimation) | faceunagi, nicefa, retexture, reel | F1, F2 |
+
+## Seed config/incompat-bmmam-bb (2026-11-13)
+
+`Tests/Pickle/config/incompat-bmmam-bb/Mod_3792365853_AppearanceSettings.xml` enables one pool entry of Body Mod Mix and Match, the Male body of Beautiful Bodies (`graphic|mireia.bodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male`, id built as in BMMaM `BodyPoolRuntime.cs:179`). Without it BMMaM's pools are empty and it changes nothing (`AppearanceSettings.bodyPoolEnabled`). Written by hand from the BMMaM source, not from a game-written file: if the pawn without a gene still draws the standard path, the key is the first suspect.
