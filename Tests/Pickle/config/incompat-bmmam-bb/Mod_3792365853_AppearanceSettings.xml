@@ -4,8 +4,10 @@
     <bodyPoolEnabled>
       <keys>
         <li>graphic|mireia.bodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
+        <li>graphic|wdi.realistic.bodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male</li>
       </keys>
       <values>
+        <li>True</li>
         <li>True</li>
       </values>
     </bodyPoolEnabled>
