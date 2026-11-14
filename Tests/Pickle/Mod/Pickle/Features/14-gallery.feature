@@ -18,7 +18,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   # NaturalcurlsHD (Hair_DarkBlack). Soren Apparel_BasicShirt copper (176, 112, 64) + Apparel_Pants, Roo_HD_Hair_Tidy
   # (Hair_DarkReddish). Ryu Apparel_BasicShirt blue (40, 70, 130) + Apparel_Pants, Roo_Royal_CleancutHD (Hair_InkBlack).
   # Quill Apparel_CollarShirt #556B2F + Apparel_Pants + Apparel_PAGGlasses, VHE_Librarian. One change, said in the story:
-  # shot 2 is the fitting (UnderWhere_Tanktop + Apparel_Shorts, so the bodies read); they dress right after.
+  # shot 2 is the fitting (UnderWhere_Tanktop + LTS_Shorts, so the bodies read); they dress right after.
   #
   # OWNER VALIDATIONS (quoted, rule 3 of sync-nsb-npt): "oui" on 2026-11-09, BiB session, for the gallery only: BiB look
   # genes or Mod options on Nelim, Miel, Soren and Ryu (body WDI or Vanilla, face UNAGI / Nice FA / Retexture / Reel);
@@ -43,7 +43,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   #   "Nelim brings the day's looks across the bridge."
   # 2 | 2-two-bodies | hut (tea room) | 09:00, clear, +60 min | the body slot: same Female body, two looks | tight two-shot,
   #   rectangle around two pawns, low table in front, off-centre left | Nelim (BiB_WdiBody) and Miel (BiB_VanillaBody) side by
-  #   side, both in UnderWhere_Tanktop and Apparel_Shorts (the fitting), both smiling, Nelim holding a cup (carries the item
+  #   side, both in UnderWhere_Tanktop and LTS_Shorts (the fitting), both smiling, Nelim holding a cup (carries the item
   #   "Meal"), Miel facing the mirror; "just after Miel stepped out of the chair" | StylingStation behind them, low table with
   #   two MealSimple items, cushions, andon lit, two PlantPot with Plant_Daylily | steps: body type is Female, has the gene, wears,
   #   stands at facing, I frame the rectangle | "Same body type, two looks: WDI and vanilla."
@@ -139,7 +139,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
     And Nelim's Pickle Tools: "Nelim" wears "UnderWhere_Tanktop"
-    And Nelim's Pickle Tools: "Nelim" also wears "Apparel_Shorts"
+    And Nelim's Pickle Tools: "Nelim" also wears "LTS_Shorts"
     And Nelim's Pickle Tools: "Nelim" has the gene "BiB_WdiBody"
     And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Miel" loses all genes
@@ -155,7 +155,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Miel" has the gene "BiB_VanillaBody"
     And Nelim's Pickle Tools: "Miel" is undressed
     And Nelim's Pickle Tools: "Miel" wears "UnderWhere_Tanktop"
-    And Nelim's Pickle Tools: "Miel" also wears "Apparel_Shorts"
+    And Nelim's Pickle Tools: "Miel" also wears "LTS_Shorts"
     And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
     And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
     And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit

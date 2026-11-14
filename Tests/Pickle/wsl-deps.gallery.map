@@ -4,7 +4,7 @@
 # SanctuaryBacklot/Tests/Pickle/wsl-deps.sanctuary.map, 2026-10-15): bodies, trousers, facial animation set, Show Hair.
 # Seeds: Tests/Pickle/config/gallery/ (AB's Visible Pants, Venus Touch Waistlines, Moving Vanilla Eyes; same files as config/sanctuary of the Backlot).
 # Added for the gallery (the shotlist, header of 14-gallery.feature): Harmony, WDI Realistic Bodies (already in the block), the four face packs
-# (UNAGI, Nice FA, Retexture, Reel), Vanilla Hair Expanded and Roo's HD Hairstyles (canon hair of Miel, Quill, Soren, Ryu, Nelim), then Biotech Bodies last.
+# (UNAGI, Nice FA, Retexture, Reel), Genes Expanded Skin (GES_Skin_Chocolate), Ponpeco Accessories (PAG glasses), UnderWhere (tanktop), LTS Raiments (LTS_Shorts), Vanilla Hair Expanded and Roo's HD Hairstyles (canon hair of Miel, Quill, Soren, Ryu, Nelim), then Biotech Bodies last.
 # Risk (said in the shotlist): Nice FA is incompatible with Nals.FacialAnimationExperimentals on its own side, and Reel needs VFE Core, VTE and VTE-FA.
 # If the game refuses the mix, the shots of the pack that cannot share the map move to a second map (second ticket), the story is unchanged.
 #
@@ -44,6 +44,10 @@ UNAGI.FacialAnimation 3268178647
 Andromeda.FacialAnimation 3302079637
 Barb.Facetexture 3271240549
 Reel.FacialAnims 3118315633
+LazyFridayStudio.GenesExpandedSkin 3214172563
+ponpeco.PonpecoAccessories 3298397484
+Malistaticy.UnderWhere 1870010563
+limetreesnake.raiments 3751997843
 nelim.sanctuarybacklot             path:SanctuaryBacklot/Mod
 nelim.pickletools.screenshotmode   path:PickleTools/ScreenshotMode/Mod
 nelim.biotechbodies path:BiotechBodies/Mod
