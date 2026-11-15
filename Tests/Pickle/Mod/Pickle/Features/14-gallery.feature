@@ -114,7 +114,9 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (134, 126) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (138, 126) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (135, 122) fully grown
-    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (137, 124) facing East
@@ -159,11 +161,15 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
     And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
     And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (138, 72) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (144, 72) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
-    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Pickle Tools: "Miel" face kit is "smile"
+    And Nelim's Pickle Tools: "Miel" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Miel" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Miel" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Miel" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (140, 74) facing South
@@ -223,9 +229,13 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: the decor "TorchLamp" at (157, 98) is lit
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (152, 98) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (158, 100) fully grown
-    And Nelim's Pickle Tools: "Quill" face kit is "smile"
+    And Nelim's Pickle Tools: "Quill" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Quill" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Quill" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Quill" face is held neutral
-    And Nelim's Pickle Tools: "Ryu" face kit is "smile"
+    And Nelim's Pickle Tools: "Ryu" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Ryu" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Ryu" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Ryu" face is held neutral
     And Nelim's Pickle Tools: "Quill" stands at (154, 99) facing South
     And Nelim's Pickle Tools: "Ryu" stands at (156, 99) facing South
@@ -302,7 +312,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: the decor "TorchLamp" at (175, 126) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (181, 126)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (181, 126) is lit
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (174, 129) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (174, 131) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (182, 129) fully grown
     And Nelim's Pickle Tools: "Nelim" stands at (176, 129) facing South
     And Nelim's Pickle Tools: "Miel" stands at (177, 129) facing South
@@ -451,9 +461,13 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I place the decor "StylingStation" at (172, 174)
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (165, 175) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (169, 175) fully grown
-    And Nelim's Pickle Tools: "Nelim" face kit is "smile"
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Pickle Tools: "Quill" face kit is "smile"
+    And Nelim's Pickle Tools: "Quill" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Quill" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Quill" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Quill" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (166, 173) facing South
