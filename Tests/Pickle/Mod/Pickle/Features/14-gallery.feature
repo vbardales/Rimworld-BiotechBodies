@@ -1,7 +1,9 @@
 @gallery @review @timeout:900 @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.clearscreen @requires:nelim.pickletools.screenshotmode @requires:UNAGI.FacialAnimation @requires:Andromeda.FacialAnimation @requires:Barb.Facetexture @requires:Reel.FacialAnims @requires:WDI.Realistic.Bodies
 Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
 
-  # SHOTLIST (v3, 2026-11-09, after the Opus director pass and a first score-gallery; plan only, nothing is played).
+  # SHOTLIST (v4, 2026-11-15, after the first full run f03a: 6 of 6 green, 6 of 6 captures REDO, then an Opus director pass; plan only, nothing replayed yet).
+  # V4 CHANGES (they win over the v3 lines below): framing tightened (root size 2 is the floor): 1 at 3.5 on (136,124), 2 at 2, 3 at 2.5, 4 at 2.5 on (176.5,129), 5 head at 2, 6 at 3.5. No carried item on 2 and 4 (the item square hid the body and the faces); 3 puts the Cloth down at its feet. 4: one row, (175..178,129), Ryu may need a cell fix. 5 moves to statue-garden (plain soil behind the head, flowers only in the foreground). 6: Nelim, Soren, Quill and Shogun only (five pawns do not read at 268 px), no carried lantern. Same mirror in 2, 4, 6; framing tightens from 2 to 5; clothes never change.
+  # (v3 text, kept for the record; the V4 line above decides).
   #
   # STORY. One spring day at Nelim's Sanctuary (fixture Nelims-tribe, SaB base map). Nelim (Virginie, protagonist, WDI
   # body) opens a "look day": her friends come to the mirror (Ideology StylingStation, the same piece in shots 2, 4 and
@@ -59,13 +61,13 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   #   chose a face" | StylingStation in the middle, wall lanterns lit, PlantPot with Plant_Daylily at each end, Brazier lit |
   #   steps: has the gene, face parts logged, stands at facing, I frame the rectangle | "Four face packs, four faces: one gene
   #   each."
-  # 5 | 5-soren-portrait | flower-garden | 15:00, clear, +120 min | one face close up (Retexture) | tight portrait, head and
+  # 5 | 5-soren-portrait | statue-garden | 15:00, clear, +120 min | one face close up (Retexture) | tight portrait, head and
   #   shoulders at the game's real zoom (never an upscaled crop), flowers in the foreground, soft afternoon light | Soren
   #   (BiB_FaceRetexture, Male, MouthSmile) stands facing a flower, one step in front of it, carrying a log (carries the item "WoodLog") for the flower edging, "just before he leans in" |
   #   Plant_Daylily and Plant_YellowTallGrass fully grown in the foreground, three PlantPot, TorchLamp lit, Brazier lit |
   #   steps: face kit neutral, face parts, stands at facing, I frame the rectangle | "A close look at a face pack: Barb's
   #   retexture."
-  # 6 | 6-water-garden-dusk | water-garden | 17:00, clear, +120 min | closing: five friends, five looks, one pond | wide, five
+  # 6 | 6-water-garden-dusk | water-garden | 17:00, clear, +120 min | closing: three friends and a dog, one pond | wide, five
   #   pawns grouped tight at the pond edge (Nelim, Miel, Soren, Ryu, Quill), lilies in the foreground, low warm light, Shogun
   #   lying at Nelim's feet facing South | looks of shots 2 to 4, clothes above, Soren carrying a lantern (carries the item
   #   "Torch"), all smiling; "just after the last guest left the mirror" | TorchLamp lit at each side, two PlantPot with
@@ -121,9 +123,9 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (135, 124) facing East
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
-    And Nelim's Pickle Tools: the animal "Shogun" stands at (136, 124) facing South
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (134, 124) facing South
     And Nelim's Pickle Tools: the other colonists are out of frame
-    And Nelim's Pickle Tools: I frame the area centred on (135, 124) at root size 8.5
+    And Nelim's Pickle Tools: I frame the area centred on (136, 124) at root size 3.5
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 1-bridge-morning"
@@ -174,9 +176,8 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (140, 74) facing South
     And Nelim's Pickle Tools: "Miel" stands at (141, 74) facing South
-    And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
     And Nelim's Pickle Tools: the other colonists are out of frame
-    And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 3.5
+    And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 2-two-bodies"
@@ -238,10 +239,11 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Ryu" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Ryu" face is held neutral
     And Nelim's Pickle Tools: "Quill" stands at (154, 99) facing South
-    And Nelim's Pickle Tools: "Ryu" stands at (156, 99) facing South
+    And Nelim's Pickle Tools: "Ryu" stands at (156, 99) facing West
     And Nelim's Pickle Tools: "Quill" carries the item "Cloth"
+    And Nelim's Pickle Tools: "Quill" puts down what it carries
     And Nelim's Pickle Tools: the other colonists are out of frame
-    And Nelim's Pickle Tools: I frame the area centred on the point (155, 99) at root size 3.5
+    And Nelim's Pickle Tools: I frame the area centred on the point (155, 99) at root size 2.5
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 3-quill-statues"
@@ -314,20 +316,16 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: the decor "TorchLamp" at (181, 126) is lit
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (174, 131) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (182, 129) fully grown
-    And Nelim's Pickle Tools: "Nelim" stands at (176, 129) facing South
-    And Nelim's Pickle Tools: "Miel" stands at (177, 129) facing South
-    And Nelim's Pickle Tools: "Soren" stands at (176, 130) facing South
-    And Nelim's Pickle Tools: "Ryu" stands at (177, 130) facing South
-    And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
-    And Nelim's Pickle Tools: "Miel" carries the item "MealSimple"
-    And Nelim's Pickle Tools: "Soren" carries the item "MealSimple"
-    And Nelim's Pickle Tools: "Ryu" carries the item "MealSimple"
+    And Nelim's Pickle Tools: "Nelim" stands at (175, 129) facing South
+    And Nelim's Pickle Tools: "Miel" stands at (176, 129) facing South
+    And Nelim's Pickle Tools: "Soren" stands at (177, 129) facing South
+    And Nelim's Pickle Tools: "Ryu" stands at (178, 129) facing South
     And Nelim's Pickle Tools: the face parts of "Nelim" are logged
     And Nelim's Pickle Tools: the face parts of "Miel" are logged
     And Nelim's Pickle Tools: the face parts of "Soren" are logged
     And Nelim's Pickle Tools: the face parts of "Ryu" are logged
     And Nelim's Pickle Tools: the other colonists are out of frame
-    And Nelim's Pickle Tools: I frame the area centred on the point (178, 129) at root size 3
+    And Nelim's Pickle Tools: I frame the area centred on the point (176.5, 129) at root size 2.5
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 4-faces-at-the-mirror"
@@ -335,8 +333,8 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
 
   Scenario: 5-soren-portrait
     Given I set the hour to 15
-    And Nelim's Sanctuary: the animals are kept out of the sanctuary "flower-garden"
-    And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "statue-garden"
+    And Nelim's Sanctuary: I am at the sanctuary "statue-garden"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
     And Nelim's Pickle Tools: the learning helper is hidden
@@ -359,13 +357,13 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (176, 112, 64)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants"
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (153, 111) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (155, 111) fully grown
-    And Nelim's Pickle Tools: I place the decor "Brazier" at (156, 108)
-    And Nelim's Pickle Tools: the decor "Brazier" at (156, 108) is lit
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (152, 108)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (152, 108) is lit
-    And Nelim's Pickle Tools: "Soren" stands at (154, 109) facing South
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (153, 101) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (155, 101) fully grown
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (156, 97)
+    And Nelim's Pickle Tools: the decor "Brazier" at (156, 97) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (152, 97)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (152, 97) is lit
+    And Nelim's Pickle Tools: "Soren" stands at (154, 99) facing South
     And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
     And Nelim's Pickle Tools: the face parts of "Soren" are logged
     And Nelim's Pickle Tools: the other colonists are out of frame
@@ -390,22 +388,6 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants"
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
     And Nelim's Pickle Tools: "Nelim" has the gene "BiB_WdiBody"
-    And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
-    And Nelim's Pickle Tools: "Miel" loses all genes
-    And Nelim's Pickle Tools: "Miel" gender is Female
-    And "Miel" is 34 years old
-    And Nelim's Pickle Tools: "Miel" body type is Thin
-    And Nelim's Pickle Tools: "Miel" head type is "Female_AverageWide"
-    And Nelim's Pickle Tools: "Miel" has the gene "GES_Skin_Chocolate"
-    And Nelim's Pickle Tools: "Miel" has the gene "Hair_DarkBlack"
-    And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Orange"
-    And Nelim's Pickle Tools: "Miel" hair colour is taken from its genes
-    And Nelim's Pickle Tools: "Miel" hairstyle is "VHE_SideBraid"
-    And Nelim's Pickle Tools: "Miel" has the gene "BiB_VanillaBody"
-    And Nelim's Pickle Tools: "Miel" has the gene "BiB_FaceNiceFA"
-    And Nelim's Pickle Tools: "Miel" is undressed
-    And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (107, 142, 35)
-    And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants"
     And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Soren" loses all genes
     And Nelim's Pickle Tools: "Soren" gender is Male
@@ -421,22 +403,6 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (176, 112, 64)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants"
-    And Nelim's Pickle Tools: a colonist "Ryu" of kind "Colonist" exists
-    And Nelim's Pickle Tools: "Ryu" loses all genes
-    And Nelim's Pickle Tools: "Ryu" gender is Male
-    And "Ryu" is 43 years old
-    And Nelim's Pickle Tools: "Ryu" body type is Thin
-    And Nelim's Pickle Tools: "Ryu" head type is "Male_NarrowPointy"
-    And Nelim's Pickle Tools: "Ryu" has the gene "Skin_Melanin4"
-    And Nelim's Pickle Tools: "Ryu" has the gene "Hair_InkBlack"
-    And Nelim's Pickle Tools: "Ryu" has the gene "Eyes_SkyBlue"
-    And Nelim's Pickle Tools: "Ryu" hair colour is taken from its genes
-    And Nelim's Pickle Tools: "Ryu" hairstyle is "Roo_Royal_CleancutHD"
-    And Nelim's Pickle Tools: "Ryu" has the gene "BiB_WdiBody"
-    And Nelim's Pickle Tools: "Ryu" has the gene "BiB_FaceReel"
-    And Nelim's Pickle Tools: "Ryu" is undressed
-    And Nelim's Pickle Tools: "Ryu" wears "Apparel_BasicShirt" dyed rgb (40, 70, 130)
-    And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants"
     And Nelim's Pickle Tools: a colonist "Quill" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Quill" loses all genes
     And Nelim's Pickle Tools: "Quill" gender is Neutre
@@ -471,13 +437,10 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Quill" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (166, 173) facing South
-    And Nelim's Pickle Tools: "Miel" stands at (167, 173) facing South
     And Nelim's Pickle Tools: "Soren" stands at (167, 172) facing South
-    And Nelim's Pickle Tools: "Ryu" stands at (165, 173) facing South
-    And Nelim's Pickle Tools: "Quill" stands at (169, 173) facing South
-    And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
+    And Nelim's Pickle Tools: "Quill" stands at (167, 173) facing South
     And Nelim's Pickle Tools: the animal "Shogun" lies at (166, 174) facing South
-    And Nelim's Pickle Tools: I frame the area centred on the point (167, 173.5) at root size 6
+    And Nelim's Pickle Tools: I frame the area centred on the point (167, 173.5) at root size 3.5
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 6-water-garden-dusk"
