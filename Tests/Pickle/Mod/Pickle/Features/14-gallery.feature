@@ -119,7 +119,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" stands at (137, 124) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (135, 124) facing East
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (136, 124) facing South
     And Nelim's Pickle Tools: the other colonists are out of frame
@@ -316,8 +316,8 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (182, 129) fully grown
     And Nelim's Pickle Tools: "Nelim" stands at (176, 129) facing South
     And Nelim's Pickle Tools: "Miel" stands at (177, 129) facing South
-    And Nelim's Pickle Tools: "Soren" stands at (179, 129) facing South
-    And Nelim's Pickle Tools: "Ryu" stands at (180, 129) facing South
+    And Nelim's Pickle Tools: "Soren" stands at (176, 130) facing South
+    And Nelim's Pickle Tools: "Ryu" stands at (177, 130) facing South
     And Nelim's Pickle Tools: "Nelim" carries the item "MealSimple"
     And Nelim's Pickle Tools: "Miel" carries the item "MealSimple"
     And Nelim's Pickle Tools: "Soren" carries the item "MealSimple"
@@ -472,7 +472,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (166, 173) facing South
     And Nelim's Pickle Tools: "Miel" stands at (167, 173) facing South
-    And Nelim's Pickle Tools: "Soren" stands at (168, 173) facing South
+    And Nelim's Pickle Tools: "Soren" stands at (167, 172) facing South
     And Nelim's Pickle Tools: "Ryu" stands at (165, 173) facing South
     And Nelim's Pickle Tools: "Quill" stands at (169, 173) facing South
     And Nelim's Pickle Tools: "Soren" carries the item "Torch"
