@@ -2,7 +2,7 @@
 Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
 
   # SHOTLIST (v4, 2026-11-15, after the first full run f03a: 6 of 6 green, 6 of 6 captures REDO, then an Opus director pass; plan only, nothing replayed yet).
-  # V4 CHANGES (they win over the v3 lines below): framing tightened (root size 2 is the floor): 1 at 3.5 on (136,124), 2 at 2, 3 at 2.5, 4 at 2.5 on (176.5,129), 5 head at 2, 6 at 3.5. No carried item on 2 and 4 (the item square hid the body and the faces); 3 puts the Cloth down at its feet. 4: one row, (175..178,129), Ryu may need a cell fix. 5 moves to statue-garden (plain soil behind the head, flowers only in the foreground). 6: Nelim, Soren, Quill and Shogun only (five pawns do not read at 268 px), no carried lantern. Same mirror in 2, 4, 6; framing tightens from 2 to 5; clothes never change.
+  # V4 CHANGES (they win over the v3 lines below): framing tightened (root size 2 is the floor): 1 at 3.5 on (136,124), 2 at 2, 3 at 2.5, 4 at 2.5 on (176.5,128), 5 head at 2, 6 at 3.5. No carried item on 2 and 4 (the item square hid the body and the faces); 3 puts the Cloth down at its feet. 4: one row, (175..178,128), station at (178,127); row 129 has Columns (SANCTUARY-CASES cloister). 5 moves to statue-garden (plain soil behind the head, flowers only in the foreground). 6: Nelim, Soren, Quill and Shogun only (five pawns do not read at 268 px), no carried lantern. Same mirror in 2, 4, 6; framing tightens from 2 to 5; clothes never change.
   # (v3 text, kept for the record; the V4 line above decides).
   #
   # STORY. One spring day at Nelim's Sanctuary (fixture Nelims-tribe, SaB base map). Nelim (Virginie, protagonist, WDI
@@ -309,23 +309,23 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Ryu" is undressed
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_BasicShirt" dyed rgb (40, 70, 130)
     And Nelim's Pickle Tools: "Ryu" wears "Apparel_Pants"
-    And Nelim's Pickle Tools: I place the decor "StylingStation" at (178, 128)
+    And Nelim's Pickle Tools: I place the decor "StylingStation" at (178, 127)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (175, 126)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (175, 126) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (181, 126)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (181, 126) is lit
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (174, 131) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (182, 129) fully grown
-    And Nelim's Pickle Tools: "Nelim" stands at (175, 129) facing South
-    And Nelim's Pickle Tools: "Miel" stands at (176, 129) facing South
-    And Nelim's Pickle Tools: "Soren" stands at (177, 129) facing South
-    And Nelim's Pickle Tools: "Ryu" stands at (178, 129) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (175, 128) facing South
+    And Nelim's Pickle Tools: "Miel" stands at (176, 128) facing South
+    And Nelim's Pickle Tools: "Soren" stands at (177, 128) facing South
+    And Nelim's Pickle Tools: "Ryu" stands at (178, 128) facing South
     And Nelim's Pickle Tools: the face parts of "Nelim" are logged
     And Nelim's Pickle Tools: the face parts of "Miel" are logged
     And Nelim's Pickle Tools: the face parts of "Soren" are logged
     And Nelim's Pickle Tools: the face parts of "Ryu" are logged
     And Nelim's Pickle Tools: the other colonists are out of frame
-    And Nelim's Pickle Tools: I frame the area centred on the point (176.5, 129) at root size 2.5
+    And Nelim's Pickle Tools: I frame the area centred on the point (176.5, 128) at root size 2.5
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 4-faces-at-the-mirror"
