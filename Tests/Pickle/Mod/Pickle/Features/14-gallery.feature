@@ -475,7 +475,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" stands at (167, 172) facing South
     And Nelim's Pickle Tools: "Ryu" stands at (165, 173) facing South
     And Nelim's Pickle Tools: "Quill" stands at (169, 173) facing South
-    And Nelim's Pickle Tools: "Soren" carries the item "Torch"
+    And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
     And Nelim's Pickle Tools: the animal "Shogun" lies at (166, 174) facing South
     And Nelim's Pickle Tools: I frame the area centred on the point (167, 173.5) at root size 6
     And Nelim's Pickle Tools: I let 30 frames pass
