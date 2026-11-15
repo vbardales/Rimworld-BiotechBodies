@@ -85,9 +85,11 @@ Re-sync 2026-11-12 (git log of NSB docs since 2026-11-09, diffs read): cc61d17 Q
 
 Re-sync 2026-11-13, before the gallery map and scenarios: `git log` of NSB docs and of NPT steps and catalogues since 2026-11-12 returns no commit, nothing changed. Places of the shotlist read today in `SANCTUAIRE-LIEUX.md` (cells and status below). Owner rules said back: everything in NSB is free; a colonist or domestic animal outside NSB needs an express validation; a property change of a colonist needs an express validation; every outfit is free; every animal the mod includes must be shown (the mod includes none).
 
+Re-sync 2026-11-15: `git log` of NSB docs shows no commit after 2026-11-12 (18abf53, already read), NPT steps and catalogues unchanged since 2026-11-13. Nothing to update, no rule 2 or 3 question open. Gallery run f03a (2026-11-15) green 6 of 6 but all six captures REDO (j weak, carried items hide body or face); cells proven standable by the run: bridge (135,124), hut (140,74) (141,74), statue-garden (154,99) (156,99), cloister (176,129) (177,129) (176,130) (177,130), flower-garden (154,109), water-garden (166,173) (167,173) (167,172); not standable: (137,124) lamp, (179,129), (168,173).
+
 Places read: 2026-11-13 (SANCTUAIRE-LIEUX.md: cells and status of the six places; SANCTUAIRE-CASES.md and EMBELLISSEMENT-LIEUX.md not opened)
 Tribe read: 2026-11-12 (diffs of NSB-ROSTER and QUILL-PROFIL since 2026-11-09; 2026-11-09: HUMAINS-PROFILS, GALERIE-COLONS, LOOKS-VALIDATION, LOOK-CATALOGUES, DEPENDANCES-SANCTUAIRE, QUILL-PROFIL; other profiles not opened)
-Steps read: 2026-11-13 (no change in NPT docs/steps.md or catalogues since 2026-11-12)
+Steps read: 2026-11-15 (no change in NPT docs/steps.md or catalogues since 2026-11-13, git log only)
 
 | Place | Shots | Cell (SANCTUAIRE-LIEUX) | Changes for the gallery | Last read |
 |---|---|---|---|---|
