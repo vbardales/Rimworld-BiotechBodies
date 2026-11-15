@@ -177,7 +177,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Miel" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (140, 74) facing South
-    And Nelim's Pickle Tools: "Miel" stands at (141, 74) facing West
+    And Nelim's Pickle Tools: "Miel" stands at (141, 74) facing South
     And Nelim's Pickle Tools: the other colonists are out of frame
     And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
     And Nelim's Pickle Tools: I let 30 frames pass
