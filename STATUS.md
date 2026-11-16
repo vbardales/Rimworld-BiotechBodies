@@ -95,7 +95,9 @@ Re-sync 2026-11-15 (second, before recomposing the six REDO scenes): last NSB do
 
 Places read: 2026-11-13 (SANCTUAIRE-LIEUX.md: cells and status of the six places); cloister cells 2026-11-15 (SANCTUAIRE-CASES.md); EMBELLISSEMENT-LIEUX.md not opened
 Tribe read: 2026-11-15 (git log only, no NSB docs commit since 2026-11-12; SHOGUN-PROFIL and CATALOGUE-ANIMAUX opened today; 2026-11-12: diffs of NSB-ROSTER and QUILL-PROFIL; 2026-11-09: HUMAINS-PROFILS, GALERIE-COLONS, LOOKS-VALIDATION, LOOK-CATALOGUES, DEPENDANCES-SANCTUAIRE, QUILL-PROFIL; other profiles not opened)
-Steps read: 2026-11-15 (no commit in NPT docs/steps.md or catalogues since 2026-11-13, git log only)
+Steps read: 2026-11-16 (git log: docs/steps.md and ColonistRace catalogues last changed 2026-11-12; 2026-11-16 commits are Yukiyuki animal catalogue entries, no step or entry serves a BiB shot)
+
+Re-sync 2026-11-16: NSB docs commits since 2026-11-15 (bf68237 Roster.xlsx, 8ad8a5a runs line, 1ce5d7c ACG-FAISABILITE.md and one GALERIE.md line = seed path rule already noted 2026-11-15) change no place, colonist, animal or look of this mod. Rules 1 to 5 said back; no question open, rule 5 n/a (mod includes no animal). Nothing updated in shotlist or scenarios.
 
 | Place | Shots | Cell (SANCTUAIRE-LIEUX) | Changes for the gallery | Last read |
 |---|---|---|---|---|
