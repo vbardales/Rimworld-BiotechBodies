@@ -171,8 +171,8 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (141, 75) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 75) fully grown
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (139, 73)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (139, 73) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
