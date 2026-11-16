@@ -8,3 +8,4 @@ One line per run: date, ticket, feature, result, evidence. Source of truth: the 
 - 2026-11-07 6fee, 8eb9, ad66: replay of the body and face features on the current build, exit 0, 8 + 3 + 4 passed; evidence Evidence/replay-*, face-reel
 - 2026-11-07 6f81, 21e3: 12-settings S1 in French, exit 0, 1 passed each (21e3 after the corpse rows fix 3dd5a60)
 - 2026-11-07 ea73, 12-settings S1 in French: exit 0, 1 passed, build 6ffbbf7 (defName on duplicate labels, rows read Humain (Human) and Humain (CreepJoiner)); evidence Evidence/settings-french3
+- 2026-11-16 2abd, 14-gallery shot 2 alone (2-two-bodies): exit 0, 1 passed; capture read, candidate cropped to Art/Gallery-clean; raw run deleted
