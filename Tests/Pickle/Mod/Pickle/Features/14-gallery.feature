@@ -69,7 +69,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   # 5 | 5-soren-portrait | statue-garden | 15:00, clear, +120 min | one face close up (Retexture) | tight portrait, head and
   #   shoulders at the game's real zoom (never an upscaled crop), flowers in the foreground, soft afternoon light | Soren
   #   (BiB_FaceRetexture, Male, MouthSmile) stands facing a flower, one step in front of it, carrying a log (carries the item "WoodLog") for the flower edging, "just before he leans in" |
-  #   Plant_Daylily and Plant_YellowTallGrass fully grown in the foreground, three PlantPot, TorchLamp lit, Brazier lit |
+  #   Plant_Daylily and Plant_YellowTallGrass fully grown in the foreground, three PlantPot, Brazier lit (V9 2026-11-16: TorchLamp dropped, it drew as a green ghost top left in v8; native crop 960x540 now at x 400 y 450 so the daylilies show) |
   #   steps: face kit neutral, face parts, stands at facing, I frame the rectangle | "A close look at a face pack: Barb's
   #   retexture."
   # 6 | 6-water-garden-dusk | water-garden | 17:00, clear, +120 min | closing: three friends and a dog, one pond | wide, five
@@ -311,8 +311,6 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (154, 98) fully grown
     And Nelim's Pickle Tools: I place the decor "Brazier" at (156, 97)
     And Nelim's Pickle Tools: the decor "Brazier" at (156, 97) is lit
-    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (152, 97)
-    And Nelim's Pickle Tools: the decor "TorchLamp" at (152, 97) is lit
     And Nelim's Pickle Tools: "Soren" stands at (153, 99) facing South
     And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
     And Nelim's Pickle Tools: the face parts of "Soren" are logged
