@@ -5,6 +5,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   # V4 CHANGES (they win over the v3 lines below): framing tightened (root size 2 is the floor): 1 at 3.5 on (136,124), 2 at 2, 3 at 2.5, 4 at 2.5 on (176.5,128), 5 head at 2, 6 at 3.5. No carried item on 2 and 4 (the item square hid the body and the faces); 3 puts the Cloth down at its feet. 4: one row, (175..178,128), station at (178,127); row 129 has Columns (SANCTUARY-CASES cloister). 5 moves to statue-garden (plain soil behind the head, flowers only in the foreground). 6: Nelim, Soren, Quill and Shogun only (five pawns do not read at 268 px), no carried lantern. Same mirror in 2, 4, 6; framing tightens from 2 to 5; clothes never change.
   # V8 (2026-11-16, after run aef8 and ticket 2abd; shot 5 only, shots 1 2 4 6 are candidates, shot 3 stays dropped): shot 5 recomposed. Cause of the REDO: Soren faces South, the flowers stood at z 97 and 98 below the chest, outside the head frame; the coil-like statue stood right of him. Now Plant_Daylily at (153,98) and (154,98) (in front of him, row just below the chest), Plant_YellowTallGrass (152,98) kept, Plant_Daylily (153,97) kept for depth; native crop 960x540 at x 400, y 330 of the 1920x1080 capture (head left of centre and in the upper third, flowers in the lower third, the statue on his right falls outside the crop). Shot 2 stored 2026-11-16 as candidate (crop x 480 y 230, Art/Gallery-clean/2-two-bodies.jpg). Hour, light, outfit, Soren and the face pack do not change.
   # V7 (2026-11-16, after run 18ee): shot 3 DROPPED (Quill with the neutral body stays in shot 6; the cropped profile of Quill and the body were unreadable at 268 px), names 1 2 4 5 6 kept, reindex after acceptance. Shot 2 gets Plant_Daylily (141,75) (142,75) and a lit TorchLamp (139,73) inside the crop (the capture had a bare wood floor). Shot 5: Soren moves to (153,99) so the coil-like statue leaves the crop.
+  # V10 (2026-11-17, after v9): the green ghost top left and the coil statue are fixtures of the statue-garden, not decor. Shot 5 moves to the flower-garden, Soren at (154,109) facing South (cell proven standable by f03a), no placed decor (the garden own flowers are the foreground), crop 960x540 chosen after the run. The pack draws the mouth (no smile step, by design).
   # V6 (2026-11-16, after runs 80d1 and 6b23): shot 3 moves to the cloister (cells (176,128) (177,128) proven by shot 4), renamed 3-quill-and-ryu, decor Brazier (177,127), TorchLamp (175,126), Plant_Daylily (175,127) (178,127); shot 2 Miel faces South again; shot 5 grass moved to (152,98) (155,97 holds a SculptureSmall); shot 6 Soren carries a WoodLog (no ThingDef named Torch, Torch is a building). Shot 4 passed (6b23): crop 960x540 offset x 450 gives four readable faces at 268 px, Ryu Reel face frowns (the pack draws the mouth).
   # V5 CHANGES (2026-11-16, after the v4 verdict: six REDO; they win over v4 and v3). CROP: shots 2 to 5 are captured at the game floor (root size 2 to 2.5) then cropped post-capture at native pixels (no upscale, ffmpeg crop=960:540, centred on the subjects, shot 4 offset x 450), so a head is about 40 px at 268 px; shots 1 and 6 stay uncropped (opening and closing, j weak assumed). 1: Shogun was absent because the Sanctuary step "animals are kept out" despawned him every frame, that step is removed from 1 and 6; the hut is another place, dropped from the line. 2: Nelim gets Roo_HD_Hair_Highpony (it had the default bun). 3: Quill faces East (facing South showed a blank orange face, a Sanctuary-side anomaly, not BiB code), Ryu faces South smiling, no Cloth (it never showed). 4: row z=128, station (178,127) behind, lit Brazier (176,127), Plant_Daylily (175,127). 5: Plant_Daylily (153,97) and Plant_YellowTallGrass (155,97) in the south foreground, the hut falls outside the crop. 6: hour 18, Nelim (165,173), Quill (166,173) facing East, Soren (167,173) in one row, Shogun lies at (165,172). Expression: pawns with a face-pack gene (Soren, Ryu, Miel, Nelim in 4 and 5) get no mouth step, the pack draws the mouth, so a neutral mouth is planned there (written trait, no malus).
   # V5 INSTANTS (gesture, instant, how obtained; criterion e). 1: just before she steps off the bridge, Nelim carries the Cloth East while Shogun waits facing the camera (carries the item, animal stands at, 30 frames pause); the hut line of v3 is void. 2: just after the fitting, Miel (facing West) looks at Nelim who shows her look to the camera (stands at facing, gaze toward what happens). 3: Quill (facing East) looks at Ryu, who shows his look facing the camera. 4: the four stand shoulder to shoulder after choosing a face (e weak, malus assumed: a gaze would hide a face pack); extra decor Plant_Daylily (176,129) and (178,129) behind the row. 5: Soren carries a WoodLog, just before he leans to the flowers. 6: just after the last guest left the mirror, Soren lifts a Torch (carries the item "Torch") for the evening, Quill looks East toward him, Shogun lies at Nelim feet. PLAN SCORES v5 (score-gallery, 2026-11-16, no capture yet): 1 4.0 (j weak assumed, k weak), 2 4.5, 3 4.5, 4 4.0 (e weak assumed), 5 4.0 (b weak in the crop), 6 4.0 (j weak assumed); series k weak (rhythm repeats row line-ups) -0.5 each; mean 4.17.
@@ -66,7 +67,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   #   chose a face" | StylingStation in the middle, wall lanterns lit, PlantPot with Plant_Daylily at each end, Brazier lit |
   #   steps: has the gene, face parts logged, stands at facing, I frame the rectangle | "Four face packs, four faces: one gene
   #   each."
-  # 5 | 5-soren-portrait | statue-garden | 15:00, clear, +120 min | one face close up (Retexture) | tight portrait, head and
+  # 5 | 5-soren-portrait | flower-garden | 15:00, clear, +120 min | one face close up (Retexture) | tight portrait, head and
   #   shoulders at the game's real zoom (never an upscaled crop), flowers in the foreground, soft afternoon light | Soren
   #   (BiB_FaceRetexture, Male, MouthSmile) stands facing a flower, one step in front of it, carrying a log (carries the item "WoodLog") for the flower edging, "just before he leans in" |
   #   Plant_Daylily and Plant_YellowTallGrass fully grown in the foreground, three PlantPot, Brazier lit (V9 2026-11-16: TorchLamp dropped, it drew as a green ghost top left in v8; native crop 960x540 now at x 400 y 450 so the daylilies show) |
@@ -281,8 +282,8 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
 
   Scenario: 5-soren-portrait
     Given I set the hour to 15
-    And Nelim's Sanctuary: the animals are kept out of the sanctuary "statue-garden"
-    And Nelim's Sanctuary: I am at the sanctuary "statue-garden"
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "flower-garden"
+    And Nelim's Sanctuary: I am at the sanctuary "flower-garden"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
     And Nelim's Pickle Tools: the learning helper is hidden
@@ -305,13 +306,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (176, 112, 64)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants"
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (153, 97) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_YellowTallGrass" at (152, 98) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (153, 98) fully grown
-    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (154, 98) fully grown
-    And Nelim's Pickle Tools: I place the decor "Brazier" at (156, 97)
-    And Nelim's Pickle Tools: the decor "Brazier" at (156, 97) is lit
-    And Nelim's Pickle Tools: "Soren" stands at (153, 99) facing South
+    And Nelim's Pickle Tools: "Soren" stands at (154, 109) facing South
     And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
     And Nelim's Pickle Tools: the face parts of "Soren" are logged
     And Nelim's Pickle Tools: the other colonists are out of frame
@@ -319,7 +314,6 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 5-soren-portrait"
-    And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 6-water-garden-dusk
     Given I set the hour to 18
