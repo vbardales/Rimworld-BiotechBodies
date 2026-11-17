@@ -166,13 +166,20 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Miel" has the gene "Hair_DarkBlack"
     And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Orange"
     And Nelim's Pickle Tools: "Miel" hair colour is taken from its genes
-    And Nelim's Pickle Tools: "Miel" hairstyle is "VHE_SideBraid"
-    And Nelim's Pickle Tools: "Miel" beard is "none"
-    And Nelim's Pickle Tools: "Miel" has the gene "BiB_FaceNiceFA"
+    And Nelim's Pickle Tools: "Miel" hairstyle is "Roo_Royal_NaturalcurlsHD"
+    And Nelim's Pickle Tools: "Miel" face tattoo is "none"
     And Nelim's Pickle Tools: "Miel" has the gene "BiB_BodyWdi"
     And Nelim's Pickle Tools: "Miel" is undressed
-    And Nelim's Pickle Tools: "Miel" wears "Apparel_BasicShirt" dyed rgb (230, 224, 206)
-    And Nelim's Pickle Tools: "Miel" also wears "Apparel_Pants"
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (196, 150, 80)
+    And Nelim's Pickle Tools: "Miel" also wears "Apparel_Pants" dyed rgb (140, 160, 120)
+    And Nelim's Pickle Tools: "Miel" face kit is "smile"
+    And Nelim's Pickle Tools: "Miel" mouth is "MouthLipsBig"
+    And Nelim's Pickle Tools: "Miel" brows are "BrowTriangle"
+    And Nelim's Pickle Tools: "Miel" lids are "LidFlirty"
+    And Nelim's Pickle Tools: "Miel" eyeballs are "Empathetic"
+    And Nelim's Pickle Tools: "Miel" face skin is "SkinEyeshadow"
+    And Nelim's Pickle Tools: "Miel" face is held neutral
+    And Nelim's Pickle Tools: "Miel" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: a colonist "Mira" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Mira" loses all genes
     And Nelim's Pickle Tools: "Mira" gender is Female
@@ -183,13 +190,20 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Mira" has the gene "Hair_DarkBlack"
     And Nelim's Pickle Tools: "Mira" has the gene "Eyes_Orange"
     And Nelim's Pickle Tools: "Mira" hair colour is taken from its genes
-    And Nelim's Pickle Tools: "Mira" hairstyle is "VHE_SideBraid"
-    And Nelim's Pickle Tools: "Mira" beard is "none"
-    And Nelim's Pickle Tools: "Mira" has the gene "BiB_FaceNiceFA"
+    And Nelim's Pickle Tools: "Mira" hairstyle is "Roo_Royal_NaturalcurlsHD"
+    And Nelim's Pickle Tools: "Mira" face tattoo is "none"
     And Nelim's Pickle Tools: "Mira" has the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: "Mira" is undressed
-    And Nelim's Pickle Tools: "Mira" wears "Apparel_BasicShirt" dyed rgb (230, 224, 206)
-    And Nelim's Pickle Tools: "Mira" also wears "Apparel_Pants"
+    And Nelim's Pickle Tools: "Mira" wears "Apparel_CollarShirt" dyed rgb (196, 150, 80)
+    And Nelim's Pickle Tools: "Mira" also wears "Apparel_Pants" dyed rgb (140, 160, 120)
+    And Nelim's Pickle Tools: "Mira" face kit is "smile"
+    And Nelim's Pickle Tools: "Mira" mouth is "MouthLipsBig"
+    And Nelim's Pickle Tools: "Mira" brows are "BrowTriangle"
+    And Nelim's Pickle Tools: "Mira" lids are "LidFlirty"
+    And Nelim's Pickle Tools: "Mira" eyeballs are "Empathetic"
+    And Nelim's Pickle Tools: "Mira" face skin is "SkinEyeshadow"
+    And Nelim's Pickle Tools: "Mira" face is held neutral
+    And Nelim's Pickle Tools: "Mira" facial expression is "normal+moodCheerful"
     And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
     And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
     And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
@@ -401,7 +415,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Nelim" stands at (165, 173) facing South
     And Nelim's Pickle Tools: "Soren" stands at (167, 173) facing South
     And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
-    And Nelim's Pickle Tools: "Miel" stands at (166, 173) facing East
+    And Nelim's Pickle Tools: "Miel" stands at (166, 173) facing South
     And Nelim's Pickle Tools: the animal "Shogun" stands at (164, 173) facing South
     And Nelim's Pickle Tools: I frame the area centred on the point (166, 173) at root size 2
     And Nelim's Pickle Tools: I let 30 frames pass
