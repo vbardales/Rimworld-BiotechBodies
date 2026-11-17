@@ -28,3 +28,9 @@ Also face packs added by the owner: VEFA (3753978140, sd.fa.movingvanillaeyes) a
 - Lot E: low or dead (1.0-1.4), skip unless asked.
 
 Not on the Workshop: ABCBodies 2, jjukbangnong, BeepBoop (A17), RimNudeWorld, Chiseled Body Addon, Sized Apparel Zero, Chanfana's Bodies, TREB's Body, Visible Pregnancy Belly Textures. Full small and old list: ask PiI.
+
+## Face packs added by the owner (PiI, 2026-11-17)
+
+- VEFA, Vanilla Experimentals for Facial Animation: Workshop 3753978140, sd.fa.movingvanillaeyes, 3931 subs, 1.6 only, updated 2026-09-20. Requires Harmony, [NL] Facial Animation WIP 1635901197, [NL] FA Experimentals 2581693737 (nals.facialanimationexperimentals), VTE-FA 2816938779. Its defs are not in Defs/: they are injected by `1.6/Patches/` (PatchAdd_EmotiveMouths, PatchAdd_Features, PatchAdd_ReelDefs, PatchAdd_VTEDefs, PatchBase_Experimentals_*, PatchEnable_MovingEyes), texPath `Things/Pawn/Humanlike/{Mouth,Brows,Eyes,Lids}/<name>`. Own DLL for a PatchOperationIfSettingTrue. Hard case: FaceLooks.cs reads plain def XML today, not patches.
+- VTE-FA, Vanilla Textures Expanded - [NL] Facial Animation: Workshop 2816938779, VanillaExpanded.VTEXE.FacialAnims, 174286 subs, 1.0-1.7. Requires nals.facialanimation. Plain defs in `Defs/FaceTypeDefs/Human/{BrowType, LidType, MouthType, SkinType}.xml` (11, 12, 27, 23 parts): same shape as the four current packs, so the easy one. Race folders (Asari, Drell, Viera...) are head types for other races, not human.
+- Not found on the Workshop: RimNudeWorld, Chiseled Body Addon, Sized Apparel Zero, Chanfana's Bodies, Chanfana x MaliBody, TREB's Body (RJW side, local installs only, flag "needs RJW / dynamic body").
