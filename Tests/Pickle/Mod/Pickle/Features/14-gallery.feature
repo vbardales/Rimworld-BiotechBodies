@@ -72,13 +72,13 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   #   stands at facing, carries the item, I frame the rectangle | "A neutral pawn, a body that finally fits."
   # 4 | 4-faces-at-the-mirror | cloister | 13:00, clear, +120 min | the face slot: four packs around the mirror | tight,
   #   four heads and shoulders, shoulder to shoulder, torii out of focus behind | Nelim (BiB_FaceUnagi), Miel (BiB_FaceNiceFA),
-  #   Soren (BiB_FaceRetexture), Ryu (BiB_FaceReel), clothes above, canon hair above, each holding a cup (carries the item "MealSimple"), all smiling; "just after the four
+  #   Soren (BiB_FaceFARetexture), Ryu (BiB_FaceReel), clothes above, canon hair above, each holding a cup (carries the item "MealSimple"), all smiling; "just after the four
   #   chose a face" | StylingStation in the middle, wall lanterns lit, PlantPot with Plant_Daylily at each end, Brazier lit |
   #   steps: has the gene, face parts logged, stands at facing, I frame the rectangle | "Four face packs, four faces: one gene
   #   each."
   # 5 | 5-soren-portrait | flower-garden | 15:00, clear, +120 min | one face close up (Retexture) | tight portrait, head and
   #   shoulders at the game's real zoom (never an upscaled crop), flowers in the foreground, soft afternoon light | Soren
-  #   (BiB_FaceRetexture, Male, MouthSmile) stands facing a flower, one step in front of it, carrying a log (carries the item "WoodLog") for the flower edging, "just before he leans in" |
+  #   (BiB_FaceFARetexture, Male, MouthSmile) stands facing a flower, one step in front of it, carrying a log (carries the item "WoodLog") for the flower edging, "just before he leans in" |
   #   Plant_Daylily and Plant_YellowTallGrass fully grown in the foreground, three PlantPot, Brazier lit (V9 2026-11-16: TorchLamp dropped, it drew as a green ghost top left in v8; native crop 960x540 now at x 400 y 450 so the daylilies show) |
   #   steps: face kit neutral, face parts, stands at facing, I frame the rectangle | "A close look at a face pack: Barb's
   #   retexture."
@@ -167,7 +167,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
     And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
-    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceFARetexture"
     And Nelim's Pickle Tools: "Soren" has the gene "BiB_WdiBody"
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
@@ -183,7 +183,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren2" has the gene "Eyes_DarkGreen"
     And Nelim's Pickle Tools: "Soren2" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Soren2" hairstyle is "Roo_HD_Hair_Tidy"
-    And Nelim's Pickle Tools: "Soren2" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren2" has the gene "BiB_FaceFARetexture"
     And Nelim's Pickle Tools: "Soren2" has the gene "BiB_VanillaBody"
     And Nelim's Pickle Tools: "Soren2" is undressed
     And Nelim's Pickle Tools: "Soren2" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
@@ -251,7 +251,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
     And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
-    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceFARetexture"
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (176, 112, 64)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants"
@@ -319,7 +319,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
     And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
-    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceFARetexture"
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (176, 112, 64)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants"
@@ -357,7 +357,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
     And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
-    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceFARetexture"
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (176, 112, 64)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants"

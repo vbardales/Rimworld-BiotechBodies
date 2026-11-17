@@ -37,7 +37,7 @@ namespace BiotechBodies
         {
             new FaceLook { Key = "Unagi", PackageId = "UNAGI.FacialAnimation", GeneDefName = "BiB_FaceUnagi" },
             new FaceLook { Key = "NiceFA", PackageId = "Andromeda.FacialAnimation", GeneDefName = "BiB_FaceNiceFA" },
-            new FaceLook { Key = "Retexture", PackageId = "Barb.Facetexture", GeneDefName = "BiB_FaceRetexture" },
+            new FaceLook { Key = "Retexture", PackageId = "Barb.Facetexture", GeneDefName = "BiB_FaceFARetexture" },
             new FaceLook { Key = "Reel", PackageId = "Reel.FacialAnims", GeneDefName = "BiB_FaceReel" }
         };
 

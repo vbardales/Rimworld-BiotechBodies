@@ -55,12 +55,12 @@ Languages: French (28 keys, 0 missing against English). English is the source si
 | `BiB_FaceNiceFA.label` | Nice face | Nice face | visage Nice |  |
 | `BiB_FaceNiceFA.description` | Carriers get the face parts of the Nice Facial Animation pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face. | Carriers get the face parts of the Nice Facial Animation pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face. | Le visage reprend les éléments du pack Nice Facial Animation (Joli visage animé), même quand un autre pack de visages l'emporte dans l'ordre de chargement. Un élément que le pack ne couvre pas garde le visage par défaut. [NL] Facial Animation - WIP (Visage animé, en travaux) dessine le visage. |  |
 
-## French/Compat/Retexture/DefInjected/GeneDef/BiB_FaceRetexture.xml
+## French/Compat/Retexture/DefInjected/GeneDef/BiB_FaceFARetexture.xml
 
 | Key or path | Original | English | French | ? |
 |---|---|---|---|---|
-| `BiB_FaceRetexture.label` | Retexture face | Retexture face | visage Retexture |  |
-| `BiB_FaceRetexture.description` | Carriers get the face parts of the Facial Animation - Retexture pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face. | Carriers get the face parts of the Facial Animation - Retexture pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face. | Le visage reprend les éléments du pack Facial Animation - Retexture (Visage animé - Retexture), même quand un autre pack de visages l'emporte dans l'ordre de chargement. Un élément que le pack ne couvre pas garde le visage par défaut. [NL] Facial Animation - WIP (Visage animé, en travaux) dessine le visage. |  |
+| `BiB_FaceFARetexture.label` | Retexture face | Retexture face | visage Retexture |  |
+| `BiB_FaceFARetexture.description` | Carriers get the face parts of the Facial Animation - Retexture pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face. | Carriers get the face parts of the Facial Animation - Retexture pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face. | Le visage reprend les éléments du pack Facial Animation - Retexture (Visage animé - Retexture), même quand un autre pack de visages l'emporte dans l'ordre de chargement. Un élément que le pack ne couvre pas garde le visage par défaut. [NL] Facial Animation - WIP (Visage animé, en travaux) dessine le visage. |  |
 
 ## French/Compat/Reel/DefInjected/GeneDef/BiB_FaceReel.xml
 

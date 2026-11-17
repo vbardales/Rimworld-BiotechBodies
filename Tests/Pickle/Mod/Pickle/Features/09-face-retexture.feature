@@ -1,5 +1,5 @@
 @review @face-retexture @timeout:180 @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.screenshotstudio
-Feature: the gene BiB_FaceRetexture gives a pawn the face parts of the Facial Animation Retexture pack
+Feature: the gene BiB_FaceFARetexture gives a pawn the face parts of the Facial Animation Retexture pack
 
   # The loaded default face is not this pack, so the gene must change the face. The same pawn is photographed close
   # up before and after the gene. The load log carries the number of part definitions cloned for the look
@@ -28,12 +28,12 @@ Feature: the gene BiB_FaceRetexture gives a pawn the face parts of the Facial An
     And Nelim's Pickle Tools: I let 10 frames pass
     And Nelim's Pickle Tools: the face parts of "Bo" are logged
     And I take a screenshot "face-default-Retexture"
-    When Nelim's Pickle Tools: "Bo" has the gene "BiB_FaceRetexture"
+    When Nelim's Pickle Tools: "Bo" has the gene "BiB_FaceFARetexture"
     And I wait 5 ticks
     And game speed is paused
     And Nelim's Pickle Tools: "Bo" faces South
     And Nelim's Pickle Tools: I let 10 frames pass
-    Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_FaceRetexture"
+    Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_FaceFARetexture"
     And Nelim's Pickle Tools: the face parts of "Bo" are logged
     And Nelim's Pickle Tools: the face Mouth texture of "Bo" starts with "BiB/Face/Retexture/"
     And Nelim's Pickle Tools: the face Mouth type of "Bo" starts with "BiB_Retexture_"
