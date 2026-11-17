@@ -43,7 +43,7 @@ PiT already ships `sex` steps in ColonistRace (`"X" sex is male|female|neutre`, 
 
 ## Open questions (owner, via SaB)
 
-1. Ship in 1.0.0 or in 1.1.0? The 1.0.0 scope was closed on 2026-11-07.
+1. Answered 2026-11-17 by the owner (Virginie, in the BiB session chat): ships in 1.1.0. The 1.0.0 scope stays closed (2026-11-07).
 2. Gene name and wording in English and French (Virginie decides, `Docs/review-names.md`).
 3. Does Neutral change romance (orientation) in 1.0, or labels and pronouns only?
 4. Existing `Gender.None` pawns in a save: leave them or repair them?
