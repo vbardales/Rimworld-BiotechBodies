@@ -38,7 +38,7 @@ Every vanilla read of `pawn.gender` that stands for biology must be found and re
 
 ## Pickle
 
-Owner rule (2026-11-17): PiT step `gender is male` also sets sex male, `gender is female` also sets sex female (what every current test uses, nothing changes for them). `gender is neutral` sets the neutral gender and draws a random sex if none was given before. A separate `sex is male|female` step sets only the sex gene. Needs from PiT (ask through the TM, BiB writes no local step): the sex-gene step, a probe and a log line that prints the drawn sex (the random draw must be readable in the run). Order matters: `gender is neutral` then `sex is ...` keeps the explicit sex; the reverse keeps it too. Until the sex gene exists (1.1.0), the steps set the gender only.
+Owner spec (2026-11-17, BiB chat and SaB relay). (1) `"X" sex is male|female` sets the SEX gene only (BiB_SexMale or BiB_SexFemale, removes the other). (2) `"X" gender is male|female|neutral` sets `Pawn.gender`; for male or female it also sets the sex gene to the same value, so a normal pawn needs ONE `gender is` step (what every current test does). (3) `gender is neutral` sets `Pawn.gender = None` and does not touch an existing sex gene; if the pawn has no sex gene yet it draws one at random (BiB chat rule), and the draw is logged. So a neutral pawn such as Quill is `sex is male` then `gender is neutral`. (4) A gender different from the sex needs the sex step AFTER the gender step. Needs from PiT (BiB writes no local step): the `sex is` step, the extended `gender is` rule, a probe and a log line that prints the sex gene and the drawn sex. Until the sex gene exists (1.1.0), `gender is male|female` is the binary workaround and SaB keeps it.
 
 ## Open questions (owner)
 
