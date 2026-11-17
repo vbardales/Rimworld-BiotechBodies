@@ -1,62 +1,50 @@
 # Sex and gender in Biotech Bodies: design draft
 
-Status: draft, 2026-11-17. Origin: owner decision relayed by SanctuaryBacklot (SaB) through the TM: sex and gender work is an extension of BiB, not a new mod. Nothing is built. Points marked (verify) are not read in the game code yet.
+Status: draft v2, 2026-11-17, ships in 1.1.0. Origin: owner decision relayed by SanctuaryBacklot (SaB): sex and gender work is an extension of BiB. Nothing is built. Points marked (verify) are not read in the game code yet.
+
+## Owner model (2026-11-17, in the BiB chat)
+
+- **Gender** is what the pawn profile shows ("femme, 23 ans, ..."). Neutral gender shows "humain, 23 ans, ...". So `Pawn.gender == Gender.None` means NEUTRAL GENDER. No separate storage for gender: the vanilla field is the gender.
+- **Sex** is biological and genetic: a gene, `BiB_SexMale` or `BiB_SexFemale` (names open). Exactly one per humanlike pawn.
+
+This replaces draft v1 (binary `Pawn.gender` plus a Neutral comp, gene, hediff or trait). The storage question of v1 is closed.
 
 ## Problem (proved by SaB, `SanctuaryBacklot/Docs/NEUTRES-TETE.md`)
 
-A `Gender.None` humanlike pawn draws its head too low. Not the head shape, not `BiB_VanillaBody`, not the body type, not RJW, not Non-Binary Gender. Male and female controls draw correctly. The game picks body `Female` and head `Male_NarrowWide` for a neutral pawn, and no head def has gender `None`.
+A `Gender.None` humanlike pawn draws its head too low. Not the head shape, not `BiB_VanillaBody`, not the body type, not RJW, not Non-Binary Gender. The game picks body `Female` and head `Male_NarrowWide` for it, and no head def has gender `None`. Vanilla reads `pawn.gender` for biology; with a neutral gender those reads are wrong or missing.
 
-## Design in three separate things
+## Design
 
-1. **Sex** (game side): `Pawn.gender` stays `Male` or `Female` for every humanlike pawn. It is drawn at random once, at creation, by the vanilla generator. It fixes organs, body type and head pool before any surgery. BiB never changes it and never writes it at load.
-2. **Gender identity** (BiB side): "Neutral" is stored outside the genes (owner, 2026-11-17: gender is not genetic), place open: see "Where gender identity is stored". It changes labels and pronouns only. It does not touch `Pawn.gender`, so the render pipeline never sees `None`. This also removes the head offset for Quill, Quo and Quaren, because their sex is binary.
-3. **Look**: already separate from sex. Body and face looks are genes resolved per slot (`BiB_VanillaBody`, `BiB_WdiBody`, face packs). A neutral pawn picks any look. A head slot is possible later (not in 1.1.0 scope yet, `STATUS.md` design line).
+1. **Sex gene** drives everything biological that vanilla takes from `pawn.gender`: body type pool, head type pool, hair pool, organs and reproduction, apparel and style gender filters. BiB redirects those reads to the sex gene when `pawn.gender` is `None` (and may do it for all pawns for one code path).
+2. **Gender** stays in `Pawn.gender` and drives only what the player reads: profile label, pronouns, text. The profile label for `None` becomes "humain" (English wording to decide). (verify the label call and the pronoun lookup for `None`).
+3. **Look** stays separate: look genes (`BiB_VanillaBody`, `BiB_WdiBody`, face packs) resolve per slot, free of sex and gender.
 
 ## Where the random draw plugs in
 
-- The vanilla draw already gives a binary sex to normal pawns. BiB adds nothing for them.
-- Only requests with `FixedGender == Gender.None` need BiB: Harmony prefix on `PawnGenerator.GeneratePawn(PawnGenerationRequest)` (verify the exact overload) sets `request.FixedGender` to a random binary value, once, at generation. Before generation, because organs, body type, head and hair are chosen from the gender during generation: a fix after the fact would be late.
-- Load: nothing. `ExposeData` is untouched, so a saved sex never changes.
-- Existing saves with a `Gender.None` humanlike pawn: leave them alone in 1.0 (verify how many cases exist: scenario starts with a neutral pawn, mods). Option for later: a one-time repair button, owner decision.
+- Sex: drawn once at creation, random binary, written as the sex gene. Harmony hook at generation (verify the overload; candidate `PawnGenerator.GeneratePawn(PawnGenerationRequest)` and the gene generation step). A pawn with a vanilla gender Male or Female gets the matching sex gene by default.
+- Gender: vanilla draw gives Male or Female; Neutral is set by a request (`FixedGender None`), a scenario step, or a BiB dev gizmo. BiB must stop vanilla from overwriting `None`.
+- Load: nothing. Saved sex gene and saved `Pawn.gender` are never rewritten.
+- Existing `Gender.None` pawns in a save get a sex gene at first load only if missing, one time, then fixed (open question 5).
 
-## What Neutral changes in game
+## Work this implies (the large part)
 
-- A label shown where the storage choice puts it (health tab, bio tab or BiB line).
-- Pronouns and gendered words in text: patch the pronoun lookup for carriers (they/them) (verify the call: `GenderUtility` and grammar request).
-- Not changed: organs, body type, head pool, romance and orientation, pregnancy. Romance stays on binary sex in 1.0.0.
-- Inheritance: vanilla random sex for a child; identity is not inherited (not genetic).
+Every vanilla read of `pawn.gender` that stands for biology must be found and redirected: PawnGenerator (body type, head, hair, organs), `PawnRenderNode` head and body graphics, hair and beard filters, `BodyTypeDef` gender rules, apparel and style filters, reproduction and pregnancy. Compat patches read `pawn.gender` too (Facial Animation, WDI, Female Body Variants): they need the same redirect or a test that they cope with `None`. A reflection or transpiler pass plus a Pickle proof per area. Not a small patch.
 
-## Where gender identity is stored: owner picks (open)
-
-Owner, 2026-11-17 (via SaB): gender is not a gene (sex is the biological part, identity is not genetic). Three candidates, none built:
-
-| | Hediff (Simple Trans precedent) | Trait | Pawn comp (saved with the pawn) |
-|---|---|---|---|
-| Visible by default | Health tab | Bio tab, with description | No: BiB adds its own line or gizmo |
-| Saved with the pawn | Yes | Yes | Yes (Scribe, ignored if the mod is removed) |
-| Reads as | A medical condition (can feel wrong for identity) | A personality trait | Neutral, not a condition |
-| Vanilla removes or changes it | Healing, revive, surgery mods may touch it | Events, Ideology, mods may remove or swap it; counts against the trait limit | Nothing |
-| Clash risk | Low | Way Better Romance and orientation mods work on traits | Low (needs a ThingDef comp added at startup for humanlike races) |
-| Choosing it in game | Needs UI or a step | Existing trait UI, dev tools | Needs own UI (small dialog or Bio tab line) |
-| Pickle | Existing hediff step may do | Existing trait step may do | New step needed, ask PiT |
-| Inherited by children | No | No | Not by default (one flag, decide) |
-
-BiB recommendation: pawn comp. It is not a condition and not a trait, and vanilla and other mods cannot swap it. Cost: own UI and one new Pickle step. Hediff is the cheapest build; trait is the most visible but the most exposed to other mods. The owner decides. Gene name follows the choice.
 ## Compatibility to check (verify)
 
-- Way Better Romance: declares Non-Binary Gender incompatible; check its gender and orientation genes and traits before naming ours.
-- RJW and rjw-genes: sex and orientation handling; no overlap if BiB only reads `Pawn.gender`.
-- Non-Binary Gender (3109763692): different mechanism (`Gender.None` side), likely incompatible with the draw prefix; decide `incompatibleWith` after a test.
-- Female Body Variants, WDI Realistic Bodies, Facial Animation: render on binary sex, nothing to change.
+- Way Better Romance, RJW, rjw-genes: sex and orientation; they read `pawn.gender` and may break on `None`. Non-Binary Gender (3109763692): same field, likely incompatible.
+- Female Body Variants, WDI Realistic Bodies, Facial Animation: render on `pawn.gender`; test with `None` and a sex gene.
+- Biotech xenogerm and gene inheritance: decide that child sex is drawn at birth, not inherited, so the sex gene never breaks a child.
 
 ## Pickle
 
-PiT already ships `sex` steps in ColonistRace (`"X" sex is male|female|neutre`, `the sex of "X" is ...`, `... is written to the log`). BiB needs: a step or existing hediff or trait step to set Neutral, and a probe that the pawn reads Neutral with a binary `Pawn.gender`. Ask PiT through the TM before writing any local step. Stability test: create a pawn, save, reload several times, same sex each time (SaB f090 could not test it, no random creation yet).
+PiT already ships `sex` steps in ColonistRace (`"X" sex is male|female|neutre`, `the sex of "X" is ...`, `... is written to the log`). They set `Pawn.gender`, which is now the GENDER. Ask PiT through the TM for sex-gene steps (set, probe, log line). New probe: a `None` gender pawn draws the head and body of its sex gene. Stability test: create a pawn, save, reload several times, same sex and gender each time.
 
-## Open questions (owner, via SaB)
+## Open questions (owner)
 
-1. Answered 2026-11-17 by the owner (Virginie, in the BiB session chat): ships in 1.1.0. The 1.0.0 scope stays closed (2026-11-07).
-2. Storage place (hediff, trait or comp, see the table) and name; wording in English and French (Virginie decides, `Docs/review-names.md`).
-3. Romance: assume labels and pronouns only, romance untouched (owner not decided, "je ne sais pas encore", 2026-11-17).
-4. Existing `Gender.None` pawns: SaB has only throw-away test pawns and one female save; ask the owner about her other saves.
-5. Until then SaB scenarios use binary sex (Quill and Quaren male, Quo female), as the TM brief says.
+1. Names of the sex genes and the Neutral profile word in English and French (Virginie decides, `Docs/review-names.md`).
+2. Neutral profile word: "humain" in French; English "human"?
+3. Can gender differ from sex for Male or Female genders (a woman with the male sex gene)? Assumed yes: sex is biology, gender is identity.
+4. Romance: not decided ("je ne sais pas encore"); untouched meanwhile.
+5. Existing `Gender.None` pawns in her saves: give them a sex gene at first load, or leave them? SaB has only throw-away test pawns.
+6. Until a 1.1.0 build exists, SaB scenarios use binary gender (Quill and Quaren male, Quo female).
