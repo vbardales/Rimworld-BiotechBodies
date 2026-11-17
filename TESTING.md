@@ -8,13 +8,13 @@ Promised behaviour (STATUS.md design, 2026-11-04/06; PUBLICATION.md is written a
 
 | Id | Behaviour | Feature, filter | Map | Expected |
 | --- | --- | --- | --- | --- |
-| B1 | BiB_VanillaBody keeps the vanilla body under WDI, male, female, Thin, Hulk, child | `03-vanilla-body` `@vanilla-gene` | vanillabody | body path starts `BiB/Vanilla/`, no error |
+| B1 | BiB_BodyVanilla keeps the vanilla body under WDI, male, female, Thin, Hulk, child | `03-vanilla-body` `@vanilla-gene` | vanillabody | body path starts `BiB/Vanilla/`, no error |
 | B2 | the same pawn without the gene shows the WDI body | `03-vanilla-body` | vanillabody | path does not start `BiB/Vanilla/` |
-| B3 | global and race body default give the vanilla body to a pawn with no gene; BiB_WdiBody beats a Vanilla default | `04-body-options` `@body-options` | bodyoptions | path follows the option; gene wins |
+| B3 | global and race body default give the vanilla body to a pawn with no gene; BiB_BodyWdi beats a Vanilla default | `04-body-options` `@body-options` | bodyoptions | path follows the option; gene wins |
 | B4 | apparel fits the vanilla body under WDI | `05-vanilla-body-apparel` `@vanilla-apparel` | vanillabody | pictures read by a person (@review), no error |
 | B5 | a Gender.None pawn with the gene shows the vanilla body (asked by NSB for Quill) | `11-neutral-body` `@neutral-gene` | vanillabody | path `BiB/Vanilla/...Naked_<type>`, pictures read |
 | C1 | a gene of another mod with `BodyLookExtension` draws its own body texture per body type, body type kept, missing texture keeps the game graphic (asked by Creatures of Kikija) | `15-custom-body` `@custom-body` | custombody | Thin drawn with the Hulk texture, Hulk with Thin, Male unlisted keeps vanilla; green, ticket 51f3 on e3e7df5 |
-| C2 | Body Mod Mix and Match beside BiB is declared incompatible, symptom measured (pass 16) | `16-incompat-bmmam` | incompat-bmmam-pool | 3 of 10 pawns with BiB_VanillaBody lose the BiB path, 5 scenarios end on a draw Log.Error; replay at each release |
+| C2 | Body Mod Mix and Match beside BiB is declared incompatible, symptom measured (pass 16) | `16-incompat-bmmam` | incompat-bmmam-pool | 3 of 10 pawns with BiB_BodyVanilla lose the BiB path, 5 scenarios end on a draw Log.Error; replay at each release |
 | F1 | BiB_FaceUnagi, BiB_FaceNiceFA, BiB_FaceFARetexture, BiB_FaceReel give the face parts of their pack | `06` to `10` `@face-unagi` `@face-nicefa` `@face-retexture` `@face-reel` | unagi, nicefa, retexture, reel | part types Mouth and Head, prefix `BiB_<Key>_` |
 | F2 | the face default (global, race) reaches a pawn with no face gene | `07-face-default` `@face-default` | faceunagi | parts of the default pack drawn |
 | S1 | the Mod options page exists, opens and closes with no error | `12-settings` `@settings` | settings | page exists, no error |
@@ -55,6 +55,6 @@ Written, not played yet (7.d): every Pickle row above. B1 to B3, B4, F1, F2 were
 
 `Tests/Pickle/config/incompat-bmmam-bb/Mod_3792365853_BodyModMixAndMatchMod.xml` enables the pool entries of Body Mod Mix and Match, the Male body of Beautiful Bodies (`graphic|mireia.bodies|Male|Male|Things/Pawn/Humanlike/Bodies/Naked_Male`, id built as in BMMaM `BodyPoolRuntime.cs:179`). Without it BMMaM's pools are empty and it changes nothing (`AppearanceSettings.bodyPoolEnabled`). Written by hand from the BMMaM source, not from a game-written file: if the pawn without a gene still draws the standard path, the key is the first suspect.
 
-Update 2026-11-13: the seed now enables two Male bodies, WDI (`wdi.realistic.bodies`) and Beautiful Bodies, so BMMaM has a real choice. Scenarios `pool pawn <n>` (10 pawns with BiB_VanillaBody, log only) and `pool control pawn <n>` (4 pawns with no gene, screenshots). Reading: 10 of 10 gene pawns log `BiB/Vanilla/` = BiB wins, no incompatibility. Any other path = BMMaM overrides the gene (BMMaM patches GraphicFor at Priority.Last). The controls must show the WDI or Beautiful Bodies look, otherwise the seed was not read (package id case is the first suspect).
+Update 2026-11-13: the seed now enables two Male bodies, WDI (`wdi.realistic.bodies`) and Beautiful Bodies, so BMMaM has a real choice. Scenarios `pool pawn <n>` (10 pawns with BiB_BodyVanilla, log only) and `pool control pawn <n>` (4 pawns with no gene, screenshots). Reading: 10 of 10 gene pawns log `BiB/Vanilla/` = BiB wins, no incompatibility. Any other path = BMMaM overrides the gene (BMMaM patches GraphicFor at Priority.Last). The controls must show the WDI or Beautiful Bodies look, otherwise the seed was not read (package id case is the first suspect).
 
 Fix 2026-11-13: the seed file name takes the `Mod` subclass of the mod (`BodyModMixAndMatchMod`), not the ModSettings class (`AppearanceSettings`, which stays in the `Class=` attribute inside). The first seeds were named after AppearanceSettings, so the game never read them: that is why tickets 8f01, 8594 and 830c showed no pool effect.

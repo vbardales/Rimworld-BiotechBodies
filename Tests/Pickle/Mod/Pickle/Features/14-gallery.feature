@@ -7,12 +7,12 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   # V7 (2026-11-16, after run 18ee): shot 3 DROPPED (Quill with the neutral body stays in shot 6; the cropped profile of Quill and the body were unreadable at 268 px), names 1 2 4 5 6 kept, reindex after acceptance. Shot 2 gets Plant_Daylily (141,75) (142,75) and a lit TorchLamp (139,73) inside the crop (the capture had a bare wood floor). Shot 5: Soren moves to (153,99) so the coil-like statue leaves the crop.
   # V10 (2026-11-17, after v9): the green ghost top left and the coil statue are fixtures of the statue-garden, not decor. Shot 5 moves to the flower-garden, Soren at (154,109) facing South (cell proven standable by f03a), no placed decor (the garden own flowers are the foreground), crop 960x540 chosen after the run. The pack draws the mouth (no smile step, by design).
   # V6 (2026-11-16, after runs 80d1 and 6b23): shot 3 moves to the cloister (cells (176,128) (177,128) proven by shot 4), renamed 3-quill-and-ryu, decor Brazier (177,127), TorchLamp (175,126), Plant_Daylily (175,127) (178,127); shot 2 Miel faces South again; shot 5 grass moved to (152,98) (155,97 holds a SculptureSmall); shot 6 Soren carries a WoodLog (no ThingDef named Torch, Torch is a building). Shot 4 passed (6b23): crop 960x540 offset x 450 gives four readable faces at 268 px, Ryu Reel face frowns (the pack draws the mouth).
-  # V19 (2026-11-17, owner: "le même personnage, cloné, un avec le gène vanilla et un avec le gène WDI ... l'idéal c'est une femme Fat ou Hulk ou Thin", after the Male tests v15 to v18 read the same at 268 px): exploration scenarios 2f-miel-Fat, -Hulk, -Thin: Miel (NSB, canon face Nice FA, side braid, BiB_WdiBody) and her twin Mira (same genes and look, BiB_VanillaBody), both Female, same body type, same tanktop dye, only the gene differs. OWNER VALIDATION (rule 3 of sync-nsb-npt): a clone of Miel, "le même personnage, cloné", pawn outside NSB, 2026-11-17, gallery only. The winner replaces shot 2, the other two 2f-* are deleted. Ticket filed after this commit.
+  # V19 (2026-11-17, owner: "le même personnage, cloné, un avec le gène vanilla et un avec le gène WDI ... l'idéal c'est une femme Fat ou Hulk ou Thin", after the Male tests v15 to v18 read the same at 268 px): exploration scenarios 2f-miel-Fat, -Hulk, -Thin: Miel (NSB, canon face Nice FA, side braid, BiB_BodyWdi) and her twin Mira (same genes and look, BiB_BodyVanilla), both Female, same body type, same tanktop dye, only the gene differs. OWNER VALIDATION (rule 3 of sync-nsb-npt): a clone of Miel, "le même personnage, cloné", pawn outside NSB, 2026-11-17, gallery only. The winner replaces shot 2, the other two 2f-* are deleted. Ticket filed after this commit.
   # V18 (2026-11-17, after ticket 6ead: Thin, Fat and Hulk with the same body type for both pawns; Female failed, a Male pawn cannot take body type Female without gender Female, not retried): Hulk reads the most different at 268 px (WDI tapered waist against vanilla squared sleeves), Fat nearly identical, Thin slight. Shot 2 now Hulk for both pawns; the tanktop colours were random and differed (grey against dark), so both are dyed rgb (230, 224, 206) so only the gene changes. 2t-* scenarios deleted. Subtitle to review: Two bodies, two looks: WDI and vanilla (it is one body type, say so).
-  # V17 (2026-11-17, owner on the v15 capture: the two pawns must use the SAME body type, only the gene changes, everything else equal; they win over v15). Shot 2 goes back to Male for both pawns (Soren BiB_WdiBody, Haru BiB_VanillaBody). Exploration scenarios 2t-bodytype-Female, -Thin, -Fat, -Hulk (same body type for both, only the gene differs) to find the body type where WDI and vanilla read most different at 268 px; the winner replaces shot 2, the other three are deleted. Ticket 6ead.
+  # V17 (2026-11-17, owner on the v15 capture: the two pawns must use the SAME body type, only the gene changes, everything else equal; they win over v15). Shot 2 goes back to Male for both pawns (Soren BiB_BodyWdi, Haru BiB_BodyVanilla). Exploration scenarios 2t-bodytype-Female, -Thin, -Fat, -Hulk (same body type for both, only the gene differs) to find the body type where WDI and vanilla read most different at 268 px; the winner replaces shot 2, the other three are deleted. Ticket 6ead.
   # V16 (2026-11-17, score-gallery at 268 px on the v16 captures of ticket 3862): 6 is a candidate (native crop 1100x619 x 290 y 250, faces about 36 px at 268 px). 1 crop tight 1080x608 shows faces but the decor falls out (bare planks, only torches): decor moved closer to the pawns, Brazier (136, 125), Plant_Daylily (134, 125) (the one at (138, 126) is unchanged and falls outside the crop), then native crop about 1190x670 x 360 y 330 chosen after the run. Nothing else changes.
-  # V15 (2026-11-17, owner "Deux corps différents", after ticket 8420 REDO: Soren WDI and Haru vanilla read the same width at 268 px, only the tanktop colour differed; they win over v14). CHANGE: Haru body type is Thin (vanilla look, BiB_VanillaBody), Soren stays Male with BiB_WdiBody, so the two silhouettes differ (the 2abd capture of 2026-11-16 already read round vs slim at 268 px). Everything else of v14 is unchanged (twins by genes, face Retexture, hair, tanktop and shorts, cells, hour, frame). The pair now shows two different bodies, not one body type with two looks. Subtitle: "Two bodies, two looks: WDI and vanilla."
-  # V14 (2026-11-17, owner idea, they win over v13 and older): shot 2 recomposed. CAUSE: under the tanktop the WDI (Nelim) and vanilla (Miel) bodies read the same at 268 px (hypothesis, not checked: Venus Touch Waistlines reshapes every pawn, to settle with VTW: do not apply its changes to pawns with a non WDI body gene). CHANGE: the pair is now Soren (BiB_WdiBody) and his twin Haru (same genes, face Retexture, hair and clothes as Soren, but BiB_VanillaBody), both Male body, both in UnderWhere_Tanktop and LTS_Shorts (the fitting), at (140, 74) and (141, 74) facing South; Nelim and Miel leave the shot (Nelim stays the photographer out of frame). OWNER VALIDATION (rule 3 of sync-nsb-npt): "un jumeau de Soren MAIS en vanilla", pawn outside NSB, 2026-11-17, gallery only. Decor, hour 9, frame (140.5, 74) at root size 2 do not change. Subtitle: "Same body type, two looks: WDI and vanilla."
+  # V15 (2026-11-17, owner "Deux corps différents", after ticket 8420 REDO: Soren WDI and Haru vanilla read the same width at 268 px, only the tanktop colour differed; they win over v14). CHANGE: Haru body type is Thin (vanilla look, BiB_BodyVanilla), Soren stays Male with BiB_BodyWdi, so the two silhouettes differ (the 2abd capture of 2026-11-16 already read round vs slim at 268 px). Everything else of v14 is unchanged (twins by genes, face Retexture, hair, tanktop and shorts, cells, hour, frame). The pair now shows two different bodies, not one body type with two looks. Subtitle: "Two bodies, two looks: WDI and vanilla."
+  # V14 (2026-11-17, owner idea, they win over v13 and older): shot 2 recomposed. CAUSE: under the tanktop the WDI (Nelim) and vanilla (Miel) bodies read the same at 268 px (hypothesis, not checked: Venus Touch Waistlines reshapes every pawn, to settle with VTW: do not apply its changes to pawns with a non WDI body gene). CHANGE: the pair is now Soren (BiB_BodyWdi) and his twin Haru (same genes, face Retexture, hair and clothes as Soren, but BiB_BodyVanilla), both Male body, both in UnderWhere_Tanktop and LTS_Shorts (the fitting), at (140, 74) and (141, 74) facing South; Nelim and Miel leave the shot (Nelim stays the photographer out of frame). OWNER VALIDATION (rule 3 of sync-nsb-npt): "un jumeau de Soren MAIS en vanilla", pawn outside NSB, 2026-11-17, gallery only. Decor, hour 9, frame (140.5, 74) at root size 2 do not change. Subtitle: "Same body type, two looks: WDI and vanilla."
   # V13 (2026-11-17, score-gallery verdict on the v12 captures of ticket 9e16: 4 and 6 candidates (native crops 1440x810 x 400 y 40 and 1200x675 x 300 y 60, stored in Art/Gallery-clean), 1 and 2 REDO; they win over v12 and older). 1: decor too thin in the frame (Brazier cut at the top, bare planks), frame centre moves from (135, 124) to (135, 125) so the lit Brazier at (136, 126), the Daylilies at (134, 126) and (138, 126) and both TorchLamps are inside the crop (native 1200x675 x 360 y 0 chosen after the run); nothing else changes. 2 STAYS REDO, not refiled yet: WDI and vanilla bodies read the same under the tanktop at 268 px (silhouettes alike), the scene needs another way to show the body difference.
   # V12 (2026-11-17, score-gallery verdict on the v11 captures of ticket f1db: 1 2 4 6 REDO again; they win over v11 and older). CAUSES: 1 and 6 j weak (faces about 10 to 12 px at 268 px: the crop 960x540 is too wide for one to three small pawns); 2 the plan says "same Female body" but Miel was Thin (adequacy partly) and Miel showed no smile; 4 the plan said all smiling but the face packs draw the mouth (Miel stern), plan and picture disagreed; 6 bare grey stone ground, the StylingStation, Brazier and lilies outside the crop. CHANGES: capture at the game floor (root size 2 for 1, 2, 4 and 6, was 2.5), then native crop WITHOUT upscale chosen after the run, tighter than v11: 1 native crop 640x360 centred on Nelim and Shogun (Nelim about 40 px wide at 268 px), 2 native crop 640x360 centred on (140.5, 74), 4 native crop 800x450 centred on the four heads, 6 native crop 640x360 centred on (166, 173). 2: Miel body type is Female (same body type as Nelim, only the look differs, as the subtitle says). 4: written trait, no smile planned and no malus: the face packs draw the mouth and brows (Miel Nice FA, Soren Retexture, Ryu Reel, Nelim Unagi), the picture proves four different faces; Nelim face is the pack face, so her own-face step is not used. 6 decor, all inside the crop: Plant_Daylily at (164, 174) (166, 174) (168, 174), Brazier moved to (169, 174), TorchLamps (164, 172) (170, 172) kept, so the ground is no longer bare; the StylingStation at (172, 174) stays out of the crop (story line in the subtitle only). Hours, outfits, pawns, gestures and the pack genes do not change.
   # V11 (2026-11-17, score-gallery verdict on the v10 captures: 5 candidate, 1 2 4 6 REDO; they win over v10 and older). CAUSES: 1 and 6 were captured at root size 3.5 (faces about 12 px at 268 px, j weak); 2 was bare (the decor of rows 73 and 75 fell outside the 960x540 crop); 4 shows a stern Reel face on Ryu while the plan said smiling. CHANGES: 1 and 6 now at root size 2.5 then native crop 960x540 at x 480 y 270 (centre of the frame), opening and closing become medium shots (series k: no wide shot left, the j rule of 2026-11-09 wins over variety, -0.5 assumed). 1: Nelim faces South (the hut is gone since v5, nothing to look at East), carries the Cloth, Shogun stands at her side facing South, frame centre (136, 125) so the lit Brazier (136, 126) and both TorchLamps are in the crop. 6: hour 17 as the header says (18 gave a grey light), Shogun STANDS at (164, 173) facing South (lying he read as a rug), root size 2.5, crop 960x540 at x 480 y 270 on three pawns and the dog. 2: Plant_Daylily added at (139, 74) and (142, 74) on the row of the pawns so the crop (x 480 y 230) holds flowers beside them. 4: no scenario change; written trait, no malus: Ryu Reel face is stern by design of the pack (the pack draws the mouth), Soren and Miel neutral, no cups, no wall lanterns in the crop (TorchLamps at (175,126) and (181,126) are outside it), the shot proves four different faces. Plan not rerated by score-gallery (it rates the captures, see STATUS).
@@ -39,7 +39,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   #
   # OWNER VALIDATIONS (quoted, rule 3 of sync-nsb-npt): "oui" on 2026-11-09, BiB session, for the gallery only: BiB look
   # genes or Mod options on Nelim, Miel, Soren and Ryu (body WDI or Vanilla, face UNAGI / Nice FA / Retexture / Reel);
-  # "oui" on 2026-11-09 for Quill Aster with BiB_VanillaBody. All colonists and Shogun (labrador) are NSB. The mod adds no
+  # "oui" on 2026-11-09 for Quill Aster with BiB_BodyVanilla. All colonists and Shogun (labrador) are NSB. The mod adds no
   # animal (rule 5 n/a). Outfits are free.
   #
   # DEPMAP. The Sanctuary map (SaB wsl-deps.sanctuary.map, nothing challenged) plus: brrainz.harmony, WDI Realistic
@@ -53,21 +53,21 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   # SHOTS (index | name | place | hour | subject | composition | living | decor | steps | subtitle)
   # 1 | 1-bridge-morning | river-bridge | 08:00, clear, +10 min after the setup | Nelim brings her cloth bundle to the tea room
   #   (the hut is in frame) | wide, bridge diagonal in the foreground, hut small in the background, light from the east |
-  #   Nelim (Female, BiB_WdiBody) stands at the east end facing East, carrying a cloth bundle (carries the item "Cloth"), smiling,
+  #   Nelim (Female, BiB_BodyWdi) stands at the east end facing East, carrying a cloth bundle (carries the item "Cloth"), smiling,
   #   "just before she reaches the hut"; Shogun stands at her side facing South (the camera) | TorchLamp lit at each end of the
   #   bridge, Brazier lit, two PlantPot with Plant_Daylily fully grown, Plant_YellowTallGrass along the rail | steps: Nelim has
   #   her own face, I frame the sanctuary "river-bridge", carries the item, the animal Shogun stands at facing South |
   #   "Nelim brings the day's looks across the bridge."
   # 2 | 2-two-bodies | hut (tea room) | 09:00, clear, +60 min | the body slot: same Female body, two looks | tight two-shot,
-  #   rectangle around two pawns, low table in front, off-centre left | Nelim (BiB_WdiBody) and Miel (BiB_VanillaBody) side by
+  #   rectangle around two pawns, low table in front, off-centre left | Nelim (BiB_BodyWdi) and Miel (BiB_BodyVanilla) side by
   #   side, both in UnderWhere_Tanktop and LTS_Shorts (the fitting), both smiling, Nelim holding a cup (carries the item
   #   "Meal"), Miel facing the mirror; "just after Miel stepped out of the chair" | StylingStation behind them, low table with
   #   two MealSimple items, cushions, andon lit, two PlantPot with Plant_Daylily | steps: body type is Female, has the gene, wears,
   #   stands at facing, I frame the rectangle | "Same body type, two looks: WDI and vanilla."
   # 3 | 3-quill-and-ryu | cloister (v6: statue-garden gave a coil-like statue between the pawns) | 11:00, clear, +120 min | the neutral body: Quill (Gender.None, vanilla look) beside
   #   Ryu (WDI) | tight two-shot knees up, Quill left of centre, Ryu right, statues behind, short shadows | Quill Aster
-  #   (BiB_VanillaBody, Neutre_AverageNormal) carrying a cloth bundle (carries the item "Cloth"), Ryu (Male,
-  #   BiB_WdiBody) beside her, both dressed (clothes above), smiling; "just before Quill lays the cloth at the statue" |
+  #   (BiB_BodyVanilla, Neutre_AverageNormal) carrying a cloth bundle (carries the item "Cloth"), Ryu (Male,
+  #   BiB_BodyWdi) beside her, both dressed (clothes above), smiling; "just before Quill lays the cloth at the statue" |
   #   statues of the garden, three PlantPot with Plant_Daylily fully grown, TorchLamp lit, Brazier lit | steps: has the gene,
   #   stands at facing, carries the item, I frame the rectangle | "A neutral pawn, a body that finally fits."
   # 4 | 4-faces-at-the-mirror | cloister | 13:00, clear, +120 min | the face slot: four packs around the mirror | tight,
@@ -120,7 +120,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (230, 224, 206)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants"
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
-    And Nelim's Pickle Tools: "Nelim" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Nelim" has the gene "BiB_BodyWdi"
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (133, 124)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (133, 124) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (137, 124)
@@ -168,7 +168,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
     And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceFARetexture"
-    And Nelim's Pickle Tools: "Soren" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_BodyWdi"
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
     And Nelim's Pickle Tools: "Soren" also wears "LTS_Shorts"
@@ -184,7 +184,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren2" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Soren2" hairstyle is "Roo_HD_Hair_Tidy"
     And Nelim's Pickle Tools: "Soren2" has the gene "BiB_FaceFARetexture"
-    And Nelim's Pickle Tools: "Soren2" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Soren2" has the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: "Soren2" is undressed
     And Nelim's Pickle Tools: "Soren2" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
     And Nelim's Pickle Tools: "Soren2" also wears "LTS_Shorts"
@@ -345,7 +345,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (230, 224, 206)
     And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants"
     And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
-    And Nelim's Pickle Tools: "Nelim" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Nelim" has the gene "BiB_BodyWdi"
     And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Soren" loses all genes
     And Nelim's Pickle Tools: "Soren" gender is Male
@@ -371,7 +371,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Quill" has the gene "Eyes_DarkCyan"
     And Nelim's Pickle Tools: "Quill" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Quill" hairstyle is "VHE_Librarian"
-    And Nelim's Pickle Tools: "Quill" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Quill" has the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: "Quill" is undressed
     And Nelim's Pickle Tools: "Quill" wears "Apparel_CollarShirt" dyed rgb (85, 107, 47)
     And Nelim's Pickle Tools: "Quill" wears "Apparel_Pants"

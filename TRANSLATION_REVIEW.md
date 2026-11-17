@@ -10,10 +10,10 @@ Languages: French (28 keys, 0 missing against English). English is the source si
 
 | Key or path | Original | English | French | ? |
 |---|---|---|---|---|
-| `BiB_VanillaBody.label` | vanilla body | vanilla body | corps vanilla |  |
-| `BiB_VanillaBody.description` | Carriers keep the vanilla body texture, even when a texture mod redraws the bodies of everyone else. The body shape stays the one the body type gives. | Carriers keep the vanilla body texture, even when a texture mod redraws the bodies of everyone else. The body shape stays the one the body type gives. | Le corps garde la texture vanilla, même quand un mod de textures redessine les corps de tous les autres. La forme du corps reste celle que donne le type de corps. |  |
-| `BiB_WdiBody.label` | WDI body | WDI body | corps WDI |  |
-| `BiB_WdiBody.description` | Carriers keep the body texture of WDI's Realistic Bodies, even when the default for their race or for everyone is another look. Without that mod, nothing changes. | Carriers keep the body texture of WDI's Realistic Bodies, even when the default for their race or for everyone is another look. Without that mod, nothing changes. | Le corps garde la texture de WDI's Realistic Bodies (Corps réalistes de WDI), même lorsqu'un autre aspect est défini par défaut pour la race ou pour tous. Sans ce mod, rien ne change. |  |
+| `BiB_BodyVanilla.label` | vanilla body | vanilla body | corps vanilla |  |
+| `BiB_BodyVanilla.description` | Carriers keep the vanilla body texture, even when a texture mod redraws the bodies of everyone else. The body shape stays the one the body type gives. | Carriers keep the vanilla body texture, even when a texture mod redraws the bodies of everyone else. The body shape stays the one the body type gives. | Le corps garde la texture vanilla, même quand un mod de textures redessine les corps de tous les autres. La forme du corps reste celle que donne le type de corps. |  |
+| `BiB_BodyWdi.label` | WDI body | WDI body | corps WDI |  |
+| `BiB_BodyWdi.description` | Carriers keep the body texture of WDI's Realistic Bodies, even when the default for their race or for everyone is another look. Without that mod, nothing changes. | Carriers keep the body texture of WDI's Realistic Bodies, even when the default for their race or for everyone is another look. Without that mod, nothing changes. | Le corps garde la texture de WDI's Realistic Bodies (Corps réalistes de WDI), même lorsqu'un autre aspect est défini par défaut pour la race ou pour tous. Sans ce mod, rien ne change. |  |
 
 ## French/DefInjected/MainButtonDef/BiB_Settings.xml
 

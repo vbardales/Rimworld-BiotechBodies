@@ -9,8 +9,8 @@ namespace BiotechBodies
     [DefOf]
     public static class BiBGeneDefOf
     {
-        public static GeneDef BiB_VanillaBody;
-        public static GeneDef BiB_WdiBody;
+        public static GeneDef BiB_BodyVanilla;
+        public static GeneDef BiB_BodyWdi;
 
         static BiBGeneDefOf()
         {

@@ -17,7 +17,7 @@ Feature: Body Mod Mix and Match is declared incompatible with Biotech Bodies, is
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
 
-  Scenario: a pawn with the gene BiB_VanillaBody next to Body Mod Mix and Match
+  Scenario: a pawn with the gene BiB_BodyVanilla next to Body Mod Mix and Match
     Given Nelim's Pickle Tools: a colonist "Bo" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Bo" gender is Male
     And Nelim's Pickle Tools: "Bo" body type is Male
@@ -25,14 +25,14 @@ Feature: Body Mod Mix and Match is declared incompatible with Biotech Bodies, is
     And I wait 5 ticks
     And game speed is paused
     And Nelim's Pickle Tools: "Bo" faces South
-    When Nelim's Pickle Tools: "Bo" has the gene "BiB_VanillaBody"
+    When Nelim's Pickle Tools: "Bo" has the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: "Bo" body type is Male
     And I wait 5 ticks
     And game speed is paused
     And Nelim's Pickle Tools: the camera is centered on "Bo" at root size 2
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "bmmam-gene-male"
-    Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_VanillaBody"
+    Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: the body texture of "Bo" is logged
 
   Scenario: a pawn with no BiB gene next to Body Mod Mix and Match
@@ -48,7 +48,7 @@ Feature: Body Mod Mix and Match is declared incompatible with Biotech Bodies, is
     When I take a screenshot "bmmam-nogene-male"
     Then Nelim's Pickle Tools: the body texture of "Cy" is logged
 
-  Scenario: a pawn with the gene BiB_WdiBody next to Body Mod Mix and Match
+  Scenario: a pawn with the gene BiB_BodyWdi next to Body Mod Mix and Match
     Given Nelim's Pickle Tools: a colonist "Wi" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Wi" gender is Male
     And Nelim's Pickle Tools: "Wi" body type is Male
@@ -56,28 +56,28 @@ Feature: Body Mod Mix and Match is declared incompatible with Biotech Bodies, is
     And I wait 5 ticks
     And game speed is paused
     And Nelim's Pickle Tools: "Wi" faces South
-    When Nelim's Pickle Tools: "Wi" has the gene "BiB_WdiBody"
+    When Nelim's Pickle Tools: "Wi" has the gene "BiB_BodyWdi"
     And Nelim's Pickle Tools: "Wi" body type is Male
     And I wait 5 ticks
     And game speed is paused
     And Nelim's Pickle Tools: the camera is centered on "Wi" at root size 2
     And Nelim's Pickle Tools: I let 5 frames pass
     And I take a screenshot "bmmam-wdi-male"
-    Then Nelim's Pickle Tools: "Wi" holds the gene "BiB_WdiBody"
+    Then Nelim's Pickle Tools: "Wi" holds the gene "BiB_BodyWdi"
     And Nelim's Pickle Tools: the body texture of "Wi" is logged
   # Pool test (owner idea, 2026-11-13). The seed config/incompat-bmmam-bb enables two Male bodies in the BMMaM pool (WDI and Beautiful Bodies),
   # so BMMaM has a real choice. BMMaM patches PawnRenderNode_Body.GraphicFor at Priority.Last, after BiB. Ten pawns with a BiB gene: all ten
   # log BiB/Vanilla/ means BiB wins and no incompatibility; any other path means BMMaM overrides the gene.
-  Scenario Outline: pool pawn <n> with the gene BiB_VanillaBody next to Body Mod Mix and Match
+  Scenario Outline: pool pawn <n> with the gene BiB_BodyVanilla next to Body Mod Mix and Match
     Given Nelim's Pickle Tools: a colonist "Gp<n>" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Gp<n>" gender is Male
     And Nelim's Pickle Tools: "Gp<n>" body type is Male
     And I destroy the gear of "Gp<n>"
     And I wait 5 ticks
-    When Nelim's Pickle Tools: "Gp<n>" has the gene "BiB_VanillaBody"
+    When Nelim's Pickle Tools: "Gp<n>" has the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: "Gp<n>" body type is Male
     And I wait 5 ticks
-    Then Nelim's Pickle Tools: "Gp<n>" holds the gene "BiB_VanillaBody"
+    Then Nelim's Pickle Tools: "Gp<n>" holds the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: the body texture of "Gp<n>" is logged
 
     Examples:

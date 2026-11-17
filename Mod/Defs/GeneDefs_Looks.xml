@@ -4,7 +4,7 @@
   <!-- A look gene shows a pawn with the vanilla texture of a slot, whatever texture mod is loaded. It is a texture
        choice, not a body shape: it does not carry a body type and does not exclude the vanilla body genes. -->
   <GeneDef>
-    <defName>BiB_VanillaBody</defName>
+    <defName>BiB_BodyVanilla</defName>
     <label>vanilla body</label>
     <description>Carriers keep the vanilla body texture, even when a texture mod redraws the bodies of everyone else. The body shape stays the one the body type gives.</description>
     <iconPath>UI/Icons/Genes/Gene_BodyThin</iconPath>
@@ -20,7 +20,7 @@
   </GeneDef>
 
   <GeneDef>
-    <defName>BiB_WdiBody</defName>
+    <defName>BiB_BodyWdi</defName>
     <label>WDI body</label>
     <description>Carriers keep the body texture of WDI's Realistic Bodies, even when the default for their race or for everyone is another look. Without that mod, nothing changes.</description>
     <iconPath>UI/Icons/Genes/Gene_BodyFat</iconPath>

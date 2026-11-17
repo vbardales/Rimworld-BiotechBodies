@@ -45,11 +45,11 @@ namespace BiotechBodies
         {
             if (pawn.genes != null)
             {
-                if (BiBGeneDefOf.BiB_VanillaBody != null && pawn.genes.HasActiveGene(BiBGeneDefOf.BiB_VanillaBody))
+                if (BiBGeneDefOf.BiB_BodyVanilla != null && pawn.genes.HasActiveGene(BiBGeneDefOf.BiB_BodyVanilla))
                 {
                     return BodyLook.Vanilla;
                 }
-                if (BiBGeneDefOf.BiB_WdiBody != null && pawn.genes.HasActiveGene(BiBGeneDefOf.BiB_WdiBody))
+                if (BiBGeneDefOf.BiB_BodyWdi != null && pawn.genes.HasActiveGene(BiBGeneDefOf.BiB_BodyWdi))
                 {
                     return BodyLook.Wdi;
                 }

@@ -11,13 +11,13 @@ This replaces draft v1 (binary `Pawn.gender` plus a Neutral comp, gene, hediff o
 
 ## Problem (proved by SaB, `SanctuaryBacklot/Docs/NEUTRES-TETE.md`)
 
-A `Gender.None` humanlike pawn draws its head too low. Not the head shape, not `BiB_VanillaBody`, not the body type, not RJW, not Non-Binary Gender. The game picks body `Female` and head `Male_NarrowWide` for it, and no head def has gender `None`. Vanilla reads `pawn.gender` for biology; with a neutral gender those reads are wrong or missing.
+A `Gender.None` humanlike pawn draws its head too low. Not the head shape, not `BiB_BodyVanilla`, not the body type, not RJW, not Non-Binary Gender. The game picks body `Female` and head `Male_NarrowWide` for it, and no head def has gender `None`. Vanilla reads `pawn.gender` for biology; with a neutral gender those reads are wrong or missing.
 
 ## Design
 
 1. **Sex gene** drives everything biological that vanilla takes from `pawn.gender`: body type pool, head type pool, hair pool, organs and reproduction, apparel and style gender filters. BiB redirects those reads to the sex gene when `pawn.gender` is `None` (and may do it for all pawns for one code path).
 2. **Gender** stays in `Pawn.gender` and drives only what the player reads: profile label, pronouns, text. The profile label for `None` becomes "humain" (English wording to decide). (verify the label call and the pronoun lookup for `None`).
-3. **Look** stays separate: look genes (`BiB_VanillaBody`, `BiB_WdiBody`, face packs) resolve per slot, free of sex and gender.
+3. **Look** stays separate: look genes (`BiB_BodyVanilla`, `BiB_BodyWdi`, face packs) resolve per slot, free of sex and gender.
 
 ## Where the random draw plugs in
 
@@ -53,7 +53,7 @@ Owner spec (2026-11-17, BiB chat and SaB relay). (1) `"X" sex is male|female` se
 
 A body texture is chosen from four inputs:
 
-1. **Library gene**: which body set (BiB_WdiBody, BiB_VanillaBody, others).
+1. **Library gene**: which body set (BiB_BodyWdi, BiB_BodyVanilla, others).
 2. **Sex**: the sex gene (BiB_SexMale, BiB_SexFemale), or a sex plus body type override gene (for example BiB_Male_Fat) when one exists.
 3. **Body type**: the pawn's own body type, or a sex plus body type gene (for example BiB_Fat) when one exists.
 4. **Kind gene**: the material of the body (BiB_Naked, BiB_Furry, BiB_Perfect, BiB_Scaly).

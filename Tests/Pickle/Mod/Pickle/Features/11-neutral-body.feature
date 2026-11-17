@@ -1,5 +1,5 @@
 @review @neutral-gene @timeout:180 @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.screenshotstudio
-Feature: a gender-neutral pawn with the gene BiB_VanillaBody shows the vanilla body under WDI's Realistic Bodies
+Feature: a gender-neutral pawn with the gene BiB_BodyVanilla shows the vanilla body under WDI's Realistic Bodies
 
   # Asked by SanctuaryBacklot (Quill Aster, Gender.None, 2026-11-07; the owner wants neutral pawns in the vanilla look).
   # WDI redraws the Male and Female bodies. This reads what a Gender.None pawn shows before and after the gene, on
@@ -31,11 +31,11 @@ Feature: a gender-neutral pawn with the gene BiB_VanillaBody shows the vanilla b
     And I take a screenshot "neutral-wdi-<type>"
     And Nelim's Pickle Tools: the body texture of "Quill" is logged
     Then Nelim's Pickle Tools: the body of "Quill" is not drawn from a texture path starting with "BiB/Vanilla/"
-    When Nelim's Pickle Tools: "Quill" has the gene "BiB_VanillaBody"
+    When Nelim's Pickle Tools: "Quill" has the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: "Quill" body type is <type>
     And I wait 5 ticks
     And game speed is paused
-    Then Nelim's Pickle Tools: "Quill" holds the gene "BiB_VanillaBody"
+    Then Nelim's Pickle Tools: "Quill" holds the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: "Quill" has body type <type>
     And Nelim's Pickle Tools: the body texture of "Quill" is logged
     And Nelim's Pickle Tools: the body of "Quill" is drawn from the texture path "BiB/Vanilla/Things/Pawn/Humanlike/Bodies/Naked_<type>"

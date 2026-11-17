@@ -1,7 +1,7 @@
 @review @vanilla-apparel @timeout:180 @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.screenshotstudio
 Feature: apparel on a vanilla body under WDI's Realistic Bodies
 
-  # WDI ships apparel textures fitted to its own bodies. A pawn with the gene BiB_VanillaBody wears the same garments
+  # WDI ships apparel textures fitted to its own bodies. A pawn with the gene BiB_BodyVanilla wears the same garments
   # before and after the gene: the two pictures are read side by side for a gap, a clipping or a missing layer. The
   # drawn body path is asserted; how the garment sits on the body is decided by eye.
 
@@ -32,7 +32,7 @@ Feature: apparel on a vanilla body under WDI's Realistic Bodies
     Then "Bo" is wearing "Apparel_BasicShirt"
     And Nelim's Pickle Tools: the body of "Bo" is not drawn from a texture path starting with "BiB/Vanilla/"
     And I take a screenshot "wdi-dressed-<gender>-<type>"
-    When Nelim's Pickle Tools: "Bo" has the gene "BiB_VanillaBody"
+    When Nelim's Pickle Tools: "Bo" has the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: "Bo" body type is <type>
     And I wait 5 ticks
     And game speed is paused

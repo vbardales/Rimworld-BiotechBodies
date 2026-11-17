@@ -59,7 +59,7 @@ Feature: the Mod options give the body look of pawns that carry no gene
     And I take a screenshot "race-vanilla-female-Female"
     And no errors were logged
 
-  Scenario: the gene BiB_WdiBody keeps the WDI body when the default for everyone is Vanilla
+  Scenario: the gene BiB_BodyWdi keeps the WDI body when the default for everyone is Vanilla
     Given Nelim's Pickle Tools: a colonist "Bo" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Bo" gender is male
     And Nelim's Pickle Tools: "Bo" body type is Male
@@ -71,12 +71,12 @@ Feature: the Mod options give the body look of pawns that carry no gene
     And Nelim's Pickle Tools: I set the option "globalBody" of the mod "nelim.biotechbodies" to "Vanilla"
     And Nelim's Pickle Tools: I let 10 frames pass
     Then Nelim's Pickle Tools: the body of "Bo" is drawn from the texture path "BiB/Vanilla/Things/Pawn/Humanlike/Bodies/Naked_Male"
-    When Nelim's Pickle Tools: "Bo" has the gene "BiB_WdiBody"
+    When Nelim's Pickle Tools: "Bo" has the gene "BiB_BodyWdi"
     And I wait 5 ticks
     And game speed is paused
     And Nelim's Pickle Tools: "Bo" faces South
     And Nelim's Pickle Tools: I let 10 frames pass
-    Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_WdiBody"
+    Then Nelim's Pickle Tools: "Bo" holds the gene "BiB_BodyWdi"
     And Nelim's Pickle Tools: the body texture of "Bo" is logged
     And Nelim's Pickle Tools: the body of "Bo" is drawn from the texture path "BiB/Wdi/Things/Pawn/Humanlike/Bodies/Naked_Male"
     And I take a screenshot "wdi-gene-over-global-vanilla-male-Male"
