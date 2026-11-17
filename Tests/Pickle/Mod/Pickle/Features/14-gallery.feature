@@ -168,6 +168,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Miel" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Miel" hairstyle is "Roo_Royal_NaturalcurlsHD"
     And Nelim's Pickle Tools: "Miel" face tattoo is "none"
+    And Nelim's Pickle Tools: "Miel" beard is "none"
     And Nelim's Pickle Tools: "Miel" has the gene "BiB_BodyWdi"
     And Nelim's Pickle Tools: "Miel" is undressed
     And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (196, 150, 80)
@@ -191,6 +192,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Mira" hair colour is taken from its genes
     And Nelim's Pickle Tools: "Mira" hairstyle is "Roo_Royal_NaturalcurlsHD"
     And Nelim's Pickle Tools: "Mira" face tattoo is "none"
+    And Nelim's Pickle Tools: "Mira" beard is "none"
     And Nelim's Pickle Tools: "Mira" has the gene "BiB_BodyVanilla"
     And Nelim's Pickle Tools: "Mira" is undressed
     And Nelim's Pickle Tools: "Mira" wears "Apparel_CollarShirt" dyed rgb (196, 150, 80)
