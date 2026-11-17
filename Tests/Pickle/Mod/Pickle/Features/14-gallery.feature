@@ -156,38 +156,38 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: the resource readout is hidden
     And Nelim's Pickle Tools: the selection brackets are hidden
     And Nelim's Pickle Tools: I move the mouse to (10, 10)
-    And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
-    And Nelim's Pickle Tools: "Miel" loses all genes
-    And Nelim's Pickle Tools: "Miel" gender is Female
-    And "Miel" is 34 years old
-    And Nelim's Pickle Tools: "Miel" body type is Hulk
-    And Nelim's Pickle Tools: "Miel" head type is "Female_AverageWide"
-    And Nelim's Pickle Tools: "Miel" has the gene "GES_Skin_Chocolate"
-    And Nelim's Pickle Tools: "Miel" has the gene "Hair_DarkBlack"
-    And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Orange"
-    And Nelim's Pickle Tools: "Miel" hair colour is taken from its genes
-    And Nelim's Pickle Tools: "Miel" hairstyle is "VHE_SideBraid"
-    And Nelim's Pickle Tools: "Miel" has the gene "BiB_FaceNiceFA"
-    And Nelim's Pickle Tools: "Miel" has the gene "BiB_WdiBody"
-    And Nelim's Pickle Tools: "Miel" is undressed
-    And Nelim's Pickle Tools: "Miel" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
-    And Nelim's Pickle Tools: "Miel" also wears "LTS_Shorts"
-    And Nelim's Pickle Tools: a colonist "Mira" of kind "Colonist" exists
-    And Nelim's Pickle Tools: "Mira" loses all genes
-    And Nelim's Pickle Tools: "Mira" gender is Female
-    And "Mira" is 34 years old
-    And Nelim's Pickle Tools: "Mira" body type is Hulk
-    And Nelim's Pickle Tools: "Mira" head type is "Female_AverageWide"
-    And Nelim's Pickle Tools: "Mira" has the gene "GES_Skin_Chocolate"
-    And Nelim's Pickle Tools: "Mira" has the gene "Hair_DarkBlack"
-    And Nelim's Pickle Tools: "Mira" has the gene "Eyes_Orange"
-    And Nelim's Pickle Tools: "Mira" hair colour is taken from its genes
-    And Nelim's Pickle Tools: "Mira" hairstyle is "VHE_SideBraid"
-    And Nelim's Pickle Tools: "Mira" has the gene "BiB_FaceNiceFA"
-    And Nelim's Pickle Tools: "Mira" has the gene "BiB_VanillaBody"
-    And Nelim's Pickle Tools: "Mira" is undressed
-    And Nelim's Pickle Tools: "Mira" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
-    And Nelim's Pickle Tools: "Mira" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Soren" loses all genes
+    And Nelim's Pickle Tools: "Soren" gender is Male
+    And "Soren" is 38 years old
+    And Nelim's Pickle Tools: "Soren" body type is Male
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Soren" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Soren" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Soren" is undressed
+    And Nelim's Pickle Tools: "Soren" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Soren" also wears "Apparel_Shorts"
+    And Nelim's Pickle Tools: a colonist "Soren2" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Soren2" loses all genes
+    And Nelim's Pickle Tools: "Soren2" gender is Male
+    And "Soren2" is 38 years old
+    And Nelim's Pickle Tools: "Soren2" body type is Male
+    And Nelim's Pickle Tools: "Soren2" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Soren2" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Soren2" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Soren2" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Soren2" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Soren2" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Soren2" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren2" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Soren2" is undressed
+    And Nelim's Pickle Tools: "Soren2" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Soren2" also wears "Apparel_Shorts"
     And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
     And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
     And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
@@ -199,10 +199,10 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 74) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
-    And Nelim's Pickle Tools: "Miel" stands at (140, 74) facing South
-    And Nelim's Pickle Tools: "Mira" stands at (141, 74) facing South
-    And Nelim's Pickle Tools: the face parts of "Miel" are logged
-    And Nelim's Pickle Tools: the face parts of "Mira" are logged
+    And Nelim's Pickle Tools: "Soren" stands at (140, 74) facing South
+    And Nelim's Pickle Tools: "Soren2" stands at (141, 74) facing South
+    And Nelim's Pickle Tools: the face parts of "Soren" are logged
+    And Nelim's Pickle Tools: the face parts of "Soren2" are logged
     And Nelim's Pickle Tools: the other colonists are out of frame
     And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
     And Nelim's Pickle Tools: I let 30 frames pass
