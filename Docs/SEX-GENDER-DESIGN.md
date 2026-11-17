@@ -69,3 +69,5 @@ Defaults (owner, 2026-11-17: "si certains manquent, mettre en place des defaults
 - Body type: the pawn's own body type (a body type gene only overrides when present).
 - Kind: the kind gene; if none, `BiB_Naked` (the vanilla kind).
 - A texture missing for the full combination falls back one input at a time (kind to Naked, then library to the game graphic), logged once per combination, never a red error. To confirm with the owner: the fallback order.
+
+Pickle steps, owner decision 2026-11-17 (BiB chat, replaces the PiT-side plan above for the `sex` steps): BiB creates its own `sex` steps (`"X" sex is male|female`, `the sex of "X" is male|female`, `the sex of "X" is written to the log`), shipped with BiB 1.1.0 in its own step package. PiT deletes its three `sex` steps (SexGeneSteps.cs). The `"X" gender is male|female|neutral` step stays in ColonistRace and keeps setting the sex gene by defName (FollowGender, no code dependency, random draw logged as [sex-drawn]), unless PiT and BiB agree otherwise. BiB steps do not exist before 1.1.0, so no pattern collision before then.
