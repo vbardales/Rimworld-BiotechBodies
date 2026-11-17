@@ -171,7 +171,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" has the gene "BiB_WdiBody"
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
-    And Nelim's Pickle Tools: "Soren" also wears "Apparel_Shorts"
+    And Nelim's Pickle Tools: "Soren" also wears "LTS_Shorts"
     And Nelim's Pickle Tools: a colonist "Soren2" of kind "Colonist" exists
     And Nelim's Pickle Tools: "Soren2" loses all genes
     And Nelim's Pickle Tools: "Soren2" gender is Male
@@ -187,7 +187,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren2" has the gene "BiB_VanillaBody"
     And Nelim's Pickle Tools: "Soren2" is undressed
     And Nelim's Pickle Tools: "Soren2" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
-    And Nelim's Pickle Tools: "Soren2" also wears "Apparel_Shorts"
+    And Nelim's Pickle Tools: "Soren2" also wears "LTS_Shorts"
     And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
     And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
     And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
