@@ -172,7 +172,6 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Miel" is undressed
     And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (196, 150, 80)
     And Nelim's Pickle Tools: "Miel" also wears "Apparel_Pants" dyed rgb (140, 160, 120)
-    And Nelim's Pickle Tools: "Miel" face kit is "smile"
     And Nelim's Pickle Tools: "Miel" mouth is "MouthLipsBig"
     And Nelim's Pickle Tools: "Miel" brows are "BrowTriangle"
     And Nelim's Pickle Tools: "Miel" lids are "LidFlirty"
@@ -196,7 +195,6 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Mira" is undressed
     And Nelim's Pickle Tools: "Mira" wears "Apparel_CollarShirt" dyed rgb (196, 150, 80)
     And Nelim's Pickle Tools: "Mira" also wears "Apparel_Pants" dyed rgb (140, 160, 120)
-    And Nelim's Pickle Tools: "Mira" face kit is "smile"
     And Nelim's Pickle Tools: "Mira" mouth is "MouthLipsBig"
     And Nelim's Pickle Tools: "Mira" brows are "BrowTriangle"
     And Nelim's Pickle Tools: "Mira" lids are "LidFlirty"
