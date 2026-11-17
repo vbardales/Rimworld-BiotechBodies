@@ -61,3 +61,11 @@ A body texture is chosen from four inputs:
 BiB_Furry (CoKK request) becomes a kind gene, not a special case. A gene from another mod with its own `BodyLookExtension.bodyPaths` (Kija_Body) keeps winning for the body types it lists.
 
 Open questions (asked to the owner, not answered): does a body type gene change the pawn's real body type or only the texture; are overrides genes or extension data; one gene per input with exclusion tags; fallback order when a texture is missing (kind then library then game graphic); which libraries ship a texture for each kind and body type (WDI FurCovered_* known, others not read).
+
+Defaults (owner, 2026-11-17: "si certains manquent, mettre en place des defaults"). Each input resolves in order, first hit wins:
+
+- Library: the pawn's gene, then the race row of the Mod options, then the global default, then Auto (already built for the body slot).
+- Sex: the sex gene; if none, the binary `Pawn.gender`; if the gender is neutral and no sex gene exists, a random sex drawn once and stored as the sex gene (never at load).
+- Body type: the pawn's own body type (a body type gene only overrides when present).
+- Kind: the kind gene; if none, `BiB_Naked` (the vanilla kind).
+- A texture missing for the full combination falls back one input at a time (kind to Naked, then library to the game graphic), logged once per combination, never a red error. To confirm with the owner: the fallback order.
