@@ -7,6 +7,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   # V7 (2026-11-16, after run 18ee): shot 3 DROPPED (Quill with the neutral body stays in shot 6; the cropped profile of Quill and the body were unreadable at 268 px), names 1 2 4 5 6 kept, reindex after acceptance. Shot 2 gets Plant_Daylily (141,75) (142,75) and a lit TorchLamp (139,73) inside the crop (the capture had a bare wood floor). Shot 5: Soren moves to (153,99) so the coil-like statue leaves the crop.
   # V10 (2026-11-17, after v9): the green ghost top left and the coil statue are fixtures of the statue-garden, not decor. Shot 5 moves to the flower-garden, Soren at (154,109) facing South (cell proven standable by f03a), no placed decor (the garden own flowers are the foreground), crop 960x540 chosen after the run. The pack draws the mouth (no smile step, by design).
   # V6 (2026-11-16, after runs 80d1 and 6b23): shot 3 moves to the cloister (cells (176,128) (177,128) proven by shot 4), renamed 3-quill-and-ryu, decor Brazier (177,127), TorchLamp (175,126), Plant_Daylily (175,127) (178,127); shot 2 Miel faces South again; shot 5 grass moved to (152,98) (155,97 holds a SculptureSmall); shot 6 Soren carries a WoodLog (no ThingDef named Torch, Torch is a building). Shot 4 passed (6b23): crop 960x540 offset x 450 gives four readable faces at 268 px, Ryu Reel face frowns (the pack draws the mouth).
+  # V19 (2026-11-17, owner: "le même personnage, cloné, un avec le gène vanilla et un avec le gène WDI ... l'idéal c'est une femme Fat ou Hulk ou Thin", after the Male tests v15 to v18 read the same at 268 px): exploration scenarios 2f-miel-Fat, -Hulk, -Thin: Miel (NSB, canon face Nice FA, side braid, BiB_WdiBody) and her twin Mira (same genes and look, BiB_VanillaBody), both Female, same body type, same tanktop dye, only the gene differs. OWNER VALIDATION (rule 3 of sync-nsb-npt): a clone of Miel, "le même personnage, cloné", pawn outside NSB, 2026-11-17, gallery only. The winner replaces shot 2, the other two 2f-* are deleted. Ticket filed after this commit.
   # V18 (2026-11-17, after ticket 6ead: Thin, Fat and Hulk with the same body type for both pawns; Female failed, a Male pawn cannot take body type Female without gender Female, not retried): Hulk reads the most different at 268 px (WDI tapered waist against vanilla squared sleeves), Fat nearly identical, Thin slight. Shot 2 now Hulk for both pawns; the tanktop colours were random and differed (grey against dark), so both are dyed rgb (230, 224, 206) so only the gene changes. 2t-* scenarios deleted. Subtitle to review: Two bodies, two looks: WDI and vanilla (it is one body type, say so).
   # V17 (2026-11-17, owner on the v15 capture: the two pawns must use the SAME body type, only the gene changes, everything else equal; they win over v15). Shot 2 goes back to Male for both pawns (Soren BiB_WdiBody, Haru BiB_VanillaBody). Exploration scenarios 2t-bodytype-Female, -Thin, -Fat, -Hulk (same body type for both, only the gene differs) to find the body type where WDI and vanilla read most different at 268 px; the winner replaces shot 2, the other three are deleted. Ticket 6ead.
   # V16 (2026-11-17, score-gallery at 268 px on the v16 captures of ticket 3862): 6 is a candidate (native crop 1100x619 x 290 y 250, faces about 36 px at 268 px). 1 crop tight 1080x608 shows faces but the decor falls out (bare planks, only torches): decor moved closer to the pawns, Brazier (136, 125), Plant_Daylily (134, 125) (the one at (138, 126) is unchanged and falls outside the crop), then native crop about 1190x670 x 360 y 330 chosen after the run. Nothing else changes.
@@ -207,6 +208,201 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 2-two-bodies"
+    And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: 2f-miel-Fat
+    Given I set the hour to 9
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "hut"
+    And Nelim's Sanctuary: I am at the sanctuary "hut"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: the selection brackets are hidden
+    And Nelim's Pickle Tools: I move the mouse to (10, 10)
+    And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Miel" loses all genes
+    And Nelim's Pickle Tools: "Miel" gender is Female
+    And "Miel" is 34 years old
+    And Nelim's Pickle Tools: "Miel" body type is Fat
+    And Nelim's Pickle Tools: "Miel" head type is "Female_AverageWide"
+    And Nelim's Pickle Tools: "Miel" has the gene "GES_Skin_Chocolate"
+    And Nelim's Pickle Tools: "Miel" has the gene "Hair_DarkBlack"
+    And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Orange"
+    And Nelim's Pickle Tools: "Miel" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Miel" hairstyle is "VHE_SideBraid"
+    And Nelim's Pickle Tools: "Miel" has the gene "BiB_FaceNiceFA"
+    And Nelim's Pickle Tools: "Miel" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Miel" is undressed
+    And Nelim's Pickle Tools: "Miel" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Miel" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: a colonist "Mira" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Mira" loses all genes
+    And Nelim's Pickle Tools: "Mira" gender is Female
+    And "Mira" is 34 years old
+    And Nelim's Pickle Tools: "Mira" body type is Fat
+    And Nelim's Pickle Tools: "Mira" head type is "Female_AverageWide"
+    And Nelim's Pickle Tools: "Mira" has the gene "GES_Skin_Chocolate"
+    And Nelim's Pickle Tools: "Mira" has the gene "Hair_DarkBlack"
+    And Nelim's Pickle Tools: "Mira" has the gene "Eyes_Orange"
+    And Nelim's Pickle Tools: "Mira" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Mira" hairstyle is "VHE_SideBraid"
+    And Nelim's Pickle Tools: "Mira" has the gene "BiB_FaceNiceFA"
+    And Nelim's Pickle Tools: "Mira" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Mira" is undressed
+    And Nelim's Pickle Tools: "Mira" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Mira" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
+    And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (144, 72) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (141, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (139, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
+    And Nelim's Pickle Tools: "Miel" stands at (140, 74) facing South
+    And Nelim's Pickle Tools: "Mira" stands at (141, 74) facing South
+    And Nelim's Pickle Tools: the face parts of "Miel" are logged
+    And Nelim's Pickle Tools: the face parts of "Mira" are logged
+    And Nelim's Pickle Tools: the other colonists are out of frame
+    And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 2f-miel-Fat"
+    And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: 2f-miel-Hulk
+    Given I set the hour to 9
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "hut"
+    And Nelim's Sanctuary: I am at the sanctuary "hut"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: the selection brackets are hidden
+    And Nelim's Pickle Tools: I move the mouse to (10, 10)
+    And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Miel" loses all genes
+    And Nelim's Pickle Tools: "Miel" gender is Female
+    And "Miel" is 34 years old
+    And Nelim's Pickle Tools: "Miel" body type is Hulk
+    And Nelim's Pickle Tools: "Miel" head type is "Female_AverageWide"
+    And Nelim's Pickle Tools: "Miel" has the gene "GES_Skin_Chocolate"
+    And Nelim's Pickle Tools: "Miel" has the gene "Hair_DarkBlack"
+    And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Orange"
+    And Nelim's Pickle Tools: "Miel" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Miel" hairstyle is "VHE_SideBraid"
+    And Nelim's Pickle Tools: "Miel" has the gene "BiB_FaceNiceFA"
+    And Nelim's Pickle Tools: "Miel" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Miel" is undressed
+    And Nelim's Pickle Tools: "Miel" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Miel" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: a colonist "Mira" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Mira" loses all genes
+    And Nelim's Pickle Tools: "Mira" gender is Female
+    And "Mira" is 34 years old
+    And Nelim's Pickle Tools: "Mira" body type is Hulk
+    And Nelim's Pickle Tools: "Mira" head type is "Female_AverageWide"
+    And Nelim's Pickle Tools: "Mira" has the gene "GES_Skin_Chocolate"
+    And Nelim's Pickle Tools: "Mira" has the gene "Hair_DarkBlack"
+    And Nelim's Pickle Tools: "Mira" has the gene "Eyes_Orange"
+    And Nelim's Pickle Tools: "Mira" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Mira" hairstyle is "VHE_SideBraid"
+    And Nelim's Pickle Tools: "Mira" has the gene "BiB_FaceNiceFA"
+    And Nelim's Pickle Tools: "Mira" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Mira" is undressed
+    And Nelim's Pickle Tools: "Mira" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Mira" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
+    And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (144, 72) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (141, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (139, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
+    And Nelim's Pickle Tools: "Miel" stands at (140, 74) facing South
+    And Nelim's Pickle Tools: "Mira" stands at (141, 74) facing South
+    And Nelim's Pickle Tools: the face parts of "Miel" are logged
+    And Nelim's Pickle Tools: the face parts of "Mira" are logged
+    And Nelim's Pickle Tools: the other colonists are out of frame
+    And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 2f-miel-Hulk"
+    And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: 2f-miel-Thin
+    Given I set the hour to 9
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "hut"
+    And Nelim's Sanctuary: I am at the sanctuary "hut"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: the selection brackets are hidden
+    And Nelim's Pickle Tools: I move the mouse to (10, 10)
+    And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Miel" loses all genes
+    And Nelim's Pickle Tools: "Miel" gender is Female
+    And "Miel" is 34 years old
+    And Nelim's Pickle Tools: "Miel" body type is Thin
+    And Nelim's Pickle Tools: "Miel" head type is "Female_AverageWide"
+    And Nelim's Pickle Tools: "Miel" has the gene "GES_Skin_Chocolate"
+    And Nelim's Pickle Tools: "Miel" has the gene "Hair_DarkBlack"
+    And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Orange"
+    And Nelim's Pickle Tools: "Miel" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Miel" hairstyle is "VHE_SideBraid"
+    And Nelim's Pickle Tools: "Miel" has the gene "BiB_FaceNiceFA"
+    And Nelim's Pickle Tools: "Miel" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Miel" is undressed
+    And Nelim's Pickle Tools: "Miel" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Miel" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: a colonist "Mira" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Mira" loses all genes
+    And Nelim's Pickle Tools: "Mira" gender is Female
+    And "Mira" is 34 years old
+    And Nelim's Pickle Tools: "Mira" body type is Thin
+    And Nelim's Pickle Tools: "Mira" head type is "Female_AverageWide"
+    And Nelim's Pickle Tools: "Mira" has the gene "GES_Skin_Chocolate"
+    And Nelim's Pickle Tools: "Mira" has the gene "Hair_DarkBlack"
+    And Nelim's Pickle Tools: "Mira" has the gene "Eyes_Orange"
+    And Nelim's Pickle Tools: "Mira" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Mira" hairstyle is "VHE_SideBraid"
+    And Nelim's Pickle Tools: "Mira" has the gene "BiB_FaceNiceFA"
+    And Nelim's Pickle Tools: "Mira" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Mira" is undressed
+    And Nelim's Pickle Tools: "Mira" wears "UnderWhere_Tanktop" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Mira" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
+    And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (144, 72) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (141, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (139, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
+    And Nelim's Pickle Tools: "Miel" stands at (140, 74) facing South
+    And Nelim's Pickle Tools: "Mira" stands at (141, 74) facing South
+    And Nelim's Pickle Tools: the face parts of "Miel" are logged
+    And Nelim's Pickle Tools: the face parts of "Mira" are logged
+    And Nelim's Pickle Tools: the other colonists are out of frame
+    And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 2f-miel-Thin"
     And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 4-faces-at-the-mirror
