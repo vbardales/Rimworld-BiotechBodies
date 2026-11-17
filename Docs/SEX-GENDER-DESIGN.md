@@ -48,3 +48,16 @@ Owner spec (2026-11-17, BiB chat and SaB relay). (1) `"X" sex is male|female` se
 4. Romance: not decided ("je ne sais pas encore"); untouched meanwhile.
 5. Existing `Gender.None` pawns in her saves: give them a sex gene at first load, or leave them? SaB has only throw-away test pawns.
 6. Until a 1.1.0 build exists, SaB scenarios use binary gender (Quill and Quaren male, Quo female).
+
+## Body texture resolver (owner model, 2026-11-17, draft, 1.1.0)
+
+A body texture is chosen from four inputs:
+
+1. **Library gene**: which body set (BiB_WdiBody, BiB_VanillaBody, others).
+2. **Sex**: the sex gene (BiB_SexMale, BiB_SexFemale), or a sex plus body type override gene (for example BiB_Male_Fat) when one exists.
+3. **Body type**: the pawn's own body type, or a sex plus body type gene (for example BiB_Fat) when one exists.
+4. **Kind gene**: the material of the body (BiB_Naked, BiB_Furry, BiB_Perfect, BiB_Scaly).
+
+BiB_Furry (CoKK request) becomes a kind gene, not a special case. A gene from another mod with its own `BodyLookExtension.bodyPaths` (Kija_Body) keeps winning for the body types it lists.
+
+Open questions (asked to the owner, not answered): does a body type gene change the pawn's real body type or only the texture; are overrides genes or extension data; one gene per input with exclusion tags; fallback order when a texture is missing (kind then library then game graphic); which libraries ship a texture for each kind and body type (WDI FurCovered_* known, others not read).
