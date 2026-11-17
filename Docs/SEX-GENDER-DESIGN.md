@@ -5,7 +5,7 @@ Status: draft v2, 2026-11-17, ships in 1.1.0. Origin: owner decision relayed by 
 ## Owner model (2026-11-17, in the BiB chat)
 
 - **Gender** is what the pawn profile shows ("femme, 23 ans, ..."). Neutral gender shows "humain, 23 ans, ...". So `Pawn.gender == Gender.None` means NEUTRAL GENDER. No separate storage for gender: the vanilla field is the gender.
-- **Sex** is biological and genetic: a gene, `BiB_SexMale` or `BiB_SexFemale` (names open). Exactly one per humanlike pawn.
+- **Sex** is biological and genetic: a gene, `BiB_SexMale` or `BiB_SexFemale` (names validated by the owner 2026-11-17). Exactly one per humanlike pawn.
 
 This replaces draft v1 (binary `Pawn.gender` plus a Neutral comp, gene, hediff or trait). The storage question of v1 is closed.
 
@@ -42,7 +42,7 @@ Owner spec (2026-11-17, BiB chat and SaB relay). (1) `"X" sex is male|female` se
 
 ## Open questions (owner)
 
-1. Names of the sex genes and the Neutral profile word in English and French (Virginie decides, `Docs/review-names.md`).
+1. Names of the sex genes: DONE, BiB_SexMale and BiB_SexFemale (owner 2026-11-17). Still open: the Neutral profile word in English and French (Virginie decides, `Docs/review-names.md`).
 2. Neutral profile word: "humain" in French; English "human"?
 3. Can gender differ from sex for Male or Female genders (a woman with the male sex gene)? Assumed yes: sex is biology, gender is identity.
 4. Romance: not decided ("je ne sais pas encore"); untouched meanwhile.
