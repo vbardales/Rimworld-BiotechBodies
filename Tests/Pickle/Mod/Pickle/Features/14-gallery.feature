@@ -173,7 +173,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Haru" loses all genes
     And Nelim's Pickle Tools: "Haru" gender is Male
     And "Haru" is 38 years old
-    And Nelim's Pickle Tools: "Haru" body type is Thin
+    And Nelim's Pickle Tools: "Haru" body type is Male
     And Nelim's Pickle Tools: "Haru" head type is "Male_AverageWide"
     And Nelim's Pickle Tools: "Haru" has the gene "Skin_Melanin5"
     And Nelim's Pickle Tools: "Haru" has the gene "Hair_DarkReddish"
@@ -205,6 +205,266 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 2-two-bodies"
+    And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: 2t-bodytype-Female
+    Given I set the hour to 9
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "hut"
+    And Nelim's Sanctuary: I am at the sanctuary "hut"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: the selection brackets are hidden
+    And Nelim's Pickle Tools: I move the mouse to (10, 10)
+    And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Soren" loses all genes
+    And Nelim's Pickle Tools: "Soren" gender is Male
+    And "Soren" is 38 years old
+    And Nelim's Pickle Tools: "Soren" body type is Female
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Soren" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Soren" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Soren" is undressed
+    And Nelim's Pickle Tools: "Soren" wears "UnderWhere_Tanktop"
+    And Nelim's Pickle Tools: "Soren" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: a colonist "Haru" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Haru" loses all genes
+    And Nelim's Pickle Tools: "Haru" gender is Male
+    And "Haru" is 38 years old
+    And Nelim's Pickle Tools: "Haru" body type is Female
+    And Nelim's Pickle Tools: "Haru" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Haru" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Haru" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Haru" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Haru" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Haru" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Haru" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Haru" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Haru" is undressed
+    And Nelim's Pickle Tools: "Haru" wears "UnderWhere_Tanktop"
+    And Nelim's Pickle Tools: "Haru" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
+    And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (144, 72) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (141, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (139, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
+    And Nelim's Pickle Tools: "Soren" stands at (140, 74) facing South
+    And Nelim's Pickle Tools: "Haru" stands at (141, 74) facing South
+    And Nelim's Pickle Tools: the face parts of "Soren" are logged
+    And Nelim's Pickle Tools: the face parts of "Haru" are logged
+    And Nelim's Pickle Tools: the other colonists are out of frame
+    And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 2t-bodytype-Female"
+    And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: 2t-bodytype-Thin
+    Given I set the hour to 9
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "hut"
+    And Nelim's Sanctuary: I am at the sanctuary "hut"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: the selection brackets are hidden
+    And Nelim's Pickle Tools: I move the mouse to (10, 10)
+    And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Soren" loses all genes
+    And Nelim's Pickle Tools: "Soren" gender is Male
+    And "Soren" is 38 years old
+    And Nelim's Pickle Tools: "Soren" body type is Thin
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Soren" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Soren" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Soren" is undressed
+    And Nelim's Pickle Tools: "Soren" wears "UnderWhere_Tanktop"
+    And Nelim's Pickle Tools: "Soren" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: a colonist "Haru" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Haru" loses all genes
+    And Nelim's Pickle Tools: "Haru" gender is Male
+    And "Haru" is 38 years old
+    And Nelim's Pickle Tools: "Haru" body type is Thin
+    And Nelim's Pickle Tools: "Haru" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Haru" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Haru" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Haru" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Haru" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Haru" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Haru" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Haru" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Haru" is undressed
+    And Nelim's Pickle Tools: "Haru" wears "UnderWhere_Tanktop"
+    And Nelim's Pickle Tools: "Haru" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
+    And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (144, 72) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (141, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (139, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
+    And Nelim's Pickle Tools: "Soren" stands at (140, 74) facing South
+    And Nelim's Pickle Tools: "Haru" stands at (141, 74) facing South
+    And Nelim's Pickle Tools: the face parts of "Soren" are logged
+    And Nelim's Pickle Tools: the face parts of "Haru" are logged
+    And Nelim's Pickle Tools: the other colonists are out of frame
+    And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 2t-bodytype-Thin"
+    And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: 2t-bodytype-Fat
+    Given I set the hour to 9
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "hut"
+    And Nelim's Sanctuary: I am at the sanctuary "hut"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: the selection brackets are hidden
+    And Nelim's Pickle Tools: I move the mouse to (10, 10)
+    And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Soren" loses all genes
+    And Nelim's Pickle Tools: "Soren" gender is Male
+    And "Soren" is 38 years old
+    And Nelim's Pickle Tools: "Soren" body type is Fat
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Soren" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Soren" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Soren" is undressed
+    And Nelim's Pickle Tools: "Soren" wears "UnderWhere_Tanktop"
+    And Nelim's Pickle Tools: "Soren" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: a colonist "Haru" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Haru" loses all genes
+    And Nelim's Pickle Tools: "Haru" gender is Male
+    And "Haru" is 38 years old
+    And Nelim's Pickle Tools: "Haru" body type is Fat
+    And Nelim's Pickle Tools: "Haru" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Haru" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Haru" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Haru" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Haru" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Haru" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Haru" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Haru" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Haru" is undressed
+    And Nelim's Pickle Tools: "Haru" wears "UnderWhere_Tanktop"
+    And Nelim's Pickle Tools: "Haru" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
+    And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (144, 72) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (141, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (139, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
+    And Nelim's Pickle Tools: "Soren" stands at (140, 74) facing South
+    And Nelim's Pickle Tools: "Haru" stands at (141, 74) facing South
+    And Nelim's Pickle Tools: the face parts of "Soren" are logged
+    And Nelim's Pickle Tools: the face parts of "Haru" are logged
+    And Nelim's Pickle Tools: the other colonists are out of frame
+    And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 2t-bodytype-Fat"
+    And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: 2t-bodytype-Hulk
+    Given I set the hour to 9
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "hut"
+    And Nelim's Sanctuary: I am at the sanctuary "hut"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: the selection brackets are hidden
+    And Nelim's Pickle Tools: I move the mouse to (10, 10)
+    And Nelim's Pickle Tools: a colonist "Soren" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Soren" loses all genes
+    And Nelim's Pickle Tools: "Soren" gender is Male
+    And "Soren" is 38 years old
+    And Nelim's Pickle Tools: "Soren" body type is Hulk
+    And Nelim's Pickle Tools: "Soren" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Soren" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Soren" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Soren" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Soren" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Soren" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Soren" has the gene "BiB_WdiBody"
+    And Nelim's Pickle Tools: "Soren" is undressed
+    And Nelim's Pickle Tools: "Soren" wears "UnderWhere_Tanktop"
+    And Nelim's Pickle Tools: "Soren" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: a colonist "Haru" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Haru" loses all genes
+    And Nelim's Pickle Tools: "Haru" gender is Male
+    And "Haru" is 38 years old
+    And Nelim's Pickle Tools: "Haru" body type is Hulk
+    And Nelim's Pickle Tools: "Haru" head type is "Male_AverageWide"
+    And Nelim's Pickle Tools: "Haru" has the gene "Skin_Melanin5"
+    And Nelim's Pickle Tools: "Haru" has the gene "Hair_DarkReddish"
+    And Nelim's Pickle Tools: "Haru" has the gene "Eyes_DarkGreen"
+    And Nelim's Pickle Tools: "Haru" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Haru" hairstyle is "Roo_HD_Hair_Tidy"
+    And Nelim's Pickle Tools: "Haru" has the gene "BiB_FaceRetexture"
+    And Nelim's Pickle Tools: "Haru" has the gene "BiB_VanillaBody"
+    And Nelim's Pickle Tools: "Haru" is undressed
+    And Nelim's Pickle Tools: "Haru" wears "UnderWhere_Tanktop"
+    And Nelim's Pickle Tools: "Haru" also wears "LTS_Shorts"
+    And Nelim's Pickle Tools: I place the decor "StylingStation" at (142, 73)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (139, 75)
+    And Nelim's Pickle Tools: the decor "Brazier" at (139, 75) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (144, 72) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (141, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (139, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
+    And Nelim's Pickle Tools: "Soren" stands at (140, 74) facing South
+    And Nelim's Pickle Tools: "Haru" stands at (141, 74) facing South
+    And Nelim's Pickle Tools: the face parts of "Soren" are logged
+    And Nelim's Pickle Tools: the face parts of "Haru" are logged
+    And Nelim's Pickle Tools: the other colonists are out of frame
+    And Nelim's Pickle Tools: I frame the area centred on the point (140.5, 74) at root size 2
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 2t-bodytype-Hulk"
     And Nelim's Pickle Tools: the decor is removed
 
   Scenario: 4-faces-at-the-mirror
