@@ -7,6 +7,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
   # V7 (2026-11-16, after run 18ee): shot 3 DROPPED (Quill with the neutral body stays in shot 6; the cropped profile of Quill and the body were unreadable at 268 px), names 1 2 4 5 6 kept, reindex after acceptance. Shot 2 gets Plant_Daylily (141,75) (142,75) and a lit TorchLamp (139,73) inside the crop (the capture had a bare wood floor). Shot 5: Soren moves to (153,99) so the coil-like statue leaves the crop.
   # V10 (2026-11-17, after v9): the green ghost top left and the coil statue are fixtures of the statue-garden, not decor. Shot 5 moves to the flower-garden, Soren at (154,109) facing South (cell proven standable by f03a), no placed decor (the garden own flowers are the foreground), crop 960x540 chosen after the run. The pack draws the mouth (no smile step, by design).
   # V6 (2026-11-16, after runs 80d1 and 6b23): shot 3 moves to the cloister (cells (176,128) (177,128) proven by shot 4), renamed 3-quill-and-ryu, decor Brazier (177,127), TorchLamp (175,126), Plant_Daylily (175,127) (178,127); shot 2 Miel faces South again; shot 5 grass moved to (152,98) (155,97 holds a SculptureSmall); shot 6 Soren carries a WoodLog (no ThingDef named Torch, Torch is a building). Shot 4 passed (6b23): crop 960x540 offset x 450 gives four readable faces at 268 px, Ryu Reel face frowns (the pack draws the mouth).
+  # V11 (2026-11-17, score-gallery verdict on the v10 captures: 5 candidate, 1 2 4 6 REDO; they win over v10 and older). CAUSES: 1 and 6 were captured at root size 3.5 (faces about 12 px at 268 px, j weak); 2 was bare (the decor of rows 73 and 75 fell outside the 960x540 crop); 4 shows a stern Reel face on Ryu while the plan said smiling. CHANGES: 1 and 6 now at root size 2.5 then native crop 960x540 at x 480 y 270 (centre of the frame), opening and closing become medium shots (series k: no wide shot left, the j rule of 2026-11-09 wins over variety, -0.5 assumed). 1: Nelim faces South (the hut is gone since v5, nothing to look at East), carries the Cloth, Shogun stands at her side facing South, frame centre (136, 125) so the lit Brazier (136, 126) and both TorchLamps are in the crop. 6: hour 17 as the header says (18 gave a grey light), Shogun STANDS at (164, 173) facing South (lying he read as a rug), root size 2.5, crop 960x540 at x 480 y 270 on three pawns and the dog. 2: Plant_Daylily added at (139, 74) and (142, 74) on the row of the pawns so the crop (x 480 y 230) holds flowers beside them. 4: no scenario change; written trait, no malus: Ryu Reel face is stern by design of the pack (the pack draws the mouth), Soren and Miel neutral, no cups, no wall lanterns in the crop (TorchLamps at (175,126) and (181,126) are outside it), the shot proves four different faces. Plan not rerated by score-gallery (it rates the captures, see STATUS).
   # V5 CHANGES (2026-11-16, after the v4 verdict: six REDO; they win over v4 and v3). CROP: shots 2 to 5 are captured at the game floor (root size 2 to 2.5) then cropped post-capture at native pixels (no upscale, ffmpeg crop=960:540, centred on the subjects, shot 4 offset x 450), so a head is about 40 px at 268 px; shots 1 and 6 stay uncropped (opening and closing, j weak assumed). 1: Shogun was absent because the Sanctuary step "animals are kept out" despawned him every frame, that step is removed from 1 and 6; the hut is another place, dropped from the line. 2: Nelim gets Roo_HD_Hair_Highpony (it had the default bun). 3: Quill faces East (facing South showed a blank orange face, a Sanctuary-side anomaly, not BiB code), Ryu faces South smiling, no Cloth (it never showed). 4: row z=128, station (178,127) behind, lit Brazier (176,127), Plant_Daylily (175,127). 5: Plant_Daylily (153,97) and Plant_YellowTallGrass (155,97) in the south foreground, the hut falls outside the crop. 6: hour 18, Nelim (165,173), Quill (166,173) facing East, Soren (167,173) in one row, Shogun lies at (165,172). Expression: pawns with a face-pack gene (Soren, Ryu, Miel, Nelim in 4 and 5) get no mouth step, the pack draws the mouth, so a neutral mouth is planned there (written trait, no malus).
   # V5 INSTANTS (gesture, instant, how obtained; criterion e). 1: just before she steps off the bridge, Nelim carries the Cloth East while Shogun waits facing the camera (carries the item, animal stands at, 30 frames pause); the hut line of v3 is void. 2: just after the fitting, Miel (facing West) looks at Nelim who shows her look to the camera (stands at facing, gaze toward what happens). 3: Quill (facing East) looks at Ryu, who shows his look facing the camera. 4: the four stand shoulder to shoulder after choosing a face (e weak, malus assumed: a gaze would hide a face pack); extra decor Plant_Daylily (176,129) and (178,129) behind the row. 5: Soren carries a WoodLog, just before he leans to the flowers. 6: just after the last guest left the mirror, Soren lifts a Torch (carries the item "Torch") for the evening, Quill looks East toward him, Shogun lies at Nelim feet. PLAN SCORES v5 (score-gallery, 2026-11-16, no capture yet): 1 4.0 (j weak assumed, k weak), 2 4.5, 3 4.5, 4 4.0 (e weak assumed), 5 4.0 (b weak in the crop), 6 4.0 (j weak assumed); series k weak (rhythm repeats row line-ups) -0.5 each; mean 4.17.
   # (v3 text, kept for the record; the V4 line above decides).
@@ -126,11 +127,11 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" stands at (135, 124) facing East
+    And Nelim's Pickle Tools: "Nelim" stands at (135, 124) facing South
     And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
     And Nelim's Pickle Tools: the animal "Shogun" stands at (134, 124) facing South
     And Nelim's Pickle Tools: the other colonists are out of frame
-    And Nelim's Pickle Tools: I frame the area centred on (136, 124) at root size 3.5
+    And Nelim's Pickle Tools: I frame the area centred on (136, 125) at root size 2.5
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 1-bridge-morning"
@@ -173,6 +174,8 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (143, 75) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (141, 75) fully grown
     And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 75) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (139, 74) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (142, 74) fully grown
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (144, 74)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (144, 74) is lit
     And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
@@ -316,7 +319,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     Then I take a screenshot "gallery 5-soren-portrait"
 
   Scenario: 6-water-garden-dusk
-    Given I set the hour to 18
+    Given I set the hour to 17
     And Nelim's Sanctuary: I am at the sanctuary "water-garden"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
@@ -381,8 +384,8 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" stands at (167, 173) facing South
     And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
     And Nelim's Pickle Tools: "Quill" stands at (166, 173) facing East
-    And Nelim's Pickle Tools: the animal "Shogun" lies at (165, 172) facing South
-    And Nelim's Pickle Tools: I frame the area centred on the point (166, 173) at root size 3.5
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (164, 173) facing South
+    And Nelim's Pickle Tools: I frame the area centred on the point (166, 173) at root size 2.5
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 6-water-garden-dusk"
