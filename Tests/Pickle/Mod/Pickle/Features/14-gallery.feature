@@ -363,21 +363,22 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" is undressed
     And Nelim's Pickle Tools: "Soren" wears "Apparel_BasicShirt" dyed rgb (176, 112, 64)
     And Nelim's Pickle Tools: "Soren" wears "Apparel_Pants"
-    And Nelim's Pickle Tools: a colonist "Quill" of kind "Colonist" exists
-    And Nelim's Pickle Tools: "Quill" loses all genes
-    And Nelim's Pickle Tools: "Quill" gender is Neutre
-    And "Quill" is 36 years old
-    And Nelim's Pickle Tools: "Quill" head type is "Male_NarrowWide"
-    And Nelim's Pickle Tools: "Quill" has the gene "Skin_Melanin7"
-    And Nelim's Pickle Tools: "Quill" has the gene "Hair_LightOrange"
-    And Nelim's Pickle Tools: "Quill" has the gene "Eyes_DarkCyan"
-    And Nelim's Pickle Tools: "Quill" hair colour is taken from its genes
-    And Nelim's Pickle Tools: "Quill" hairstyle is "VHE_Librarian"
-    And Nelim's Pickle Tools: "Quill" has the gene "BiB_BodyVanilla"
-    And Nelim's Pickle Tools: "Quill" is undressed
-    And Nelim's Pickle Tools: "Quill" wears "Apparel_CollarShirt" dyed rgb (85, 107, 47)
-    And Nelim's Pickle Tools: "Quill" wears "Apparel_Pants"
-    And Nelim's Pickle Tools: "Quill" wears "Apparel_PAGGlasses"
+    And Nelim's Pickle Tools: a colonist "Miel" of kind "Colonist" exists
+    And Nelim's Pickle Tools: "Miel" loses all genes
+    And Nelim's Pickle Tools: "Miel" gender is Female
+    And "Miel" is 34 years old
+    And Nelim's Pickle Tools: "Miel" body type is Thin
+    And Nelim's Pickle Tools: "Miel" head type is "Female_AverageWide"
+    And Nelim's Pickle Tools: "Miel" has the gene "GES_Skin_Chocolate"
+    And Nelim's Pickle Tools: "Miel" has the gene "Hair_DarkBlack"
+    And Nelim's Pickle Tools: "Miel" has the gene "Eyes_Orange"
+    And Nelim's Pickle Tools: "Miel" hair colour is taken from its genes
+    And Nelim's Pickle Tools: "Miel" hairstyle is "VHE_SideBraid"
+    And Nelim's Pickle Tools: "Miel" has the gene "BiB_FaceNiceFA"
+    And Nelim's Pickle Tools: "Miel" has the gene "BiB_BodyVanilla"
+    And Nelim's Pickle Tools: "Miel" is undressed
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (107, 142, 35)
+    And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants"
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (164, 172)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (164, 172) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (170, 172)
@@ -392,15 +393,15 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
     And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Nelim" face is held neutral
-    And Nelim's Pickle Tools: "Quill" mouth is "MouthSmile"
-    And Nelim's Pickle Tools: "Quill" lids are "LidCheerful"
-    And Nelim's Pickle Tools: "Quill" brows are "BrowNormal"
-    And Nelim's Pickle Tools: "Quill" face is held neutral
+    And Nelim's Pickle Tools: "Miel" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Miel" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Miel" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Miel" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
     And Nelim's Pickle Tools: "Nelim" stands at (165, 173) facing South
     And Nelim's Pickle Tools: "Soren" stands at (167, 173) facing South
     And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
-    And Nelim's Pickle Tools: "Quill" stands at (166, 173) facing East
+    And Nelim's Pickle Tools: "Miel" stands at (166, 173) facing East
     And Nelim's Pickle Tools: the animal "Shogun" stands at (164, 173) facing South
     And Nelim's Pickle Tools: I frame the area centred on the point (166, 173) at root size 2
     And Nelim's Pickle Tools: I let 30 frames pass
