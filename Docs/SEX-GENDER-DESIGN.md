@@ -38,7 +38,7 @@ Every vanilla read of `pawn.gender` that stands for biology must be found and re
 
 ## Pickle
 
-PiT already ships `sex` steps in ColonistRace (`"X" sex is male|female|neutre`, `the sex of "X" is ...`, `... is written to the log`). They set `Pawn.gender`, which is now the GENDER. Ask PiT through the TM for sex-gene steps (set, probe, log line). New probe: a `None` gender pawn draws the head and body of its sex gene. Stability test: create a pawn, save, reload several times, same sex and gender each time.
+Owner rule (2026-11-17): PiT step `gender is male` also sets sex male, `gender is female` also sets sex female (what every current test uses, nothing changes for them). `gender is neutral` sets the neutral gender and draws a random sex if none was given before. A separate `sex is male|female` step sets only the sex gene. Needs from PiT (ask through the TM, BiB writes no local step): the sex-gene step, a probe and a log line that prints the drawn sex (the random draw must be readable in the run). Order matters: `gender is neutral` then `sex is ...` keeps the explicit sex; the reverse keeps it too. Until the sex gene exists (1.1.0), the steps set the gender only.
 
 ## Open questions (owner)
 
