@@ -10,6 +10,6 @@ Draft in progress. Only the gallery section exists so far; the Steam description
 | 2 | 2-two-bodies.jpg | Two bodies, two looks: WDI and vanilla. |
 | 4 | 4-faces-at-the-mirror.jpg | Four face packs, four faces: one gene each. |
 | 5 | 5-soren-portrait.jpg | A close look at a face pack: Barb's retexture. |
-| 6 | 6-water-garden-dusk.jpg | Look day ends: everyone keeps the look they chose. |
+| 6 | 6-water-garden-dusk.jpg | Day ends, and everyone keeps the look they chose. |
 
 Index 3 is dropped (shot 3 removed 2026-11-16); names are final, no reindex.
