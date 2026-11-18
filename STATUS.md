@@ -82,7 +82,7 @@ Origin: asked by the owner on 2026-11-04 through RhyaethWdiRealisticBodiesPatch 
 
 ## Settings audit
 
-Date 2026-11-07, revision 4c3dc53 (files: Source/BiotechBodies/BiBSettings.cs, MainButtonWorker_Settings.cs, Mod/Defs/MainButtonDefs/BiB_Settings.xml). Result: `partial` (analysis and compile done, in-game checks `unverified`).
+Date 2026-11-07, revision 4c3dc53 (files: Source/BiotechBodies/BiBSettings.cs, MainButtonWorker_Settings.cs, Mod/Defs/MainButtonDefs/BiB_Settings.xml); in-game checks played 2026-11-07 to 2026-11-09 on 5cb9ad6, text revised 2026-11-18 (5.g). Result: `passed` on 5cb9ad6 (S1 to S7 green, see Tests below). Changed since 5cb9ad6 (settings side only): gene renames BiB_BodyVanilla and BiB_BodyWdi in BiBSettings.cs (same logic), two face pack labels and one French MainButton description; no option, access route or default changed. Owed: replay of feature 12 (S1, English and French) on the current build with the 8.b replays, `unverified` until then.
 
 Inventory and rationale (5.a, 5.b). Mod options page "Biotech Bodies" holds the defaults the look slots use when a pawn has no look gene (design of 2026-11-04/06):
 - Body slot: one global default and one row per loaded humanlike race; values Auto, Vanilla, WDI (WDI only when WDI.Realistic.Bodies is loaded). Use: a colony decides once how every pawn of a race is drawn without adding a gene to each pawn. Auto changes nothing.
@@ -97,9 +97,9 @@ Usage review (5.e). Body and face defaults apply to the pawn drawn at once for t
 Tests (5.f), expected and observed:
 - Actual effect, body: global and per-race Auto/Vanilla/WDI observed, tickets 29a6 and 0287 (3 passed each); gene overrides option, 8d8e (5 passed).
 - Actual effect, face default: tickets f795 and 3859 (4 passed), pack genes b6ab, a198, 7078 (1 passed each) on build ca5d6c9.
-- Optional dependencies: WDI absent and face pack absent paths analysed in code (fallback to Auto, row hidden). Played: not yet (`unverified`).
-- Compile: `dotnet build --no-incremental`, 0 warning, 0 error on 4c3dc53.
-- Not run (`unverified`, in-game, at playTests): first use with clean config, persistence across restart and save reload, input validation (menus only, no free text), shortcut hidden on a clean config, shortcut integration in RIMMSQOL, runtime logs while opening and editing the page, English and French replay.
+- Optional dependencies: WDI absent played S4 green (2026-11-07); face pack absent path analysed in code (fallback to Auto, row hidden), not played (`unverified`, low risk).
+- Compile: `dotnet build --no-incremental`, 0 warning, 0 error on f71990c (2026-11-18, DLL sha256 e2a49343 equals the committed one).
+- Played green at playTests (tickets 6bce, b7c4, 0f7b, 32c6, replay b51a, 6f81, ea73): first use with clean config S2, persistence S3, shortcut hidden by default and RIMMSQOL integration S5 to S7, English and French S1, page logs read. Input validation: menus only, no free text. Replay of 12 on the current build owed (see above).
 
 ## Translation audit
 
