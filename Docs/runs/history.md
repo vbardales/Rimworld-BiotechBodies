@@ -9,3 +9,8 @@ One line per run: date, ticket, feature, result, evidence. Source of truth: the 
 - 2026-11-07 6f81, 21e3: 12-settings S1 in French, exit 0, 1 passed each (21e3 after the corpse rows fix 3dd5a60)
 - 2026-11-07 ea73, 12-settings S1 in French: exit 0, 1 passed, build 6ffbbf7 (defName on duplicate labels, rows read Humain (Human) and Humain (CreepJoiner)); evidence Evidence/settings-french3
 - 2026-11-16 2abd, 14-gallery shot 2 alone (2-two-bodies): exit 0, 1 passed; capture read, candidate cropped to Art/Gallery-clean; raw run deleted
+- 2026-11-18 6642, replay of 03 05 11 (vanillabody) on f57edd6 after the gene renames: exit 0, 11 passed; triaged to Evidence/replay-body
+- 2026-11-18 f007, replay of 04 (bodyoptions): exit 0, 3 passed; Evidence/replay-bodyopt
+- 2026-11-18 adc4, replay of 09: exit 0, 1 passed
+- 2026-11-18 3785, replay of 12 (settings, S1 owed): exit 0, 4 passed; Evidence/replay-settings
+- 2026-11-18 84e9, 16-incompat-bmmam-pool: RED 13 passed, 6 failed = documented BMMaM incompatibility (BiB body path no longer drawn, Log.Error NullReferenceException in DynamicDrawManager.PreDrawVisibleThings, BMMaM side, same shape as a3cf 2026-11-13); incompatibleWith stays (owner 2026-11-13); evidence folder deleted
