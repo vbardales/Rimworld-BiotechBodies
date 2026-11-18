@@ -16,6 +16,7 @@ nelim.pickletools.coatsteps path:PickleTools/CoatSteps/Mod
 nelim.pickletools.clearscreen path:PickleTools/ClearScreen/Mod
 nelim.pickletools.colonistrace path:PickleTools/ColonistRace/Mod
 nelim.pickletools.clickdiagnostics path:PickleTools/ClickDiagnostics/Mod
+nelim.pickletools.inspecttabs path:PickleTools/InspectTabs/Mod
 nelim.pickletools   path:PickleTools/Tests/Pickle/StandaloneBase/Mod
 brrainz.harmony 2009463077
 OskarPotocki.VanillaFactionsExpanded.Core 2023507013
