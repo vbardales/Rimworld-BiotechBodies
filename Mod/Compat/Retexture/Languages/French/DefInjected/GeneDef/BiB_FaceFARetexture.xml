@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LanguageData>
   <BiB_FaceFARetexture.label>visage Retexture</BiB_FaceFARetexture.label>
-  <BiB_FaceFARetexture.description>Le visage reprend les éléments du pack Facial Animation - Retexture (Visage animé - Retexture), même quand un autre pack de visages l'emporte dans l'ordre de chargement. Un élément que le pack ne couvre pas garde le visage par défaut. [NL] Facial Animation - WIP (Visage animé, en travaux) dessine le visage.</BiB_FaceFARetexture.description>
+  <BiB_FaceFARetexture.description>Le visage reprend les éléments du pack Facial Animation - Retexture (Visage Animé - Retexture), même quand un autre pack de visages l'emporte dans l'ordre de chargement. Un élément que le pack ne couvre pas garde le visage par défaut. [NL] Facial Animation - WIP (Visage animé, en travaux) dessine le visage.</BiB_FaceFARetexture.description>
 </LanguageData>
