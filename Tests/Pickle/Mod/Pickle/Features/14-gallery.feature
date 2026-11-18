@@ -488,7 +488,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: I select the colonist named "Nelim" alone
     And Nelim's Pickle Tools: the game interface is shown
     And Nelim's Pickle Tools: I let 5 frames pass
-    And Nelim's Pickle Tools: I open the hidden "Genes" inspect tab
+    And Nelim's Pickle Tools: I open the hidden "ITab_Genes" inspect tab
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 7-genes-tab"
