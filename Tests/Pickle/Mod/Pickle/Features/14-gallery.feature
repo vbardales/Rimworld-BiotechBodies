@@ -467,7 +467,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
     And Nelim's Pickle Tools: "Miel" stands at (166, 173) facing North
     And Nelim's Pickle Tools: the animal "Shogun" stands at (164, 173) facing South
-    And Nelim's Pickle Tools: I frame the area centred on the point (167, 173) at root size 4
+    And Nelim's Pickle Tools: I frame the area centred on the point (165, 173) at root size 3
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 6-water-garden-dusk"
