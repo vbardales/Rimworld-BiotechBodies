@@ -40,7 +40,7 @@
     <defName>BiB_FaceUnagi</defName>
     <label>UNAGI face</label>
     <description>Carriers get the face parts of the UNAGI Facial Animation pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face.</description>
-    <iconPath>UI/Icons/Genes/Gene_Head</iconPath>
+    <iconPath>UI/Icons/Genes/Gene_HeadboneHuman</iconPath>
     <displayCategory>Cosmetic</displayCategory>
     <displayOrderInCategory>902</displayOrderInCategory>
     <selectionWeight>0</selectionWeight>
@@ -56,7 +56,7 @@
     <defName>BiB_FaceNiceFA</defName>
     <label>Nice face</label>
     <description>Carriers get the face parts of the Nice Facial Animation pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face.</description>
-    <iconPath>UI/Icons/Genes/Gene_Head</iconPath>
+    <iconPath>UI/Icons/Genes/Gene_HeadboneHuman</iconPath>
     <displayCategory>Cosmetic</displayCategory>
     <displayOrderInCategory>903</displayOrderInCategory>
     <selectionWeight>0</selectionWeight>
@@ -72,7 +72,7 @@
     <defName>BiB_FaceFARetexture</defName>
     <label>Retexture face</label>
     <description>Carriers get the face parts of the Facial Animation - Retexture pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face.</description>
-    <iconPath>UI/Icons/Genes/Gene_Head</iconPath>
+    <iconPath>UI/Icons/Genes/Gene_HeadboneHuman</iconPath>
     <displayCategory>Cosmetic</displayCategory>
     <displayOrderInCategory>904</displayOrderInCategory>
     <selectionWeight>0</selectionWeight>
@@ -88,7 +88,7 @@
     <defName>BiB_FaceReel</defName>
     <label>Reel face</label>
     <description>Carriers get the face parts of the Reel's Facial Animation Textures pack, even when another face pack wins the load order. A part the pack does not cover keeps the default face. [NL] Facial Animation - WIP draws the face.</description>
-    <iconPath>UI/Icons/Genes/Gene_Head</iconPath>
+    <iconPath>UI/Icons/Genes/Gene_HeadboneHuman</iconPath>
     <displayCategory>Cosmetic</displayCategory>
     <displayOrderInCategory>905</displayOrderInCategory>
     <selectionWeight>0</selectionWeight>
