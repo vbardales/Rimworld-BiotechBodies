@@ -483,6 +483,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Nelim" has the gene "BiB_FaceUnagi"
     And Nelim's Pickle Tools: "Nelim" stands at (177, 128) facing East
     And Nelim's Pickle Tools: I select the thing of def "Human" at (177, 128)
+    And Nelim's Pickle Tools: I let 5 frames pass
     And Nelim's Pickle Tools: I open the hidden "Genes" inspect tab
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
