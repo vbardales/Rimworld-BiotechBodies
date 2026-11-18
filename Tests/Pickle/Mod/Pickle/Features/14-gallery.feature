@@ -1,7 +1,7 @@
 @gallery @review @timeout:900 @requires:nelim.sanctuarybacklot @requires:nelim.pickletools.screenshotstudio @requires:nelim.pickletools.stagedecor @requires:nelim.pickletools.camerazoom @requires:nelim.pickletools.colonistrace @requires:nelim.pickletools.clearscreen @requires:nelim.pickletools.screenshotmode @requires:UNAGI.FacialAnimation @requires:Andromeda.FacialAnimation @requires:Barb.Facetexture @requires:Reel.FacialAnims @requires:WDI.Realistic.Bodies
 Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
 
-  # V24 (2026-11-18, director pass by an Opus sub-agent, one call, written at writeShotlist; plan only, nothing replayed; it wins over v23 and older). KEPT: (1) new shot 3-nelim-turn (slot 3 was free), cloister at the StylingStation mirror, 12:00 +60 min, Nelim alone with Shogun beside her facing South: she takes BOTH a body gene and a face gene (ask b, combinations): BiB_BodyWdi + BiB_FaceUnagi (the same face as Nelim in shot 4, continuity; not Reel, which draws a frown; the director proposed Nice FA, rejected for continuity), facing East toward the mirror, "stands next to" the StylingStation placed at (178,127), just after she chose; one burned label "BiB_BodyWdi + BiB_FaceUnagi"; native crop 960x540 or tighter, no upscale; the pack draws the mouth, no smile step (criterion d: written reason); decor requested from Cat (salon dressing, family 3). (2) new interface shot 7-genes-tab (ask c): Nelim selected, hidden Genes inspect tab open (nelim.pickletools.inspecttabs in the map), same place and tick as 3, cropped, no subtitle, outside the story score; the tab step has never been played: ticket on one pawn first, if the step fails shot 3 carries ask b alone. (3) shot 6 recomposed (V24): hour 18:00 (at 17:00 the light is still day), Soren in profile facing East stands next to a TorchLamp he has just placed (replaces the WoodLog, neutral mouth reads as concentration, no smile asked), two friends (Miel, Ryu) face North backs to the camera walking off toward the bridge (backs hide the pack mouths, the WDI body still reads from behind), Nelim faces West in profile watching them go, Shogun stands facing South (no lying pose exists, drop "lying"), pond fills about 40% of the frame (stones, reeds, lily pads, flagstone or grass ground, never bare grey, Cat requests: water-garden dressing, light sources), two or three lit lamps in the frame; Quill dropped from shot 6 (head offset, NSB). Check the capture at 268 px before the crop: raise the lamp count before cropping tighter. (4) Steam text and subtitles state ask (e): genes pick a look per pawn, the face genes need their pack installed, the Mod options set the default for a pawn with no gene (to write in PUBLICATION.md at writeReleaseDocs). (5) visual mods rule of 2026-11-18: Show Me Your Hands and Yayo's Animations (and similar) installed for the captures when possible: Cat asked (kind visualmod, compatibility with WDI, the four packs, Nal and BiB); if one cannot share the map the shotlist says why; stored candidates 1 2 4 5 are not reshot for it (the mods change poses and hands, not the body or face looks the mod shows) unless the compatibility check says a pose is wrong. (6) interface window renumbered 8-options-window (was 7), last, native crop with the per-race row in view, no subtitle. REJECTED: renumbering or re-timing the stored candidates 1 2 4 5 (it forces reshoots for no gain); breaking the four-pawn row of shot 4 into a queue with mixed facings (shot 4 is a candidate, v23 variety rule applies when it is recomposed); a global move of the story end to 18:30 (only shot 6 moves, to 18:00). Series rhythm: 08:00 1, 09:00 2, 12:00 3, 13:00 4, 15:00 5, 18:00 6, interface 7 and 8 last. Cat requests sent 2026-11-18 (water-garden dressing, light sources, salon dressing, visualmod); answers owed.
+  # V24 (2026-11-18, director pass by an Opus sub-agent, one call, written at writeShotlist; plan only, nothing replayed; it wins over v23 and older). KEPT: (1) new shot 3-nelim-turn (slot 3 was free), cloister at the StylingStation mirror, 12:00 +60 min, Nelim alone with Shogun beside her facing South: she takes BOTH a body gene and a face gene (ask b, combinations): BiB_BodyWdi + BiB_FaceUnagi (the same face as Nelim in shot 4, continuity; not Reel, which draws a frown; the director proposed Nice FA, rejected for continuity), facing East toward the mirror, "stands next to" the StylingStation placed at (178,127), just after she chose; one burned label "BiB_BodyWdi + BiB_FaceUnagi"; native crop 960x540 or tighter, no upscale; the pack draws the mouth, no smile step (criterion d: written reason); decor requested from Cat (salon dressing, family 3). (2) new interface shot 7-genes-tab (ask c): Nelim selected, hidden Genes inspect tab open (nelim.pickletools.inspecttabs in the map), same place and tick as 3, cropped, no subtitle, outside the story score; the tab step has never been played: ticket on one pawn first, if the step fails shot 3 carries ask b alone. (3) shot 6 recomposed (V24): hour 18:00 (at 17:00 the light is still day), Soren in profile facing East carries a WoodLog, the fuel of the TorchLamp he is about to refuel (neutral mouth reads as concentration, no smile asked; no ThingDef Torch exists, no step lays a floor either: stepping stones dropped, the pond ground stays as the map has it, ask NPT for a floor step later), one friend (Miel) faces North, back to the camera, walking off toward the bridge (cast of shot 6 stays Nelim, Miel, Soren, Shogun: Ryu and Quill are not in it) (backs hide the pack mouths, the WDI body still reads from behind), Nelim faces West in profile watching them go, Shogun stands facing South (no lying pose exists, drop "lying"), pond fills about 40% of the frame (stones, reeds, lily pads, flagstone or grass ground, never bare grey, Cat requests: water-garden dressing, light sources), two or three lit lamps in the frame; Quill dropped from shot 6 (head offset, NSB). Check the capture at 268 px before the crop: raise the lamp count before cropping tighter. (4) Steam text and subtitles state ask (e): genes pick a look per pawn, the face genes need their pack installed, the Mod options set the default for a pawn with no gene (to write in PUBLICATION.md at writeReleaseDocs). (5) visual mods rule of 2026-11-18: Show Me Your Hands and Yayo's Animations (and similar) installed for the captures when possible: Cat asked (kind visualmod, compatibility with WDI, the four packs, Nal and BiB); if one cannot share the map the shotlist says why; stored candidates 1 2 4 5 are not reshot for it (the mods change poses and hands, not the body or face looks the mod shows) unless the compatibility check says a pose is wrong. (6) interface window renumbered 8-options-window (was 7), last, native crop with the per-race row in view, no subtitle. REJECTED: renumbering or re-timing the stored candidates 1 2 4 5 (it forces reshoots for no gain); breaking the four-pawn row of shot 4 into a queue with mixed facings (shot 4 is a candidate, v23 variety rule applies when it is recomposed); a global move of the story end to 18:30 (only shot 6 moves, to 18:00). Series rhythm: 08:00 1, 09:00 2, 12:00 3, 13:00 4, 15:00 5, 18:00 6, interface 7 and 8 last. Cat requests sent 2026-11-18 (water-garden dressing, light sources, salon dressing, visualmod); answers owed.
   # V24b (2026-11-18, Cat answers, source: XML of the Sanctuary map; no photo of these yet, PiT asked by Cat, set bib-water-garden). Shot 6 pond dressing, real defNames: no reed and no lily pad def exists (dropped from V24), use Plant_Daylily (Core, already used), PlantPot_Bonsai and Plant_TreeBonsai (Ideology), ground FlagstoneGranite laid as stepping stones and edging (floor step on WaterShallow to confirm with PiT, else on grass beside the pond), Marsh (Core) at the pond edge, GrasslandSoil (Odyssey) grass look; lights Brazier (Royalty, fuel) and TorchLamp (Core, fuel), Campfire (Core, wood) optional, no StandingLamp (power). Shot 3 salon dressing: Dresser (closest to a wardrobe, no wardrobe or clothes rack def exists), Armchair, Stool, EndTable, Bookcase (Core), PlantPot_Bonsai (Ideology), StylingStation (Ideology); rug only as Carpet_MindbendA..E floor patch (Ideology). Visual mods: Show Me Your Hands 2475965842 and Yayo's Animation Continued 2877292196 are not in the Sanctuary map: add the two ids to wsl-deps.gallery.map; load order and incompatibilities with WDI, the four FA packs, Nal and the BiB Harmony patch are unknown, so one test ticket (shot 3, with the mods, label gallery visual mods test) runs first; a crash, frozen pose or face clash is written here with its ticket id and Cat is told. Credit sources for the thank-you register: the mods above (workshopIds).
   # SHOTLIST (v4, 2026-11-15, after the first full run f03a: 6 of 6 green, 6 of 6 captures REDO, then an Opus director pass; plan only, nothing replayed yet).
   # V4 CHANGES (they win over the v3 lines below): framing tightened (root size 2 is the floor): 1 at 3.5 on (136,124), 2 at 2, 3 at 2.5, 4 at 2.5 on (176.5,128), 5 head at 2, 6 at 3.5. No carried item on 2 and 4 (the item square hid the body and the faces); 3 puts the Cloth down at its feet. 4: one row, (175..178,128), station at (178,127); row 129 has Columns (SANCTUARY-CASES cloister). 5 moves to statue-garden (plain soil behind the head, flowers only in the foreground). 6: Nelim, Soren, Quill and Shogun only (five pawns do not read at 268 px), no carried lantern. Same mirror in 2, 4, 6; framing tightens from 2 to 5; clothes never change.
@@ -228,6 +228,52 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     Then I take a screenshot "gallery 2-two-bodies"
     And Nelim's Pickle Tools: the decor is removed
 
+  Scenario: 3-nelim-turn
+    Given I set the hour to 12
+    And Nelim's Sanctuary: the animals are kept out of the sanctuary "cloister"
+    And Nelim's Sanctuary: I am at the sanctuary "cloister"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: the selection brackets are hidden
+    And Nelim's Pickle Tools: I move the mouse to (10, 10)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_BasicShirt" dyed rgb (230, 224, 206)
+    And Nelim's Pickle Tools: "Nelim" wears "Apparel_Pants"
+    And Nelim's Pickle Tools: "Nelim" hairstyle is "Roo_HD_Hair_Highpony"
+    And Nelim's Pickle Tools: "Nelim" has the gene "BiB_BodyWdi"
+    And Nelim's Pickle Tools: "Nelim" has the gene "BiB_FaceUnagi"
+    And Nelim's Pickle Tools: I place the decor "StylingStation" at (178, 127)
+    And Nelim's Pickle Tools: I place the decor "Brazier" at (176, 127)
+    And Nelim's Pickle Tools: the decor "Brazier" at (176, 127) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (175, 126)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (175, 126) is lit
+    And Nelim's Pickle Tools: I place the decor "TorchLamp" at (181, 126)
+    And Nelim's Pickle Tools: the decor "TorchLamp" at (181, 126) is lit
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (175, 127) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (176, 129) fully grown
+    And Nelim's Pickle Tools: I place the decor "Plant_Daylily" at (178, 129) fully grown
+    And Nelim's Pickle Tools: I place the decor "Stool" at (179, 128)
+    And Nelim's Pickle Tools: I place the decor "EndTable" at (180, 128)
+    And Nelim's Pickle Tools: I place the decor "Armchair" at (181, 128)
+    And Nelim's Pickle Tools: I place the decor "Bookcase" at (182, 127)
+    And Nelim's Pickle Tools: "Nelim" mouth is "MouthSmile"
+    And Nelim's Pickle Tools: "Nelim" lids are "LidCheerful"
+    And Nelim's Pickle Tools: "Nelim" brows are "BrowNormal"
+    And Nelim's Pickle Tools: "Nelim" face is held neutral
+    And Nelim's Sanctuary: Nelim has her own face
+    And Nelim's Pickle Tools: "Nelim" stands at (177, 128) facing East
+    And Nelim's Pickle Tools: "Nelim" carries the item "Cloth"
+    And Nelim's Pickle Tools: the animal "Shogun" stands at (175, 128) facing South
+    And Nelim's Pickle Tools: the face parts of "Nelim" are logged
+    And Nelim's Pickle Tools: the other colonists are out of frame
+    And Nelim's Pickle Tools: I frame the area centred on the point (177.5, 128) at root size 2
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 3-nelim-turn"
+    And Nelim's Pickle Tools: the decor is removed
+
   Scenario: 4-faces-at-the-mirror
     Given I set the hour to 13
     And Nelim's Sanctuary: the animals are kept out of the sanctuary "cloister"
@@ -351,7 +397,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     Then I take a screenshot "gallery 5-soren-portrait"
 
   Scenario: 6-water-garden-dusk
-    Given I set the hour to 17
+    Given I set the hour to 18
     And Nelim's Sanctuary: I am at the sanctuary "water-garden"
     And Nelim's Pickle Tools: studio presentation mode is enabled
     And Nelim's Pickle Tools: the colonist bar is hidden
@@ -414,13 +460,44 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Miel" brows are "BrowNormal"
     And Nelim's Pickle Tools: "Miel" face is held neutral
     And Nelim's Sanctuary: Nelim has her own face
-    And Nelim's Pickle Tools: "Nelim" stands at (165, 173) facing South
-    And Nelim's Pickle Tools: "Soren" stands at (167, 173) facing South
+    And Nelim's Pickle Tools: "Nelim" stands at (165, 173) facing West
+    And Nelim's Pickle Tools: "Soren" stands at (167, 173) facing East
     And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
-    And Nelim's Pickle Tools: "Miel" stands at (166, 173) facing South
+    And Nelim's Pickle Tools: "Miel" stands at (166, 173) facing North
     And Nelim's Pickle Tools: the animal "Shogun" stands at (164, 173) facing South
     And Nelim's Pickle Tools: I frame the area centred on the point (166, 173) at root size 2
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 6-water-garden-dusk"
     And Nelim's Pickle Tools: the decor is removed
+
+  Scenario: 7-genes-tab
+    Given I set the hour to 12
+    And Nelim's Sanctuary: I am at the sanctuary "cloister"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: "Nelim" has the gene "BiB_BodyWdi"
+    And Nelim's Pickle Tools: "Nelim" has the gene "BiB_FaceUnagi"
+    And Nelim's Pickle Tools: "Nelim" stands at (177, 128) facing East
+    And Nelim's Pickle Tools: I select the thing of def "Human" at (177, 128)
+    And Nelim's Pickle Tools: I open the hidden "Genes" inspect tab
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 7-genes-tab"
+
+  Scenario: 8-options-window
+    Given I set the hour to 12
+    And Nelim's Sanctuary: I am at the sanctuary "window-backdrop-for-height"
+    And Nelim's Pickle Tools: studio presentation mode is enabled
+    And Nelim's Pickle Tools: the colonist bar is hidden
+    And Nelim's Pickle Tools: the learning helper is hidden
+    And Nelim's Pickle Tools: the tooltips are hidden
+    And Nelim's Pickle Tools: the resource readout is hidden
+    And Nelim's Pickle Tools: I open the mod options page of the mod "nelim.biotechbodies"
+    And Nelim's Pickle Tools: I let 30 frames pass
+    When Nelim's Pickle Tools: I let 5 frames pass
+    Then I take a screenshot "gallery 8-options-window"
+    And Nelim's Pickle Tools: I close the mod options window
