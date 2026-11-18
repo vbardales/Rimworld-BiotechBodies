@@ -1,6 +1,6 @@
 # Biotech Bodies: publication
 
-Draft in progress. Only the gallery section exists so far; the Steam description and the release notes are written at writeReleaseDocs.
+Draft in progress. Only the gallery section exists so far; the Steam description and the release notes are written during writeReleaseDocs.
 
 ## Gallery subtitles
 
