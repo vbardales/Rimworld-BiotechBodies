@@ -441,6 +441,8 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Miel" is undressed
     And Nelim's Pickle Tools: "Miel" wears "Apparel_CollarShirt" dyed rgb (107, 142, 35)
     And Nelim's Pickle Tools: "Miel" wears "Apparel_Pants"
+    And Nelim's Pickle Tools: I lay the floor "FlagstoneGranite" from (163, 172) to (167, 175)
+    And Nelim's Pickle Tools: I place the decor "PlantPot_Bonsai" at (163, 174)
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (164, 172)
     And Nelim's Pickle Tools: the decor "TorchLamp" at (164, 172) is lit
     And Nelim's Pickle Tools: I place the decor "TorchLamp" at (170, 172)
@@ -465,7 +467,7 @@ Feature: the Steam gallery of Biotech Bodies, one day of looks at the Sanctuary
     And Nelim's Pickle Tools: "Soren" carries the item "WoodLog"
     And Nelim's Pickle Tools: "Miel" stands at (166, 173) facing North
     And Nelim's Pickle Tools: the animal "Shogun" stands at (164, 173) facing South
-    And Nelim's Pickle Tools: I frame the area centred on the point (166, 173) at root size 2
+    And Nelim's Pickle Tools: I frame the area centred on the point (167, 173) at root size 4
     And Nelim's Pickle Tools: I let 30 frames pass
     When Nelim's Pickle Tools: I let 5 frames pass
     Then I take a screenshot "gallery 6-water-garden-dusk"
