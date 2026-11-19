@@ -63,10 +63,10 @@ Relecture de Virginie (second, texts changed 2026-11-17 and 2026-11-18): validat
 
 Rules (owner, 2026-11-05/07): everything in NSB is free (places, colonists, domestic animals); a colonist or domestic animal outside NSB needs an express validation; a change to a colonist's properties needs an express validation quoted with its date (BiB genes on Nelim, Miel, Soren, Ryu, Quill: owner "oui" 2026-11-09, gallery only); every outfit is free; every animal the mod includes must be shown (rule 5: the mod includes none, n/a).
 
-Last sync 2026-11-18 (NSB docs, NPT steps and catalogues): nothing changes a place, colonist, animal or look of this mod. NSB maps carry Nals.FacialAnimation and wdi.realistic.bodies but not the four face packs: the gallery map adds them. Neutral colonists (Quill) draw the head offset low in game (NSB Docs/NEUTRES-TETE.md, not BiB code). Cat 2026-11-18: gallery uses Show Me Your Hands (2475965842) and Yayo's Animation Continued (2877292196) when possible; pond is the real Sanctuary water (no lantern, reed or lily pad def).
+Last sync 2026-11-19 (NSB docs: last commit 2372794 2026-11-18, already read; NPT: none; earlier 2026-11-18, NPT steps and catalogues): nothing changes a place, colonist, animal or look of this mod. NSB maps carry Nals.FacialAnimation and wdi.realistic.bodies but not the four face packs: the gallery map adds them. Neutral colonists (Quill) draw the head offset low in game (NSB Docs/NEUTRES-TETE.md, not BiB code). Cat 2026-11-18: gallery uses Show Me Your Hands (2475965842) and Yayo's Animation Continued (2877292196) when possible; pond is the real Sanctuary water (no lantern, reed or lily pad def).
 Places read: 2026-11-13 (SANCTUAIRE-LIEUX.md); cloister cells 2026-11-15
 Tribe read: 2026-11-18 (git log; profiles read earlier: HUMAINS-PROFILS, GALERIE-COLONS, LOOKS-VALIDATION, QUILL-PROFIL, MIEL-PROFIL)
-Steps read: 2026-11-18 (git log; NPT changed 2026-11-19, sync-nsb-npt owed)
+Steps read: 2026-11-19 (git log since 2026-11-18: no commit on steps.md or catalogues; last 2026-11-17 ace6816, vanilla face, already known)
 
 | Place | Shots | Cell (SANCTUAIRE-LIEUX) | Changes for the gallery | Last read |
 |---|---|---|---|---|
