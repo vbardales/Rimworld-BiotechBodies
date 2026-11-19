@@ -101,11 +101,11 @@ Plan: shotlist v24 (header V24 and V24b of `Tests/Pickle/Features/14-gallery.fea
 | Shot | Place, time | Subject | State (2026-11-19) |
 |---|---|---|---|
 | 1-bridge-morning | river-bridge 08:00 | Nelim carries Cloth, Shogun in front | candidate (Art/Gallery-clean and Art/Gallery) |
-| 2-two-bodies | hut 09:00 | same Female body, vanilla and WDI | REDO: v32 pawns near identical, WDI not visible; recompose torso crop 640x360, labels vanilla body and WDI body |
+| 2-two-bodies | hut 09:00 | same Hulk Female body, WDI (front) and vanilla (profile) | V25 filed: ticket ba74 (gallery-visualmods map); then torso crop 640x360, labels, subtitle |
 | 3-nelim-turn | cloister 12:00 | Nelim BiB_BodyWdi + BiB_FaceUnagi | candidate, label burned (proof: ticket 4839 with visual mods) |
 | 4-faces-at-the-mirror | cloister 13:00 | four face packs | candidate |
 | 5-soren-portrait | flower-garden 15:00 | one face pack close up | candidate |
-| 6-water-garden-dusk | water-garden 18:00 | friends leave at dusk | REDO: v28 no readable pond, pawns in a row, Soren not beside a lamp; recompose, no Parked |
+| 6-water-garden-dusk | water-garden 17:00 | friends leave at dusk | V25 filed: ticket ba74 (hour 17, root size 2 centred (164.5,173), lamp (168,172) beside Soren) |
 | 7-genes-tab | cloister | Genes tab of Nelim | stored, no subtitle (ticket f423 green after iconPath fix) |
 | 8-options-window | window-backdrop | Mod options | stored, no subtitle (ticket 2405) |
 
