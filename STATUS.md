@@ -24,7 +24,7 @@ remaining:
   - "CODE and AUDIT: Mod/Defs/GeneDefs_Looks.xml iconPath of the four face genes fixed 2026-11-19 to UI/Icons/Genes/Gene_HeadboneHuman (Gene_Head does not exist, Genes tab logged an error, found by shot 7); Mod/ changed after tested_on f57edd6 and code_review_sha 050c7b5 (four XML values, no code): Audit to say whether 8.a and 8.m reopen; translation review stale on that file (regenerate). 8.m code review of 5cb9ad6..HEAD kept by Audit before this change. Replays green 2026-11-18 on f57edd6 (03 04 05 09 11 12), 16 red documented (BMMaM incompatibleWith stays)."
   - "PEERS: shot 7 and the Genes tab are done (PiT steps `I select the colonist named alone`, `the game interface is shown`, tab name ITab_Genes). Kholo fur question from aPMiaPB answered 2026-11-19 (BiB has no fur gene, awaiting their repro). Open design asks, nothing coded before 1.0.0 is out: sex gene and body texture resolver (Docs/SEX-GENDER-DESIGN.md), BiB_Furry for CoKK, body pack lot 1 (BACKLOG.md), fur look slot or VTF is an owner decision (1.1.0 or later). Then: 1.7 pass (tested_1_7), 8.n to writeShotlist then shootGallery, mountPreview redone from Art/Gallery-clean."
 updated: 2026-11-19
-protocols_read_sha: 17c496d34a1f08f70ed2988fce4e4368993c5f8b
+protocols_read_sha: df8ff0a7d4e76e952d1c64d0c14a47d9c5190420
 ---
 
 # Biotech Bodies: status
@@ -101,11 +101,11 @@ Plan: shotlist v24 (header V24 and V24b of `Tests/Pickle/Features/14-gallery.fea
 | Shot | Place, time | Subject | State (2026-11-19) |
 |---|---|---|---|
 | 1-bridge-morning | river-bridge 08:00 | Nelim carries Cloth, Shogun in front | candidate (Art/Gallery-clean and Art/Gallery) |
-| 2-two-bodies | hut 09:00 | same Hulk Female body, WDI (front) and vanilla (profile) | V25 filed: ticket ba74 (gallery-visualmods map); then torso crop 640x360, labels, subtitle |
+| 2-two-bodies | hut 09:00 | same Hulk Female body, WDI (front) and vanilla (profile) | candidate: torso crop 640x360 with labels in Art/Gallery-clean (ticket ba74 green, minified in Evidence/gallery-candidates/v34-shot2); subtitle at rate-gallery |
 | 3-nelim-turn | cloister 12:00 | Nelim BiB_BodyWdi + BiB_FaceUnagi | candidate, label burned (proof: ticket 4839 with visual mods) |
 | 4-faces-at-the-mirror | cloister 13:00 | four face packs | candidate |
 | 5-soren-portrait | flower-garden 15:00 | one face pack close up | candidate |
-| 6-water-garden-dusk | water-garden 17:00 | friends leave at dusk | V25 filed: ticket ba74 (hour 17, root size 2 centred (164.5,173), lamp (168,172) beside Soren) |
+| 6-water-garden-dusk | water-garden 17:00 | friends leave at dusk | REDO 2026-11-19 (ticket ba74 capture): pond unreadable at 268 px, light not dusk, torch not beside Soren; run deleted, recompose (darker hour, lamp adjacent to Soren, lily pads in frame) |
 | 7-genes-tab | cloister | Genes tab of Nelim | stored, no subtitle (ticket f423 green after iconPath fix) |
 | 8-options-window | window-backdrop | Mod options | stored, no subtitle (ticket 2405) |
 
