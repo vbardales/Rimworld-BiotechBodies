@@ -105,7 +105,7 @@ Plan: shotlist v24 (header V24 and V24b of `Tests/Pickle/Features/14-gallery.fea
 | 3-nelim-turn | cloister 12:00 | Nelim BiB_BodyWdi + BiB_FaceUnagi | candidate, label burned (proof: ticket 4839 with visual mods) |
 | 4-faces-at-the-mirror | cloister 13:00 | four face packs | candidate |
 | 5-soren-portrait | flower-garden 15:00 | one face pack close up | candidate |
-| 6-water-garden-dusk | water-garden 17:00 | friends leave at dusk | REDO 2026-11-19 (ticket ba74 capture): pond unreadable at 268 px, light not dusk, torch not beside Soren; run deleted, recompose (darker hour, lamp adjacent to Soren, lily pads in frame) |
+| 6-water-garden-dusk | water-garden 17:00 | friends leave at dusk | V26 filed: ticket c3e9 (647efd3, frame (163.5,173) root size 3, water and reeds on the left third); then score-gallery, 268 px check |
 | 7-genes-tab | cloister | Genes tab of Nelim | stored, no subtitle (ticket f423 green after iconPath fix) |
 | 8-options-window | window-backdrop | Mod options | stored, no subtitle (ticket 2405) |
 
