@@ -5,7 +5,7 @@ repo: Rimworld-BiotechBodies
 remote: https://github.com/vbardales/Rimworld-BiotechBodies.git
 visibility: public
 detached: yes
-workflow_stage: declareDependencies[1.0.0]
+workflow_stage: playTests[1.0.0]
 licence: original
 licence_at: "2026-11-04: original mod by the owner, no source mod code reused"
 upstream_mod_remotes: N/A
@@ -21,12 +21,12 @@ published: no
 tested_on: "2026-11-18 pickle f57edd6 (03 04 05 09 11 12 green, 16 red = documented BMMaM incompat)"
 code_review_sha: 050c7b50ea2ff43aacc4e30a6832bfe074e5b689
 remaining:
-  - "4.g record written 2026-11-22 (dependencies field). Next: run replay-audit to return to writeShotlist/shootGallery (stage move needs Virginie OK). Also open: NPT steps changed 2026-11-21 (run sync-nsb-npt, update Steps read date); ticket c3e9 result (shot 6 V26, passed) sits in Tests/Pickle/Inbox/gallery-v35: score-gallery, 268 px check, then keep or REDO. Gallery work below is kept."
+  - "Replay 2026-11-22: 4.g done, stage playTests[1.0.0]. Open: 8.a freeze tested sha (GeneDefs_Looks.xml iconPath changed in 0ebc264 after tested_on f57edd6); 8.c replay of 06 07 08 10 13 15 on the current build (ticket f423 green on genes tab only; 8.d 8.f 8.g 8.h 8.i unread after 0ebc264); 8.m code review of the XML value diff 050c7b5..HEAD (not display text), then new code_review_sha; 8.n. Also: sync-nsb-npt (NPT changed 2026-11-21, update Steps read date); shot 6 run c3e9 in Inbox/gallery-v35 passed, score-gallery and 268 px check owed. Gallery work below is kept."
   - "Open 2026-11-19 (journal of everything before in docs/runs/status-remaining-journal-2026-11-19.md; the NSB and Shotlist sections below hold the gallery state). GALLERY: shotlist v24 (feature 14 header, V24 and V24b) is the plan. Candidates stored in Art/Gallery-clean and Art/Gallery: 1, 3 (label BiB_BodyWdi + BiB_FaceUnagi burned), 4, 5; interface shots 7 (genes tab, green f423) and 8 (options window) stored without subtitle. Shots 2 and 6: V25 filed 2026-11-19 as ticket ba74 (tree 2118e7a, map gallery-visualmods, evidence Inbox/gallery-v34); on RUN_DONE: read summary.json, open captures, shrink to 268 px, score-gallery; shot 2 then torso crop 640x360 + labels vanilla body and WDI body + subtitle, shot 6 crop only if water stays in frame; REDO means delete run and recompose. Earlier v32 run (e33f, 0823) was REDO, deleted. Old notes: Shot 2: two near-identical pawns (same afro, shirt, skin), WDI body not visible at this crop; recompose with torso crop 640x360 and labels vanilla body and WDI body, or two clearly different pawns. Shot 6 v28: reeds and lily pads at the left but no readable pond, pawns in a row, Soren with WoodLog and not beside a lamp; recompose. Not verified: 268 px shrink (ffmpeg) of both. Rule (owner 2026-11-19, Audit): the session decides each image alone, candidate kept (Art plus minified green run in Tests/Pickle/Evidence), REDO to Parked with RELEASE.md and a new take; one owner review at the end (12b). Owed when candidates are final: minify the green run folder of each candidate into Evidence, burn subtitles for 2, send all subtitled images in one message."
   - "CODE and AUDIT: Mod/Defs/GeneDefs_Looks.xml iconPath of the four face genes fixed 2026-11-19 to UI/Icons/Genes/Gene_HeadboneHuman (Gene_Head does not exist, Genes tab logged an error, found by shot 7); Mod/ changed after tested_on f57edd6 and code_review_sha 050c7b5 (four XML values, no code): Audit to say whether 8.a and 8.m reopen; translation review stale on that file (regenerate). 8.m code review of 5cb9ad6..HEAD kept by Audit before this change. Replays green 2026-11-18 on f57edd6 (03 04 05 09 11 12), 16 red documented (BMMaM incompatibleWith stays)."
   - "PEERS: shot 7 and the Genes tab are done (PiT steps `I select the colonist named alone`, `the game interface is shown`, tab name ITab_Genes). Kholo fur question from aPMiaPB answered 2026-11-19 (BiB has no fur gene, awaiting their repro). Open design asks, nothing coded before 1.0.0 is out: sex gene and body texture resolver (Docs/SEX-GENDER-DESIGN.md), BiB_Furry for CoKK, body pack lot 1 (BACKLOG.md), fur look slot or VTF is an owner decision (1.1.0 or later). Then: 1.7 pass (tested_1_7), 8.n to writeShotlist then shootGallery, mountPreview redone from Art/Gallery-clean."
 updated: 2026-11-22
-protocols_read_sha: 594cd3b3900dd4d873f4145c4228f5932399c0cf
+protocols_read_sha: 15eb1e61fa482b458f9508e69b85d8f7070f2ac4
 ---
 
 # Biotech Bodies: status
