@@ -34,3 +34,7 @@ Vanilla face look (owner, 2026-11-17): VTE is not the vanilla face. The face slo
 
 Seen on gallery shot 2 (ticket ba74, proof kept in Tests/Pickle/Evidence/gallery-candidates/v34-shot2): the pawn with the gene BiB_BodyVanilla gets the vanilla body texture, but the tanktop she wears is drawn with the WDI Realistic Bodies garment texture (WDI-shaped bust and waist on a vanilla body), not the vanilla version of the same garment. Expected: the garment follows the body look of the pawn (TESTING.md B4, scenario 05-vanilla-body-apparel, was meant to catch this and only had a person reading the picture).
 Cause: not established. Hypothesis: WDI replaces the worn graphic of apparel globally, and BiB swaps only the body node. Next step: read how WDI patches apparel graphics, then either give the BiB_BodyVanilla pawn the vanilla apparel path or document the limit. Owner decision 2026-11-22: fix in 1.0.0. Done in 47b4403 (postfix on ApparelGraphicRecordGetter.TryGetGraphicApparel: a pawn with the Vanilla body look gets the body-type worn graphic from the official textures); replay ticket 2f58 on scenario 05, then recompose shot 2.
+
+## Face gene icon (owner, 2026-11-22)
+
+The icon of the four face genes is the vanilla Gene_HeadboneHuman (0ebc264, because Gene_Head does not exist). The owner finds it poor in the Genes tab. Wanted: a dedicated Face icon (Art source, UI/Icons/Genes path in Mod/Textures). Needs an asset: owner prompt or decision, nothing coded.
