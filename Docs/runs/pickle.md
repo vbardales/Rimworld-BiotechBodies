@@ -14,3 +14,10 @@ One line per run: date, ticket, feature, result, evidence. Source of truth: the 
 - 2026-11-18 adc4, replay of 09: exit 0, 1 passed
 - 2026-11-18 3785, replay of 12 (settings, S1 owed): exit 0, 4 passed; Evidence/replay-settings
 - 2026-11-18 84e9, 16-incompat-bmmam-pool: RED 13 passed, 6 failed = documented BMMaM incompatibility (BiB body path no longer drawn, Log.Error NullReferenceException in DynamicDrawManager.PreDrawVisibleThings, BMMaM side, same shape as a3cf 2026-11-13); incompatibleWith stays (owner 2026-11-13); evidence folder deleted
+- 2026-11-22 6150, replay of faceunagi on f0b3d49 (hetzner lane, Pickle older than azure): exit 0, 4 passed; Evidence/replay-unagi
+- 2026-11-22 1a82, replay of nicefa on f0b3d49 (azure): exit 0, 1 passed; Evidence/replay-nicefa
+- 2026-11-22 a29f, replay of reel on f0b3d49 (azure): exit 0, 1 passed; Evidence/replay-reel
+- 2026-11-22 4e62, replay of avec-rimmsqol (13, S5 S6 S7) on f0b3d49 (azure): exit 0, 3 passed; Evidence/replay-rimmsqol
+- 2026-11-22 228f, replay of custombody (15) on f0b3d49 (azure): exit 0, 3 passed; Evidence/replay-custombody
+- 2026-11-22 75a2, replay of settings (12, French) on f0b3d49 (azure): exit 0, 4 passed; Evidence/replay-settings-fr
+- 2026-11-22 c3e9, gallery shot 6 (gallery-visualmods): exit 0, 1 passed; Inbox/gallery-v35 (score-gallery and 268 px check owed)
