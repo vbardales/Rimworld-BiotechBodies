@@ -180,6 +180,47 @@ namespace BiotechBodies
         }
     }
 
+    // The apparel of a pawn with the Vanilla body look is drawn from the official textures too. WDI's Realistic
+    // Bodies also ships the worn textures of body-type apparel (tanktop, shirt...) under the vanilla paths, so a
+    // vanilla body would otherwise wear garments shaped for the WDI body. Only body-type graphics are touched
+    // (headgear and packs have no body type suffix); a garment the official content does not ship keeps the
+    // game's graphic.
+    [HarmonyPatch(typeof(ApparelGraphicRecordGetter), nameof(ApparelGraphicRecordGetter.TryGetGraphicApparel))]
+    public static class ApparelGraphicRecordGetter_TryGetGraphicApparel_Patch
+    {
+        [HarmonyPostfix]
+        public static void Postfix(bool __result, Apparel apparel, BodyTypeDef bodyType, ref ApparelGraphicRecord rec)
+        {
+            var graphic = rec.graphic;
+            if (!__result || graphic == null || bodyType == null || graphic.path == null)
+            {
+                return;
+            }
+            var pawn = apparel?.Wearer;
+            if (pawn == null || CustomBody.PathFor(pawn) != null)
+            {
+                return;
+            }
+            if (!BodySources.Wants(pawn, out var look) || look != BodyLook.Vanilla)
+            {
+                return;
+            }
+            if (graphic.path.StartsWith(BodySources.VanillaPrefix) || !graphic.path.EndsWith("_" + bodyType.defName))
+            {
+                return;
+            }
+            var shader = graphic.MatSouth != null ? graphic.MatSouth.shader : null;
+            var prefixed = BodySources.VanillaPrefix + graphic.path;
+            if (shader == null || BodySources.Resolve(prefixed + "_south") == null)
+            {
+                return;
+            }
+            rec = new ApparelGraphicRecord(
+                GraphicDatabase.Get<Graphic_Multi>(prefixed, shader, graphic.drawSize, graphic.color, graphic.colorTwo),
+                apparel);
+        }
+    }
+
     // Resolves the prefixed paths from their source only. Everything else goes to the game untouched.
     [HarmonyPatch(typeof(ContentFinder<Texture2D>), nameof(ContentFinder<Texture2D>.Get))]
     public static class ContentFinder_Texture2D_Get_Patch
