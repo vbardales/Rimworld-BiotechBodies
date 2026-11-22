@@ -99,7 +99,7 @@ Steps read: 2026-11-22 (NPT commits since 2026-11-19: ClickDiagnostics logging s
 
 ## Shotlist
 
-Plan: shotlist v24 (header V24 and V24b of `Tests/Pickle/Features/14-gallery.feature`, Opus director pass 2026-11-18); story and per-shot detail live in the feature header and in PUBLICATION.md, not here. Series k ok; plan mean 4.67.
+Plan: shotlist V27 (2026-11-22, owner review; header of Tests/Pickle/Mod/Pickle/Features/14-gallery.feature, V27 line, wins over V25 and V26; V24 and V24b still hold for the rest). Changes: shots 2 and 3 front view with neckline (2 waits for ticket 2f58), shot 4 label per face, NEW shot 9-bodies-lineup (five different bodies, front, labels), shot 6 pawns face the camera, shot 7 Nelim roster hairstyle and no blush, Miel lipstick (NPT step). Scores not recomputed, score-gallery loop to 5 owed. Earlier plan line: Plan: shotlist v24 (header V24 and V24b of `Tests/Pickle/Features/14-gallery.feature`, Opus director pass 2026-11-18); story and per-shot detail live in the feature header and in PUBLICATION.md, not h
 
 | Shot | Place, time | Subject | State (2026-11-19) |
 |---|---|---|---|
